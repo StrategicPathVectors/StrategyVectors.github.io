@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Vectors - Transform Your Strategy Creation & Impact</title>
+    
+    <!-- Google Fonts for Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual ID from Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <style>
+        /* ==================================
+           BRAND COLORS FROM CHAMELEON PALETTE
+           ================================== */
+        :root {
+            /* Primary Colors */
+            --primary-purple: #44003A;
+            --primary-red: #FF4834;
+            --primary-yellow: #FFC14C;
+            
+            /* Secondary Colors */
+            --secondary-purple: #8400AC;
+            --secondary-magenta: #EB1CA9;
+            --secondary-yellow: #FFE594;
+            
+            /* Background Colors */
+            --bg-dark: #5E5E5E;
+            --bg-medium: #757575;
+            --bg-light: #f8f8f8;
+            --white: #ffffff;
+            
+            /* Typography */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+        
+        /* ==================================
+           RESET & BASE STYLES
+           ================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* ==================================
+           NAVIGATION HEADER
+           ================================== */
+        header {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, var(--primary-yellow), var(--primary-red));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .brand-name {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        /* Mobile menu button (hidden on desktop) */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* ==================================
+           HERO SECTION
+           ================================== */
+        .hero {
+            margin-top: 72px; /* Account for fixed header */
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-purple);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--bg-dark);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-magenta));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 72, 52, 0.3);
+        }
+        
+        /* ==================================
+           VIDEO SECTION
+           ================================== */
+        .video-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--bg-medium);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .video-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--bg-medium), var(--bg-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-title {
+            font-size: 1.3rem;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-description {
+            color: var(--bg-dark);
+            line-height: 1.6;
+        }
+        
+        /* ==================================
+           SERVICES SECTION
+           ================================== */
+        .services-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-red);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-yellow), var(--secondary-yellow));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary-purple);
+        }
+        
+        .service-card h3 {
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .service-card p {
+            color: var(--bg-dark);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .learn-more-btn {
+            display: inline-block;
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--primary-red);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .learn-more-btn:hover {
+            background: var(--primary-red);
+            color: white;
+        }
+        
+        /* ==================================
+           CONTACT FORM SECTION
+           ================================== */
+        .contact-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-purple);
+        }
+        
+        .form-submit {
+            text-align: center;
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-magenta));
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 72, 52, 0.3);
+        }
+        
+        .form-note {
+            margin-top: 1rem;
+            color: var(--bg-medium);
+            font-size: 0.9rem;
+        }
+        
+        .form-message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* ==================================
+           FOOTER
+           ================================== */
+        footer {
+            background: var(--primary-purple);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* ==================================
+           RESPONSIVE DESIGN
+           ================================== */
+        @media (max-width: 768px) {
+            /* Mobile Navigation */
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-purple);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            /* Hero adjustments */
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            /* Grid adjustments */
+            .video-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Form grid adjustment */
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Section spacing */
+            .hero,
+            .video-section,
+            .services-section,
+            .contact-section {
+                padding: 2rem 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo">SV</div>
+                <span class="brand-name">Strategy Vectors</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#videos">Insights</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Transform Your Strategy Creation & Impact</h1>
+            <p class="subtitle">
+                Utilize the power & speed of AI to produce market-based, contextualised potential pivot points 
+                (or vectors) that form the basis of strategic possibilities
+            </p>
+            <a href="#services" class="cta-button">Discover Our Approach</a>
+        </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section" id="videos">
+        <div class="container">
+            <h2 class="section-title">Strategic Insights</h2>
+            <p class="section-subtitle">Explore our approach to strategy transformation through these featured presentations</p>
+            
+            <div class="video-grid">
+                <!-- Video 1 Placeholder -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Introduction to Strategy Vectors</h3>
+                        <p class="video-description">
+                            Discover how our AI-powered approach revolutionizes traditional strategy development.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 Placeholder -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Patient Journey Transformation</h3>
+                        <p class="video-description">
+                            Learn how we create enhanced and unified patient experiences through strategic design.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Video 3 Placeholder -->
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Identifying Pivot Points</h3>
+                        <p class="video-description">
+                            Explore our methodology for discovering critical strategic inflection points.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Strategic Services</h2>
+            <p class="section-subtitle">Transforming healthcare strategy through innovative methodologies</p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Enhanced & Unified Patient Journey Creation</h3>
+                    <p>
+                        We map every element of a proprietary 12-step patient journey per each national health economy. 
+                        This integrates & contextualises epidemiology, treatment algorithms, finances, resources, 
+                        all stakeholders, competitive landscapes and patient segments with a singular unifying lens: 
+                        the journey of patients from first symptoms to ultimate outcomes.
+                    </p>
+                    <a href="#contact-form" class="learn-more-btn">Learn More</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>Pivot Point/VECTOR Identification</h3>
+                    <p>
+                        From the unified patient map we identify system-level potential pivot points that form 
+                        the basis of market-focused strategic possibilities and early strategy ideation. 
+                        The focus is shifted from internal data analysis into "how to win" given the new 
+                        context & perspective.
+                    </p>
+                    <a href="#" class="learn-more-btn">Learn More</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chess-king"></i>
+                    </div>
+                    <h3>Strategy Consulting</h3>
+                    <p>
+                        Our experienced team combine expertise & passion to work with you to iterate the 
+                        analysis into strategy creation via iterative discussions & workshops utilizing 
+                        a mix of proprietary tools & frameworks and industry-leading thinking.
+                    </p>
+                    <a href="#" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-section" id="contact-form">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Let's discuss how we can transform your strategic approach</p>
+            
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Replace YOUR_ACCESS_KEY with your actual key from Web3Forms -->
+                <input type="hidden" name="access_key" value="cc54bfea-592f-4df2-b8df-413e570ea722">
+                <input type="hidden" name="subject" value="New Strategy Vectors Inquiry">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="first_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="last_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="organisation">Organisation *</label>
+                        <input type="text" id="organisation" name="organisation" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title *</label>
+                        <input type="text" id="jobTitle" name="job_title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="geographic">Geographic Scope *</label>
+                        <input type="text" id="geographic" name="geographic_scope" 
+                               placeholder="e.g., Global, Europe, UK, etc." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="therapyArea">Therapy Area Interest *</label>
+                        <input type="text" id="therapyArea" name="therapy_area" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="questions">Specific Questions or Comments</label>
+                        <textarea id="questions" name="questions" rows="5" 
+                                  placeholder="Please share any specific questions or areas of interest..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <p class="form-note">* Required fields</p>
+                </div>
+                
+                <div id="form-success" class="form-message success-message" style="display: none;">
+                    Thank you for your inquiry! We'll be in touch within 24-48 hours.
+                </div>
+                
+                <div id="form-error" class="form-message error-message" style="display: none;">
+                    There was an error submitting the form. Please try again or email us directly.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="logo-container" style="justify-content: center; margin-bottom: 1rem;">
+                <div class="logo">SV</div>
+                <span class="brand-name">Strategy Vectors</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/robinmaidenchameleonconsulting/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:robin@consultchameleon.co.uk" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="copyright">
+                © 2024 Strategy Vectors. All rights reserved. | Transforming Strategy Through Intelligence
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+        
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+        
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const successMsg = document.getElementById('form-success');
+                const errorMsg = document.getElementById('form-error');
+                
+                // Hide any previous messages
+                successMsg.style.display = 'none';
+                errorMsg.style.display = 'none';
+                
+                // The form will submit normally to Web3Forms
+                // Web3Forms will handle the email sending
+                
+                // Show success message after a brief delay
+                setTimeout(function() {
+                    successMsg.style.display = 'block';
+                    contactForm.reset();
+                    // Scroll to success message
+                    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>
