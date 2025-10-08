@@ -28,10 +28,10 @@
            BRAND COLORS FROM CHAMELEON PALETTE
            ================================== */
         :root {
-            /* Primary Colors */
-            --primary-purple: #44003A;
+            /* Primary Colors - NO DEEP PURPLE, ONLY RED AND GOLD */
             --primary-red: #FF4834;
             --primary-yellow: #FFC14C;
+            --blend-orange: #FF7940;
             
             /* Secondary Colors */
             --secondary-purple: #8400AC;
@@ -43,6 +43,9 @@
             --bg-medium: #757575;
             --bg-light: #f8f8f8;
             --white: #ffffff;
+            
+            /* For headers only where needed */
+            --primary-purple: #44003A;
             
             /* Typography */
             --font-heading: 'Montserrat', sans-serif;
@@ -69,6 +72,134 @@
             font-family: var(--font-heading);
             font-weight: 600;
             line-height: 1.2;
+        }
+        
+        /* ==================================
+           ANIMATED INFINITY LOGO STYLES
+           ================================== */
+        .animated-logo {
+            width: 80px;  /* DOUBLED SIZE */
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .animated-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Infinity path animation */
+        .infinity-path {
+            fill: none;
+            stroke-linecap: round;
+            opacity: 0.9;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 0;
+            animation: infinityMorph 8s ease-in-out infinite, dashFlow 12s linear infinite;
+        }
+        
+        /* Animated nodes */
+        .flow-node {
+            opacity: 0;
+            animation: nodeAppear 8s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        /* Node colors */
+        .node-red { fill: #FF4834; }
+        .node-gold { fill: #FFC14C; }
+        .node-orange { fill: #FF7940; }
+        
+        /* Stagger animations */
+        .flow-node:nth-child(3) { animation-delay: 0s; }
+        .flow-node:nth-child(4) { animation-delay: 0.5s; }
+        .flow-node:nth-child(5) { animation-delay: 1s; }
+        .flow-node:nth-child(6) { animation-delay: 1.5s; }
+        .flow-node:nth-child(7) { animation-delay: 2s; }
+        .flow-node:nth-child(8) { animation-delay: 2.5s; }
+        .flow-node:nth-child(9) { animation-delay: 3s; }
+        .flow-node:nth-child(10) { animation-delay: 3.5s; }
+        
+        /* MASSIVE Hero background logo */
+        .hero-bg-logo {
+            position: absolute;
+            width: 1400px;  /* EXTRA LARGE */
+            height: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            opacity: 0.3;  /* CLEARLY VISIBLE */
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { 
+                opacity: 0.3;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% { 
+                opacity: 0.4;
+                transform: translate(-50%, -50%) scale(1.05);
+            }
+        }
+        
+        /* Infinity morph animation */
+        @keyframes infinityMorph {
+            0%, 100% { 
+                d: path("M 20,40 Q 30,10 40,40 T 60,40 Q 70,70 80,40 T 100,40 Q 90,70 80,40 T 60,40 Q 50,10 40,40 T 20,40 Z");
+                stroke-width: 3;
+            }
+            25% {
+                d: path("M 20,40 Q 30,5 40,40 T 60,40 Q 70,75 80,40 T 100,40 Q 90,75 80,40 T 60,40 Q 50,5 40,40 T 20,40 Z");
+                stroke-width: 4;
+            }
+            50% { 
+                d: path("M 20,40 Q 30,0 40,40 T 60,40 Q 70,80 80,40 T 100,40 Q 90,80 80,40 T 60,40 Q 50,0 40,40 T 20,40 Z");
+                stroke-width: 5;
+            }
+            75% {
+                d: path("M 20,40 Q 30,8 40,40 T 60,40 Q 70,72 80,40 T 100,40 Q 90,72 80,40 T 60,40 Q 50,8 40,40 T 20,40 Z");
+                stroke-width: 4;
+            }
+        }
+        
+        @keyframes dashFlow {
+            to { stroke-dashoffset: -1000; }
+        }
+        
+        @keyframes nodeAppear {
+            0% { 
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            20% {
+                opacity: 1;
+                transform: scale(1.2) rotate(180deg);
+            }
+            40%, 60% { 
+                opacity: 1;
+                transform: scale(1) rotate(360deg);
+            }
+            80% {
+                opacity: 0.5;
+                transform: scale(0.8) rotate(540deg);
+            }
+            100% { 
+                opacity: 0;
+                transform: scale(0) rotate(720deg);
+            }
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .infinity-path,
+            .flow-node,
+            .hero-bg-logo {
+                animation: none !important;
+            }
         }
         
         /* ==================================
@@ -99,19 +230,6 @@
             gap: 10px;
         }
         
-        .logo {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, var(--primary-yellow), var(--primary-red));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            font-size: 20px;
-        }
-        
         .brand-name {
             color: white;
             font-size: 1.5rem;
@@ -136,7 +254,6 @@
             color: var(--primary-yellow);
         }
         
-        /* Mobile menu button (hidden on desktop) */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -150,15 +267,24 @@
            HERO SECTION
            ================================== */
         .hero {
-            margin-top: 72px; /* Account for fixed header */
+            margin-top: 72px;
             background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
             padding: 4rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: visible;  /* Show the full logo */
+            min-height: 600px;
         }
         
         .hero-content {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            background: rgba(248, 248, 248, 0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
         }
         
         .hero h1 {
@@ -185,6 +311,9 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 20;
+            box-shadow: 0 5px 20px rgba(255, 72, 52, 0.4);
         }
         
         .cta-button:hover {
@@ -193,7 +322,7 @@
         }
         
         /* ==================================
-           VIDEO SECTION
+           VIDEO SECTION (HIGHLIGHTS)
            ================================== */
         .video-section {
             padding: 4rem 2rem;
@@ -266,11 +395,102 @@
         }
         
         /* ==================================
+           BLOG SECTION
+           ================================== */
+        .blog-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary-purple), var(--secondary-magenta));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--bg-medium);
+        }
+        
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .blog-category {
+            background: var(--secondary-yellow);
+            color: var(--primary-purple);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+        
+        .blog-card h3 {
+            color: var(--primary-purple);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        .blog-excerpt {
+            color: var(--bg-dark);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        
+        .read-more:hover {
+            gap: 0.8rem;
+        }
+        
+        /* ==================================
            SERVICES SECTION
            ================================== */
         .services-section {
             padding: 4rem 2rem;
-            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+            background: white;
         }
         
         .services-grid {
@@ -281,7 +501,7 @@
         }
         
         .service-card {
-            background: white;
+            background: var(--bg-light);
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
@@ -341,13 +561,13 @@
            ================================== */
         .contact-section {
             padding: 4rem 2rem;
-            background: white;
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
         }
         
         .contact-form {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--bg-light);
+            background: white;
             padding: 2.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -480,7 +700,6 @@
            RESPONSIVE DESIGN
            ================================== */
         @media (max-width: 768px) {
-            /* Mobile Navigation */
             .nav-links {
                 display: none;
                 position: absolute;
@@ -501,7 +720,17 @@
                 display: block;
             }
             
-            /* Hero adjustments */
+            .animated-logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .hero-bg-logo {
+                width: 900px;
+                height: 450px;
+                opacity: 0.25;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -510,20 +739,19 @@
                 font-size: 1rem;
             }
             
-            /* Grid adjustments */
             .video-grid,
+            .blog-grid,
             .services-grid {
                 grid-template-columns: 1fr;
             }
             
-            /* Form grid adjustment */
             .form-grid {
                 grid-template-columns: 1fr;
             }
             
-            /* Section spacing */
             .hero,
             .video-section,
+            .blog-section,
             .services-section,
             .contact-section {
                 padding: 2rem 1rem;
@@ -538,6 +766,11 @@
             .section-title {
                 font-size: 1.75rem;
             }
+            
+            .hero-bg-logo {
+                width: 600px;
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -546,15 +779,41 @@
     <header>
         <nav>
             <div class="logo-container">
-                <div class="logo">SV</div>
+                <!-- DOUBLED SIZE Animated Infinity Logo -->
+                <div class="animated-logo">
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#FF4834;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#FF7940;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFC14C;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Complete infinity symbol -->
+                        <path class="infinity-path" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z" 
+                              stroke="url(#headerGrad)" stroke-width="4" fill="none"/>
+                        
+                        <!-- Animated nodes -->
+                        <circle class="flow-node node-red" cx="20" cy="40" r="3"/>
+                        <circle class="flow-node node-gold" cx="35" cy="22" r="2.5"/>
+                        <circle class="flow-node node-orange" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-gold" cx="65" cy="22" r="2.5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="3"/>
+                        <circle class="flow-node node-orange" cx="95" cy="58" r="2.5"/>
+                        <circle class="flow-node node-gold" cx="110" cy="40" r="3"/>
+                    </svg>
+                </div>
                 <span class="brand-name">Strategy Vectors</span>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#videos">Insights</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -563,6 +822,61 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="home">
+        <!-- MASSIVE 4X Background Infinity Logo -->
+        <div class="hero-bg-logo">
+            <svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF4834;stop-opacity:1" />
+                        <stop offset="25%" style="stop-color:#FF7940;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#FFC14C;stop-opacity:1" />
+                        <stop offset="75%" style="stop-color:#FF7940;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FF4834;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                
+                <!-- Primary large infinity path -->
+                <path class="infinity-path" 
+                      d="M 50,125 Q 100,25 150,125 T 250,125 Q 300,225 350,125 T 450,125 Q 400,225 350,125 T 250,125 Q 200,25 150,125 T 50,125 Z" 
+                      stroke="url(#heroGrad1)" stroke-width="20" fill="none" filter="url(#glow)"/>
+                
+                <!-- Secondary infinity for depth -->
+                <path class="infinity-path" 
+                      d="M 50,125 Q 100,25 150,125 T 250,125 Q 300,225 350,125 T 450,125 Q 400,225 350,125 T 250,125 Q 200,25 150,125 T 50,125 Z" 
+                      stroke="#FFC14C" stroke-width="10" fill="none" opacity="0.5" style="animation-delay: 2s;"/>
+                
+                <!-- Large animated nodes -->
+                <circle class="flow-node node-red" cx="50" cy="125" r="20"/>
+                <circle class="flow-node node-gold" cx="100" cy="60" r="18"/>
+                <circle class="flow-node node-orange" cx="150" cy="125" r="20"/>
+                <circle class="flow-node node-red" cx="200" cy="60" r="18"/>
+                <circle class="flow-node node-gold" cx="250" cy="125" r="20"/>
+                <circle class="flow-node node-orange" cx="300" cy="190" r="18"/>
+                <circle class="flow-node node-red" cx="350" cy="125" r="20"/>
+                <circle class="flow-node node-gold" cx="400" cy="190" r="18"/>
+                <circle class="flow-node node-orange" cx="450" cy="125" r="20"/>
+                
+                <!-- Medium nodes for depth -->
+                <circle class="flow-node node-gold" cx="125" cy="90" r="12" opacity="0.7"/>
+                <circle class="flow-node node-red" cx="225" cy="90" r="12" opacity="0.7"/>
+                <circle class="flow-node node-orange" cx="325" cy="160" r="12" opacity="0.7"/>
+                <circle class="flow-node node-gold" cx="425" cy="160" r="12" opacity="0.7"/>
+                
+                <!-- Small accent nodes -->
+                <circle class="flow-node" cx="75" cy="85" r="6" fill="#FFC14C" opacity="0.5"/>
+                <circle class="flow-node" cx="175" cy="85" r="6" fill="#FF4834" opacity="0.5"/>
+                <circle class="flow-node" cx="275" cy="165" r="6" fill="#FF7940" opacity="0.5"/>
+                <circle class="flow-node" cx="375" cy="165" r="6" fill="#FFC14C" opacity="0.5"/>
+            </svg>
+        </div>
+        
         <div class="hero-content">
             <h1>Transform Your Strategy Creation & Impact</h1>
             <p class="subtitle">
@@ -573,14 +887,13 @@
         </div>
     </section>
 
-    <!-- VIDEO SECTION -->
-    <section class="video-section" id="videos">
+    <!-- HIGHLIGHTS SECTION -->
+    <section class="video-section" id="highlights">
         <div class="container">
-            <h2 class="section-title">Strategic Insights</h2>
+            <h2 class="section-title">Strategic Highlights</h2>
             <p class="section-subtitle">Explore our approach to strategy transformation through these featured presentations</p>
             
             <div class="video-grid">
-                <!-- Video 1 Placeholder -->
                 <div class="video-card">
                     <div class="video-placeholder">
                         <i class="fas fa-play-circle"></i>
@@ -593,7 +906,6 @@
                     </div>
                 </div>
                 
-                <!-- Video 2 Placeholder -->
                 <div class="video-card">
                     <div class="video-placeholder">
                         <i class="fas fa-play-circle"></i>
@@ -606,7 +918,6 @@
                     </div>
                 </div>
                 
-                <!-- Video 3 Placeholder -->
                 <div class="video-card">
                     <div class="video-placeholder">
                         <i class="fas fa-play-circle"></i>
@@ -622,6 +933,83 @@
         </div>
     </section>
 
+    <!-- BLOG SECTION WITH BELGIUM OBESITY POST -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Thinking</h2>
+            <p class="section-subtitle">Strategic thinking and industry perspectives from our team</p>
+            
+            <div class="blog-grid">
+                <!-- Belgium Obesity Blog Post -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="far fa-calendar"></i> October 2025
+                            </span>
+                            <span class="blog-category">Healthcare Strategy</span>
+                        </div>
+                        <h3>Belgium's €4.5B Obesity Crisis: 18 Strategic Pivot Points Discovered</h3>
+                        <p class="blog-excerpt">
+                            How AI analyzed 3,067 data sources in 72 hours to reveal Belgium's obesity paradox and identify 
+                            18 strategic intervention opportunities in their healthcare system.
+                        </p>
+                        <a href="blog-belgium-obesity.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="far fa-calendar"></i> September 2025
+                            </span>
+                            <span class="blog-category">Innovation</span>
+                        </div>
+                        <h3>Identifying Strategic Inflection Points</h3>
+                        <p class="blog-excerpt">
+                            A deep dive into our methodology for discovering critical moments where strategic 
+                            intervention can dramatically alter organizational trajectories.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="far fa-calendar"></i> August 2025
+                            </span>
+                            <span class="blog-category">Patient Journey</span>
+                        </div>
+                        <h3>Unified Patient Experience Design</h3>
+                        <p class="blog-excerpt">
+                            How integrating epidemiology, treatment algorithms, and stakeholder perspectives 
+                            creates comprehensive patient journey maps that drive better outcomes.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- SERVICES SECTION -->
     <section class="services-section" id="services">
         <div class="container">
@@ -629,7 +1017,6 @@
             <p class="section-subtitle">Transforming healthcare strategy through innovative methodologies</p>
             
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-route"></i>
@@ -644,7 +1031,6 @@
                     <a href="#contact-form" class="learn-more-btn">Learn More</a>
                 </div>
                 
-                <!-- Service 2 -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-compass"></i>
@@ -659,7 +1045,6 @@
                     <a href="#contact-form" class="learn-more-btn">Learn More</a>
                 </div>
                 
-                <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-chess-king"></i>
@@ -684,7 +1069,7 @@
             
             <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                 <!-- Replace YOUR_ACCESS_KEY with your actual key from Web3Forms -->
-                <input type="hidden" name="access_key" value="cc54bfea-592f-4df2-b8df-413e570ea722">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
                 <input type="hidden" name="subject" value="New Strategy Vectors Inquiry">
                 
                 <div class="form-grid">
@@ -751,7 +1136,37 @@
     <footer id="contact">
         <div class="footer-content">
             <div class="logo-container" style="justify-content: center; margin-bottom: 1rem;">
-                <div class="logo">SV</div>
+                <!-- DOUBLED SIZE Footer Infinity Logo -->
+                <div class="animated-logo">
+                    <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#FF4834;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#FF7940;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFC14C;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Complete infinity symbol -->
+                        <path class="infinity-path" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z" 
+                              stroke="url(#footerGrad)" stroke-width="5" fill="none"/>
+                        
+                        <!-- Full set of animated nodes -->
+                        <circle class="flow-node node-red" cx="20" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="35" cy="22" r="3.5"/>
+                        <circle class="flow-node node-orange" cx="50" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="65" cy="22" r="3.5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="4"/>
+                        <circle class="flow-node node-orange" cx="95" cy="58" r="3.5"/>
+                        <circle class="flow-node node-gold" cx="110" cy="40" r="4"/>
+                        <circle class="flow-node node-red" cx="125" cy="58" r="3.5"/>
+                        
+                        <!-- Extra accent nodes -->
+                        <circle class="flow-node node-orange" cx="42" cy="30" r="2" opacity="0.6"/>
+                        <circle class="flow-node node-red" cx="88" cy="50" r="2" opacity="0.6"/>
+                    </svg>
+                </div>
                 <span class="brand-name">Strategy Vectors</span>
             </div>
             <div class="social-links">
@@ -776,7 +1191,7 @@
             navLinks.classList.toggle('active');
         }
         
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -786,13 +1201,12 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
                     document.getElementById('navLinks').classList.remove('active');
                 }
             });
         });
         
-        // Add scroll effect to header
+        // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
@@ -802,27 +1216,29 @@
             }
         });
         
-        // Form submission handling
+        // Form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 const successMsg = document.getElementById('form-success');
                 const errorMsg = document.getElementById('form-error');
                 
-                // Hide any previous messages
                 successMsg.style.display = 'none';
                 errorMsg.style.display = 'none';
                 
-                // The form will submit normally to Web3Forms
-                // Web3Forms will handle the email sending
-                
-                // Show success message after a brief delay
                 setTimeout(function() {
                     successMsg.style.display = 'block';
                     contactForm.reset();
-                    // Scroll to success message
                     successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }, 1000);
+            });
+        }
+        
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (prefersReducedMotion.matches) {
+            document.querySelectorAll('.infinity-path, .flow-node').forEach(el => {
+                el.style.animationPlayState = 'paused';
             });
         }
     </script>
