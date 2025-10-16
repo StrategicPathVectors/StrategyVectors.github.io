@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Latest Thinking - Strategy Vectors</title>
+    
+    <!-- Google Fonts for Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==================================
+           BRAND COLORS FROM CHAMELEON PALETTE
+           ================================== */
+        :root {
+            /* Primary Colors */
+            --primary-red: #FF4834;
+            --primary-yellow: #FFC14C;
+            --blend-orange: #FF7940;
+            
+            /* Secondary Colors */
+            --secondary-purple: #8400AC;
+            --secondary-magenta: #EB1CA9;
+            --secondary-yellow: #FFE594;
+            
+            /* Background Colors */
+            --bg-dark: #5E5E5E;
+            --bg-medium: #757575;
+            --bg-light: #f8f8f8;
+            --white: #ffffff;
+            
+            /* For headers */
+            --primary-purple: #44003A;
+            
+            /* Typography */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+        
+        /* ==================================
+           RESET & BASE STYLES
+           ================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* ==================================
+           ANIMATED SVG LOGO STYLES
+           ================================== */
+        .animated-logo {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .animated-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .infinity-path {
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            opacity: 0.9;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 0;
+            animation: infinityMorph 8s ease-in-out infinite, dashFlow 12s linear infinite;
+        }
+        
+        .infinity-gradient-red {
+            stroke: var(--primary-red);
+        }
+        
+        .infinity-gradient-gold {
+            stroke: var(--primary-yellow);
+            opacity: 0.8;
+        }
+        
+        .flow-node {
+            opacity: 0;
+            animation: nodeAppear 8s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        .node-red { fill: var(--primary-red); }
+        .node-gold { fill: var(--primary-yellow); }
+        .node-blend { fill: #FF7940; }
+        
+        .flow-node:nth-child(3) { animation-delay: 0s; }
+        .flow-node:nth-child(4) { animation-delay: 0.5s; }
+        .flow-node:nth-child(5) { animation-delay: 1s; }
+        .flow-node:nth-child(6) { animation-delay: 1.5s; }
+        .flow-node:nth-child(7) { animation-delay: 2s; }
+        .flow-node:nth-child(8) { animation-delay: 2.5s; }
+        .flow-node:nth-child(9) { animation-delay: 3s; }
+        
+        @keyframes infinityMorph {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.05) rotate(2deg); }
+            50% { transform: scale(0.95) rotate(-2deg); }
+            75% { transform: scale(1.05) rotate(2deg); }
+        }
+        
+        @keyframes dashFlow {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 1000; }
+        }
+        
+        @keyframes nodeAppear {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            10%, 90% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.2); }
+        }
+
+        /* ==================================
+           NAVIGATION HEADER
+           ================================== */
+        header {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .brand-name {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* ==================================
+           PAGE HEADER
+           ================================== */
+        .page-header {
+            margin-top: 72px;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .page-header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* ==================================
+           BLOGS SECTION
+           ================================== */
+        .blogs-section {
+            padding: 4rem 2rem;
+            background: var(--bg-light);
+            min-height: 60vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(132, 0, 172, 0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            color: var(--primary-purple);
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-meta {
+            color: var(--primary-red);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-content p {
+            color: var(--bg-dark);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .read-more {
+            color: var(--secondary-purple);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .read-more:hover {
+            color: var(--primary-red);
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary-purple), var(--secondary-magenta));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(132, 0, 172, 0.4);
+        }
+
+        .back-home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(132, 0, 172, 0.3);
+        }
+        
+        /* ==================================
+           FOOTER
+           ================================== */
+        footer {
+            background: var(--primary-purple);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* ==================================
+           RESPONSIVE DESIGN
+           ================================== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-purple);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .animated-logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .blogs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blogs-section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="animated-logo">
+                    <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <path class="infinity-path infinity-gradient-red" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        <path class="infinity-path infinity-gradient-gold" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <circle class="flow-node node-red" cx="35" cy="27" r="4"/>
+                        <circle class="flow-node node-gold" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="65" cy="27" r="5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="95" cy="53" r="3"/>
+                        <circle class="flow-node node-blend" cx="110" cy="40" r="5"/>
+                        <circle class="flow-node node-red" cx="125" cy="53" r="4"/>
+                    </svg>
+                </div>
+                <div class="brand-name">Strategy Vectors</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Our Latest Thinking</h1>
+        <p>Insights, perspectives, and thought leadership on strategic transformation and innovation</p>
+    </section>
+
+    <!-- BLOGS SECTION -->
+    <section class="blogs-section">
+        <div class="container">
+            <div class="blogs-grid" id="all-blogs">
+                <!-- All blogs will be dynamically loaded here -->
+            </div>
+
+            <div class="back-home">
+                <a href="index.html" class="back-home-btn">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-container">
+                <div class="animated-logo">
+                    <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <path class="infinity-path infinity-gradient-red" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        <path class="infinity-path infinity-gradient-gold" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <circle class="flow-node node-red" cx="35" cy="27" r="4"/>
+                        <circle class="flow-node node-gold" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="65" cy="27" r="5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="95" cy="53" r="3"/>
+                        <circle class="flow-node node-blend" cx="110" cy="40" r="5"/>
+                        <circle class="flow-node node-red" cx="125" cy="53" r="4"/>
+                    </svg>
+                </div>
+                <div class="brand-name">Strategy Vectors</div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 Strategy Vectors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/blogs-data.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Load all blogs
+        function loadAllBlogs() {
+            const allBlogsContainer = document.getElementById('all-blogs');
+            if (!allBlogsContainer || typeof blogsData === 'undefined') return;
+
+            blogsData.forEach(blog => {
+                const blogCard = document.createElement('article');
+                blogCard.className = 'blog-card';
+                blogCard.id = blog.id;
+                blogCard.innerHTML = `
+                    <img src="${blog.image}" alt="${blog.title}" class="blog-image">
+                    <div class="blog-content">
+                        <h3>${blog.title}</h3>
+                        <p class="blog-meta">Published: ${blog.date}</p>
+                        <p>${blog.content}</p>
+                        <a href="#${blog.id}" class="read-more">Read Full Article →</a>
+                    </div>
+                `;
+                allBlogsContainer.appendChild(blogCard);
+            });
+        }
+
+        // Load blogs when page loads
+        document.addEventListener('DOMContentLoaded', loadAllBlogs);
+
+        // Smooth scroll to blog if hash is present
+        if (window.location.hash) {
+            setTimeout(() => {
+                const element = document.querySelector(window.location.hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
