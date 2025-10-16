@@ -86,13 +86,16 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            margin-left: -10px;
         }
         
         .animated-logo {
-            width: 50px;
-            height: 25px;
-            position: relative;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .animated-logo svg {
@@ -100,33 +103,103 @@
             height: 100%;
         }
         
+        /* Main infinity path with morphing animation - SLOWED DOWN */
         .infinity-path {
             fill: none;
             stroke-width: 3;
             stroke-linecap: round;
-            stroke-linejoin: round;
-            animation: drawPath 3s ease-in-out infinite;
+            opacity: 0.9;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 0;
+            animation: infinityMorph 16s ease-in-out infinite, dashFlow 24s linear infinite;
         }
         
+        /* Use coral red and gold gradient only */
         .infinity-gradient-red {
             stroke: var(--primary-red);
-            opacity: 0.9;
         }
         
         .infinity-gradient-gold {
             stroke: var(--primary-yellow);
-            opacity: 0.6;
-            animation-delay: 0.5s;
+            opacity: 0.8;
         }
         
-        @keyframes drawPath {
+        /* Node animations - SLOWED DOWN */
+        .flow-node {
+            opacity: 0;
+            animation: nodeAppear 16s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        .node-red {
+            fill: var(--primary-red);
+        }
+        
+        .node-gold {
+            fill: var(--primary-yellow);
+        }
+        
+        .node-blend {
+            fill: #FF7940;
+        }
+        
+        /* Stagger node animations - DOUBLED timing */
+        .flow-node:nth-child(3) { animation-delay: 0s; }
+        .flow-node:nth-child(4) { animation-delay: 1s; }
+        .flow-node:nth-child(5) { animation-delay: 2s; }
+        .flow-node:nth-child(6) { animation-delay: 3s; }
+        .flow-node:nth-child(7) { animation-delay: 4s; }
+        .flow-node:nth-child(8) { animation-delay: 5s; }
+        .flow-node:nth-child(9) { animation-delay: 6s; }
+        .flow-node:nth-child(10) { animation-delay: 7s; }
+        .flow-node:nth-child(11) { animation-delay: 8s; }
+        
+        /* Logo Keyframe Animations - SLOWED DOWN */
+        @keyframes infinityMorph {
             0%, 100% {
-                stroke-dasharray: 200;
-                stroke-dashoffset: 200;
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                transform: scale(1.05) rotate(2deg);
             }
             50% {
-                stroke-dasharray: 200;
+                transform: scale(0.95) rotate(-2deg);
+            }
+            75% {
+                transform: scale(1.05) rotate(2deg);
+            }
+        }
+        
+        @keyframes dashFlow {
+            0% {
                 stroke-dashoffset: 0;
+            }
+            100% {
+                stroke-dashoffset: 1000;
+            }
+        }
+        
+        @keyframes nodeAppear {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            10%, 90% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
             }
         }
         
@@ -366,6 +439,19 @@
             padding: 0 2rem;
         }
         
+        .footer-content .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-content .brand-name {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        
         .footer-content p {
             margin-bottom: 0.5rem;
         }
@@ -376,6 +462,11 @@
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
+            }
+            
+            .animated-logo {
+                width: 60px;
+                height: 60px;
             }
             
             .nav-links {
@@ -424,10 +515,22 @@
             <div class="logo-container">
                 <div class="animated-logo">
                     <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dual path infinity logo like homepage -->
                         <path class="infinity-path infinity-gradient-red" 
                               d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
                         <path class="infinity-path infinity-gradient-gold" 
                               d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <!-- Complete set of animated nodes -->
+                        <circle class="flow-node node-red" cx="20" cy="40" r="3"/>
+                        <circle class="flow-node node-gold" cx="35" cy="22" r="2.5"/>
+                        <circle class="flow-node node-blend" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-gold" cx="65" cy="22" r="2.5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="95" cy="58" r="2.5"/>
+                        <circle class="flow-node node-gold" cx="110" cy="40" r="3"/>
+                        <circle class="flow-node node-red" cx="125" cy="58" r="2.5"/>
+                        <circle class="flow-node node-blend" cx="140" cy="40" r="3"/>
                     </svg>
                 </div>
                 <span class="brand-name">Strategy Vectors</span>
@@ -438,8 +541,9 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="approach.html">Approach</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -501,11 +605,21 @@
         <!-- Main Description -->
         <div class="description-box">
             <h3>What Does Our Patient Journey Framework (PJF) Do?</h3>
-            <p>It contextualises the entire health economy and market, stakeholder influences, financial and resource constraints, competitive landscape, and behavioural science investigations of patients and HCPs all around a proprietary 12-step framework.</p>
+            <p>From Contextual Intelligence to Strategy Vectors: The Starting Point, Not the Destination</p>
             
-            <p>Insights should be developed in teams, and this unifying and optimised lens focused on the patient as the core (but far from only aspect) allows all team members to align around one common understanding of the patient journey—but also how different segments require different things throughout this journey.</p>
-            
-            <p>Ultimately, all of this contextualised intelligence produces a series of strategic vectors or potential pivot points that form the basis and trigger for strategic choice development.</p>
+            <p>The PJF initial report represents the essential first step in strategy creation, not its conclusion. The framework's primary deliverable is the identification of Strategy Vectors—points of strategic intervention where behavioural changes can fundamentally redirect outcomes toward desired future states.</p>
+        </div>
+
+        <!-- Understanding Strategy Vectors - MOVED ABOVE 12-Step Framework -->
+        <div class="framework-highlight">
+            <h3><i class="fas fa-compass"></i>Understanding Strategy Vectors</h3>
+            <p>Strategy Vectors are the synthesis of comprehensive market intelligence contextualised through the patient journey. Each vector represents:</p>
+            <ul style="margin-top: 1rem; padding-left: 2rem; line-height: 1.8;">
+                <li><strong>A Current State</strong> - What behaviours exist today and why they persist</li>
+                <li><strong>A Problem or Opportunity</strong> - Where current behaviours create suboptimal outcomes or where gaps reveal untapped potential</li>
+                <li><strong>A Leverage Point</strong> - Where intervention could trigger cascading behavioural changes across multiple stakeholders</li>
+                <li><strong>Multiple Possible Futures</strong> - Various pathways that could lead to preferred outcomes</li>
+            </ul>
         </div>
 
         <!-- Framework Highlights -->
@@ -518,23 +632,41 @@
             <h3><i class="fas fa-users"></i>Team-Based Insight Development</h3>
             <p>Strategic insights are most powerful when developed collaboratively. Our approach brings cross-functional teams together around a shared understanding, ensuring that diverse perspectives contribute to richer, more robust strategic outcomes while maintaining alignment on core objectives.</p>
         </div>
-
-        <div class="framework-highlight">
-            <h3><i class="fas fa-heartbeat"></i>Patient-Centric, But Holistic</h3>
-            <p>While the patient remains at the center of our framework, we recognize that effective healthcare strategy must account for the entire ecosystem. Our approach balances patient needs with stakeholder interests, market realities, and resource constraints to create strategies that are both ideal and achievable.</p>
-        </div>
     </section>
 
     <!-- CALL TO ACTION -->
     <section class="cta-section">
         <h2>Ready to Transform Your Strategy?</h2>
         <p>Discover how our contextual intelligence and system thinking approach can unlock new strategic opportunities for your organization.</p>
-        <a href="#contact" class="cta-button">Get Started</a>
+        <a href="index.html#contact" class="cta-button">Get Started</a>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
+            <div class="logo-container" style="justify-content: center; margin-bottom: 1rem; margin-left: 0;">
+                <div class="animated-logo">
+                    <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dual path infinity logo like homepage -->
+                        <path class="infinity-path infinity-gradient-red" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        <path class="infinity-path infinity-gradient-gold" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <!-- Complete set of animated nodes -->
+                        <circle class="flow-node node-red" cx="20" cy="40" r="3"/>
+                        <circle class="flow-node node-gold" cx="35" cy="22" r="2.5"/>
+                        <circle class="flow-node node-blend" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-gold" cx="65" cy="22" r="2.5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="95" cy="58" r="2.5"/>
+                        <circle class="flow-node node-gold" cx="110" cy="40" r="3"/>
+                        <circle class="flow-node node-red" cx="125" cy="58" r="2.5"/>
+                        <circle class="flow-node node-blend" cx="140" cy="40" r="3"/>
+                    </svg>
+                </div>
+                <span class="brand-name">Strategy Vectors</span>
+            </div>
             <p>&copy; 2025 Strategy Vectors. All rights reserved.</p>
             <p>Transforming Strategy Through Intelligence</p>
         </div>
