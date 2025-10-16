@@ -263,8 +263,56 @@
         .hero .subtitle {
             font-size: 1.25rem;
             color: var(--secondary-yellow);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             font-weight: 300;
+        }
+        
+        /* Video Container */
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+        
+        .video-placeholder {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px dashed var(--primary-yellow);
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .video-placeholder:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary-red);
+        }
+        
+        .video-placeholder i {
+            font-size: 4rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .video-placeholder:hover i {
+            color: var(--primary-red);
+            transform: scale(1.1);
+        }
+        
+        .video-placeholder p {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-placeholder .video-subtext {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 0;
         }
         
         /* ==================================
@@ -494,6 +542,22 @@
                 font-size: 1rem;
             }
             
+            .video-container {
+                margin-top: 2rem;
+            }
+            
+            .video-placeholder {
+                padding: 3rem 1.5rem;
+            }
+            
+            .video-placeholder i {
+                font-size: 3rem;
+            }
+            
+            .video-placeholder p {
+                font-size: 1.25rem;
+            }
+            
             .section-intro h2 {
                 font-size: 2rem;
             }
@@ -553,6 +617,15 @@
         <div class="hero-content">
             <h1>Our Approach</h1>
             <p class="subtitle">With our contextual intelligence, system thinking & fresh perspective framework you can create better strategy</p>
+            
+            <!-- Video Placeholder -->
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Video Coming Soon</p>
+                    <p class="video-subtext">Learn about our approach in action</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -629,8 +702,20 @@
         </div>
 
         <div class="framework-highlight">
-            <h3><i class="fas fa-users"></i>Team-Based Insight Development</h3>
-            <p>Strategic insights are most powerful when developed collaboratively. Our approach brings cross-functional teams together around a shared understanding, ensuring that diverse perspectives contribute to richer, more robust strategic outcomes while maintaining alignment on core objectives.</p>
+            <h3><i class="fas fa-users"></i>Strategy Building Begins Here</h3>
+            <p>Once Strategy Vectors are identified, teams can engage in the genuine work of strategy creation:</p>
+            
+            <p style="margin-top: 1.5rem;"><strong>Debate Possibilities</strong> - Each Strategy Vector opens multiple pathways forward. Teams must explore, challenge, and refine these possibilities. The framework provides the structured foundation for these strategic debates.</p>
+            
+            <p style="margin-top: 1rem;"><strong>Iterate with Your Team</strong> - Strategy development is not linear. Armed with Strategy Vectors teams can rapidly iterate on strategic concepts (& re-engage with our PJF!)</p>
+            
+            <p style="margin-top: 1rem;"><strong>Dive into New Areas of Investigation</strong> - Strategy Vectors reveal gaps in understanding or areas requiring deeper investigation. This focused investigation is fundamentally different from broad data collection; it's targeted inquiry in service of strategic possibility. Aiming at real insight.</p>
+            
+            <p style="margin-top: 1rem;"><strong>Seek Fresh Insight</strong> - The framework creates fertile ground for insight generation by revealing unexpected connections, contradictions, and opportunities. These insights emerge from the synthesis of contextual intelligence, not from the data itself.</p>
+            
+            <p style="margin-top: 1rem;"><strong>Build Pilots and Scenarios</strong> - With Strategy Vectors identified and possibilities debated, teams can develop rapid pilots to test hypotheses and create scenarios to model different future states. What would have to be true for this Strategy Vector to shift?</p>
+            
+            <p style="margin-top: 1rem;"><strong>Move Quickly with Strategy Deployment</strong> - Because the framework creates alignment around problems and possibilities, organizations can move from strategy creation to deployment with unusual speed. Teams aren't selling ideas across silos; they're executing against shared Strategy Vectors that everyone understands and believes in.</p>
         </div>
     </section>
 
