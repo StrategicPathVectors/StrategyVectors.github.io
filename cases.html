@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies - Strategy Vectors</title>
+    
+    <!-- Google Fonts for Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==================================
+           BRAND COLORS FROM CHAMELEON PALETTE
+           ================================== */
+        :root {
+            /* Primary Colors - NO DEEP PURPLE, ONLY RED AND GOLD */
+            --primary-red: #FF4834;
+            --primary-yellow: #FFC14C;
+            --blend-orange: #FF7940;
+            
+            /* Secondary Colors */
+            --secondary-purple: #8400AC;
+            --secondary-magenta: #EB1CA9;
+            --secondary-yellow: #FFE594;
+            
+            /* Background Colors */
+            --bg-dark: #5E5E5E;
+            --bg-medium: #757575;
+            --bg-light: #f8f8f8;
+            --white: #ffffff;
+            
+            /* For headers only where needed */
+            --primary-purple: #44003A;
+            
+            /* Typography */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+        
+        /* ==================================
+           RESET & BASE STYLES
+           ================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* ==================================
+           ANIMATED SVG LOGO STYLES
+           ================================== */
+        .animated-logo {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .animated-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Main infinity path with morphing animation */
+        .infinity-path {
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            opacity: 0.9;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 0;
+            animation: infinityMorph 8s ease-in-out infinite, dashFlow 12s linear infinite;
+        }
+        
+        /* Use coral red and gold gradient only */
+        .infinity-gradient-red {
+            stroke: var(--primary-red);
+        }
+        
+        .infinity-gradient-gold {
+            stroke: var(--primary-yellow);
+            opacity: 0.8;
+        }
+        
+        /* Node animations */
+        .flow-node {
+            opacity: 0;
+            animation: nodeAppear 8s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        .node-red {
+            fill: var(--primary-red);
+        }
+        
+        .node-gold {
+            fill: var(--primary-yellow);
+        }
+        
+        .node-blend {
+            fill: #FF7940;
+        }
+        
+        /* Stagger node animations */
+        .flow-node:nth-child(3) { animation-delay: 0s; }
+        .flow-node:nth-child(4) { animation-delay: 0.5s; }
+        .flow-node:nth-child(5) { animation-delay: 1s; }
+        .flow-node:nth-child(6) { animation-delay: 1.5s; }
+        .flow-node:nth-child(7) { animation-delay: 2s; }
+        .flow-node:nth-child(8) { animation-delay: 2.5s; }
+        .flow-node:nth-child(9) { animation-delay: 3s; }
+        
+        /* Logo Keyframe Animations */
+        @keyframes infinityMorph {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                transform: scale(1.05) rotate(2deg);
+            }
+            50% {
+                transform: scale(0.95) rotate(-2deg);
+            }
+            75% {
+                transform: scale(1.05) rotate(2deg);
+            }
+        }
+        
+        @keyframes dashFlow {
+            0% {
+                stroke-dashoffset: 0;
+            }
+            100% {
+                stroke-dashoffset: 1000;
+            }
+        }
+        
+        @keyframes nodeAppear {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            10%, 90% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+        }
+
+        /* ==================================
+           NAVIGATION HEADER
+           ================================== */
+        header {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .brand-name {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .nav-links a.active {
+            color: var(--primary-yellow);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* ==================================
+           PAGE HEADER
+           ================================== */
+        .page-header {
+            margin-top: 72px;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .page-header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        /* ==================================
+           MAIN CONTENT
+           ================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .case-studies-content {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .intro-text {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            color: var(--bg-dark);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* ==================================
+           CASE STUDY CARDS
+           ================================== */
+        .case-study-item {
+            margin-bottom: 4rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .case-study-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 72, 52, 0.2);
+        }
+        
+        .case-study-header {
+            padding: 2rem;
+            background: white;
+        }
+        
+        .case-study-header h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study-meta {
+            color: var(--bg-medium);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .case-study-description {
+            color: var(--bg-dark);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-study-tags {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-magenta));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* ==================================
+           CTA SECTION
+           ================================== */
+        .cta-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: var(--primary-purple);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: var(--bg-dark);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-magenta));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 72, 52, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 72, 52, 0.3);
+        }
+        
+        /* ==================================
+           FOOTER
+           ================================== */
+        footer {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* ==================================
+           RESPONSIVE DESIGN
+           ================================== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-purple);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .animated-logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .case-study-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .case-studies-content,
+            .cta-section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <!-- Animated Infinity Logo -->
+                <div class="animated-logo">
+                    <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <path class="infinity-path infinity-gradient-red" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        <path class="infinity-path infinity-gradient-gold" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <circle class="flow-node node-red" cx="35" cy="27" r="4"/>
+                        <circle class="flow-node node-gold" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="65" cy="27" r="5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="95" cy="53" r="3"/>
+                        <circle class="flow-node node-blend" cx="110" cy="40" r="5"/>
+                        <circle class="flow-node node-red" cx="125" cy="53" r="4"/>
+                    </svg>
+                </div>
+                <div class="brand-name">Strategy Vectors</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="cases.html" class="active">Case Studies</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Case Studies</h1>
+        <p>Explore real-world examples of how Strategy Vectors transforms business challenges into strategic opportunities through AI-powered intelligence</p>
+    </section>
+
+    <!-- CASE STUDIES CONTENT -->
+    <section class="case-studies-content">
+        <div class="container">
+            <div class="intro-text">
+                <p>We have selected some recent report summary "teasers" in various forms to provide an immediate idea of the level & type of intelligence the first stage of reporting produces. These examples demonstrate our unique approach to strategic analysis and the actionable insights we deliver to our clients.</p>
+            </div>
+
+            <!-- Case Study 1 -->
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <h2>Belgium Obesity Market Analysis</h2>
+                    <p class="case-study-meta">Healthcare Strategy | Q1 2025</p>
+                    <p class="case-study-description">
+                        An in-depth analysis of Belgium's escalating obesity crisis, examining patient journey pivot points and identifying strategic vectors for pharmaceutical market entry. This case study reveals how AI-powered analysis uncovered unexpected opportunities in the out-of-pocket GLP-1 medication market.
+                    </p>
+                    <div class="case-study-tags">
+                        <span class="tag">Healthcare</span>
+                        <span class="tag">Patient Journey</span>
+                        <span class="tag">Market Entry</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <h2>Digital Transformation Strategy</h2>
+                    <p class="case-study-meta">Technology | Q4 2024</p>
+                    <p class="case-study-description">
+                        A comprehensive strategic analysis for a mid-sized pharmaceutical company navigating digital transformation. Our VECTOR identification methodology uncovered critical pivot points in their existing operations, leading to a refined go-to-market strategy that increased efficiency by 40%.
+                    </p>
+                    <div class="case-study-tags">
+                        <span class="tag">Digital Strategy</span>
+                        <span class="tag">Transformation</span>
+                        <span class="tag">Life Sciences</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <h2>Rare Disease Market Entry Strategy</h2>
+                    <p class="case-study-meta">Pharmaceutical Strategy | Q3 2024</p>
+                    <p class="case-study-description">
+                        An innovative approach to entering a complex rare disease market, utilizing our Enhanced & Unified Patient Journey Creation methodology. This case demonstrates how contextual AI analysis can identify previously overlooked strategic opportunities in highly specialized therapeutic areas.
+                    </p>
+                    <div class="case-study-tags">
+                        <span class="tag">Rare Disease</span>
+                        <span class="tag">Market Strategy</span>
+                        <span class="tag">AI Analysis</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Case Study 4 -->
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <h2>Commercial Excellence Optimization</h2>
+                    <p class="case-study-meta">Sales Strategy | Q2 2024</p>
+                    <p class="case-study-description">
+                        A strategic review of commercial operations for a global life sciences company, identifying key pivot points in their sales approach and developing data-driven vectors for improved market penetration. This engagement showcased the power of combining traditional strategic analysis with AI-enhanced insights.
+                    </p>
+                    <div class="case-study-tags">
+                        <span class="tag">Commercial Strategy</span>
+                        <span class="tag">Sales Optimization</span>
+                        <span class="tag">Data Analytics</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Case Study 5 -->
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <h2>Portfolio Prioritization & Resource Allocation</h2>
+                    <p class="case-study-meta">Strategic Planning | Q1 2024</p>
+                    <p class="case-study-description">
+                        An extensive portfolio analysis helping a biotech company optimize resource allocation across multiple therapeutic programs. Using our VECTOR identification methodology, we identified strategic pivot points that enabled the client to refocus investments and accelerate their most promising assets.
+                    </p>
+                    <div class="case-study-tags">
+                        <span class="tag">Portfolio Strategy</span>
+                        <span class="tag">Resource Planning</span>
+                        <span class="tag">Biotech</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Case Study 6 -->
+            <div class="case-study-item">
+                <div class="case-study-header">
+                    <h2>Market Access & Payer Strategy</h2>
+                    <p class="case-study-meta">Market Access | Q4 2023</p>
+                    <p class="case-study-description">
+                        A comprehensive market access strategy for a novel therapeutic entering a challenging payer environment. Our analysis uncovered unexpected vectors for value demonstration and reimbursement optimization, resulting in successful market access across multiple European markets.
+                    </p>
+                    <div class="case-study-tags">
+                        <span class="tag">Market Access</span>
+                        <span class="tag">Payer Strategy</span>
+                        <span class="tag">Value Demonstration</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Strategy?</h2>
+            <p>Discover how Strategy Vectors can help unlock your organization's strategic potential through AI-powered intelligence and proven methodologies.</p>
+            <a href="index.html#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-container">
+                <div class="animated-logo">
+                    <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <path class="infinity-path infinity-gradient-red" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        <path class="infinity-path infinity-gradient-gold" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <circle class="flow-node node-red" cx="35" cy="27" r="4"/>
+                        <circle class="flow-node node-gold" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="65" cy="27" r="5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="95" cy="53" r="3"/>
+                        <circle class="flow-node node-blend" cx="110" cy="40" r="5"/>
+                        <circle class="flow-node node-red" cx="125" cy="53" r="4"/>
+                    </svg>
+                </div>
+                <div class="brand-name">Strategy Vectors</div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 Strategy Vectors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
