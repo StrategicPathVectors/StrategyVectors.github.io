@@ -400,33 +400,31 @@
         
         .service-card {
             background: white;
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255, 72, 52, 0.15);
+            box-shadow: 0 8px 25px rgba(255, 72, 52, 0.2);
         }
         
         .service-icon {
             font-size: 3rem;
             color: var(--primary-red);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
             color: var(--primary-purple);
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
         
         .service-card p {
             color: var(--bg-dark);
-            line-height: 1.8;
             margin-bottom: 1.5rem;
         }
         
@@ -435,8 +433,8 @@
             color: var(--primary-red);
             text-decoration: none;
             font-weight: 600;
-            padding: 0.5rem 1.5rem;
             border: 2px solid var(--primary-red);
+            padding: 0.5rem 1.5rem;
             border-radius: 25px;
             transition: all 0.3s ease;
         }
@@ -445,83 +443,23 @@
             background: var(--primary-red);
             color: white;
         }
-
+        
         /* ==================================
-           BLOG SECTION
+           CASE STUDIES SECTION
            ================================== */
-        .blog-section {
+        .case-studies-section {
             padding: 4rem 2rem;
             background: white;
         }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .blog-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(132, 0, 172, 0.15);
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .blog-content {
-            padding: 2rem;
-        }
-
-        .blog-content h3 {
-            font-size: 1.4rem;
-            color: var(--primary-purple);
-            margin-bottom: 0.75rem;
-        }
-
-        .blog-meta {
-            color: var(--primary-red);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .blog-content p {
-            color: var(--bg-dark);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .read-more {
-            color: var(--secondary-purple);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: var(--primary-red);
-        }
-
-        .view-all-blogs {
+        
+        .view-all-case-studies {
             text-align: center;
             margin-top: 3rem;
         }
-
+        
         .view-all-btn {
             display: inline-block;
-            background: linear-gradient(135deg, var(--secondary-purple), var(--secondary-magenta));
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-magenta));
             color: white;
             padding: 1rem 2.5rem;
             border-radius: 50px;
@@ -529,36 +467,102 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 20px rgba(132, 0, 172, 0.4);
+            box-shadow: 0 5px 20px rgba(255, 72, 52, 0.4);
         }
-
+        
         .view-all-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(132, 0, 172, 0.3);
+            box-shadow: 0 10px 25px rgba(255, 72, 52, 0.3);
         }
         
         /* ==================================
-           CONTACT FORM SECTION
+           BLOG SECTION
+           ================================== */
+        .blog-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 72, 52, 0.2);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-content h3 {
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .blog-meta {
+            color: var(--bg-medium);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content p {
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-magenta);
+        }
+        
+        .view-all-blogs {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* ==================================
+           CONTACT SECTION
            ================================== */
         .contact-section {
             padding: 4rem 2rem;
-            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+            background: white;
         }
         
         .contact-form {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
         .form-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .form-group {
@@ -571,10 +575,9 @@
         }
         
         .form-group label {
-            font-weight: 600;
-            color: var(--primary-purple);
             margin-bottom: 0.5rem;
-            font-size: 0.95rem;
+            color: var(--primary-purple);
+            font-weight: 600;
         }
         
         .form-group input,
@@ -582,15 +585,15 @@
             padding: 0.75rem;
             border: 2px solid #e0e0e0;
             border-radius: 8px;
-            font-size: 1rem;
             font-family: var(--font-body);
+            font-size: 1rem;
             transition: border-color 0.3s ease;
         }
         
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--secondary-purple);
+            border-color: var(--primary-red);
         }
         
         .form-submit {
@@ -607,6 +610,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 72, 52, 0.4);
         }
         
         .submit-button:hover {
@@ -620,30 +624,11 @@
             font-size: 0.9rem;
         }
         
-        .form-message {
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            text-align: center;
-        }
-        
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .error-message {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
         /* ==================================
            FOOTER
            ================================== */
         footer {
-            background: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
             color: white;
             padding: 2rem;
             text-align: center;
@@ -652,24 +637,21 @@
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
         }
-
+        
         .footer-logo-container {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             margin-bottom: 1rem;
         }
         
         .social-links {
-            margin: 1rem 0;
             display: flex;
             justify-content: center;
             gap: 1.5rem;
+            margin-top: 1rem;
         }
         
         .social-links a {
@@ -745,6 +727,7 @@
             .video-section,
             .blog-section,
             .services-section,
+            .case-studies-section,
             .contact-section {
                 padding: 3rem 1rem;
             }
@@ -779,6 +762,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#videos">Videos</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -797,11 +781,11 @@
         </div>
     </section>
 
-    <!-- VIDEO SECTION -->
+    <!-- VIDEO SECTION - RENAMED TO "EXPLAINING OUR APPROACH" -->
     <section id="videos" class="video-section">
         <div class="container">
-            <h2 class="section-title">Watch Our Insights</h2>
-            <p class="section-subtitle">Discover how Strategy Vectors transforms business challenges into opportunities</p>
+            <h2 class="section-title">Explaining Our Approach</h2>
+            <p class="section-subtitle">Discover how our approach can revolutionise your strategy creation. These videos explain in more...</p>
             
             <div class="video-grid">
                 <div class="video-container">
@@ -833,7 +817,7 @@
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive strategic solutions tailored to your needs</p>
+            <p class="section-subtitle">Three stages and levels of engagement to shift your strategy toward something far more than it would otherwise have been</p>
             
             <div class="services-grid">
                 <div class="service-card">
@@ -866,11 +850,47 @@
         </div>
     </section>
 
-    <!-- BLOG SECTION -->
+    <!-- NEW CASE STUDIES SECTION -->
+    <section id="case-studies" class="case-studies-section">
+        <div class="container">
+            <h2 class="section-title">Case Studies</h2>
+            <p class="section-subtitle">We have selected some recent report summary "teasers" in various forms to provide an immediate idea of the level & type of intelligence the first stage of reporting produces</p>
+            
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="view-all-case-studies">
+                <a href="cases.html" class="view-all-btn">See More Examples</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION - UPDATED TO SHOW ONLY 3 BLOGS -->
     <section id="blog" class="blog-section">
         <div class="container">
             <h2 class="section-title">Latest Thinking</h2>
-            <p class="section-subtitle">Thought leadership and industry perspectives</p>
+            <p class="section-subtitle">Read or watch our most recent thoughts on life sciences & wider strategy related topics</p>
             
             <div class="blog-grid" id="latest-blogs">
                 <!-- Latest 3 blogs -->
@@ -1002,6 +1022,9 @@
         function loadLatestBlogs() {
             const latestBlogsContainer = document.getElementById('latest-blogs');
             if (!latestBlogsContainer || typeof blogsData === 'undefined') return;
+
+            // Clear existing content
+            latestBlogsContainer.innerHTML = '';
 
             // Get the 3 most recent blogs
             const latestBlogs = blogsData.slice(0, 3);
