@@ -5,10 +5,10 @@
 const blogsData = [
     {
         id: 'blog-1',
-        title: 'The Future of Strategic Planning in 2025',
-        date: 'March 15, 2025',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
-        excerpt: 'Explore how AI and data analytics are reshaping the strategic planning landscape, and what it means for businesses seeking competitive advantage...',
+        title: 'New content coming soon',
+        date: 'November 5, 2025',
+        image: 'images/golf_strategy.png',
+        excerpt: 'Explore how golf & course management is a great analogy for straetgic decision-making',
         content: 'More new thinking to generate discussions coming soon'
     },
     {
