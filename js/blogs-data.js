@@ -13,11 +13,42 @@ const blogsData = [
     },
     {
         id: 'blog-2',
-        title: 'Building Resilient Organizations',
-        date: 'February 28, 2025',
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop',
-        excerpt: 'Learn the key principles of organizational resilience and how to build adaptable structures that thrive in uncertainty...',
-        content: 'More new thinking to generate discussions coming soon'
+        title: 'The Science of Strategic Insights',
+        date: 'October 28, 2025',
+        image: 'images/insight_aha.png',
+        excerpt: 'Understanding the Cognitive Foundations and collaborative practices that transform data into contextualised intelligence and then on to insight is crucial',
+        content: `The Science of Strategic Insights: How Your Brain and Your Team Generate Breakthrough Thinking (pt 1)
+
+We get asked often “what do you mean by insights?” And, we find ourselves commenting on articles & posts about insights which de-value the critical importance of true insight in strategy development and under-estimate the difficulty of creating “real” insight. Often times people use “insights” when they mean “something interesting” or a “new piece of information”.
+
+Understanding the Cognitive Foundations and collaborative practices that transform data into contextualised intelligence and then on to insights toward competitive advantage is crucial.
+So, we are going to dedicate a few blogs to this topic…
+This is part 1; where we focus on “what is an insight?”
+Strategic insights don't arrive through mystical inspiration. They emerge from specific neurobiological processes in your brain and deliberate collaborative practices in your teams. 
+Understanding these mechanisms, and the barriers that block them, is essential for pharmaceutical organizations seeking to transform data into strategic advantage.
+The gap between data-rich and insight-driven companies isn't about information access. It's about cognitive capabilities and team behaviours. While 69% of biopharma leaders believe their current model meets today's needs, only 30% feel prepared to respond to market trends through insights (Deloitte, 2024). This dangerous confidence masks a fundamental misunderstanding of how insights actually form. 
+Here's what the science reveals about generating strategic insights and how teams can systematically develop this capability. 
+To appreciate what happens in your brain during an "Aha!" moment we must understand what qualifies as a true strategic insight. Chameleon Consulting identifies four essential characteristics that distinguish insights from mere observations or data:
+1. Previously Unknown: If you knew it already, then so did your competitor—that is data or fact. An insight provides a unique viewpoint, preferably with longevity.
+2. Driver of Behaviour: Understand stakeholder needs, get behind data and reveal fresh attitudes and behaviours. Provide some future direction and longevity.
+3. Competitive Advantage: Reveal new ideas, words, segments, services and offerings that link with a deeper brand promise, creating fresh competitive advantage.
+4. Immediately Actionable: The insight must drive the organization. Even if it requires new indications, lifecycle management options, etc., you should start planning now. 
+
+A true insight in the pharmaceutical industry needs to pass all four tests. 
+Knowing that market share declined 3% last quarter is data. Understanding that this decline stems from a newly identified patient adherence barrier related to injection anxiety that competitors haven't addressed and that this barrier could be overcome through a nurse support program is an insight. It's previously unknown (competitors haven't recognized this specific barrier), drives behaviour (explains patient discontinuation patterns), creates competitive advantage (addressable through differentiated support), and is immediately actionable (program development can begin). 
+Strategic insights feel sudden and complete, arriving with a sense of certainty that analytic problem-solving lacks. This isn't coincidence—it reflects distinct neurobiological mechanisms. Groundbreaking research by John Kounios and Mark Beeman, published in the Annual Review of Psychology (2014), reveals that insights involve the right hemisphere's anterior superior temporal gyrus, which engages in coarser semantic coding activating broader semantic fields than the left hemisphere's narrower focus. This enables connecting distant associations that focused analysis would miss. At the moment of insight, there's a burst of high-frequency gamma-band EEG activity—the brain's "Eureka!" signature. This is preceded by transient alpha-band activity that reduces visual noise, essentially closing your eyes to external distractions to facilitate retrieval of weakly activated solutions gestating below conscious awareness. 
+Insights differ fundamentally from analytic solutions in four ways:
+1. Suddenness: They arrive all-at-once, not through stepwise progress (the rigour of process gets you far; but isn’t everything!)
+2. No intermediate states: You don't get "partway" to an insight 
+3. Positive affect: The characteristic "Aha!" feeling accompanies breakthrough understanding that can then lead to real momentum across the room!
+4. Higher accuracy: Webb et al. (2016) found solutions accompanied by insight are actually more likely to be correct (r=0.40-0.50) than analytically derived solutions 
+
+Most remarkably, insight work happens below conscious awareness. Solution representations activate weakly long before conscious recognition. Your brain is processing patterns and connections while you're focused elsewhere—which explains why insights often arrive during showers, walks, or while falling asleep. Individual differences matter. People showing more diffuse, outward attention at rest demonstrate greater insight-solving capabilities. Positive mood facilitates insight by broadening semantic processing, making weak associations more accessible and increasing both perceptual and conceptual attention breadth. 
+The strategic implication: Organizations seeking breakthrough insights must design environments and practices that leverage these neurobiological realities—diverse stimuli to activate broader semantic fields, psychological safety to maintain positive affect, and permission for incubation time rather than relentless deadline pressure. 
+In our next blog we will focus on the core cognitive competencies required to generate better & deeper insights…
+
+Key References: - Kounios, J., & Beeman, M. (2014). The cognitive neuroscience of insight. Annual Review of Psychology, 65, 71-93. - Webb, M. E., Little, D. R., & Cropper, S. J. (2016). Insight is not in the problem: Investigating insight in problem solving across task types. Frontiers in Psychology, 7, 1424. - Watkins, M. (2024). Six disciplines of strategic thinking. Harvard Business Review. - Day, G. S. (2011). Closing the marketing capabilities gap. Journal of Marketing, 75(4), 183-195. - Lycett, M. (2013). 'Datafication': Making sense of (big) data in a complex world. European Journal of Information Systems, 22(4), 381-386. - Kolko, J. (2012). Wicked problems: Problems worth solving. Austin Center for Design. - Shore, Z., & McMaster, H. R. Strategic empathy: Understanding adversaries' perceptions and motivations. - Kahneman, D., & Tversky, A. Judgment under uncertainty: Heuristics and biases. - Deloitte. (2024). Future of biopharma commercial models survey. - Stremersch, S., et al. (2024). Customer insights for innovation. Journal of the Academy of Marketing Science. - Strategic Management Journal research on dynamic capabilities and organizational learning.
+`
     },
     {
     id: 'blog-3',
