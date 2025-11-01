@@ -98,24 +98,24 @@ Key References: - Kounios, J., & Beeman, M. (2014). The cognitive neuroscience o
 }
     {
         id: 'blog-4',
-        title: 'Placeholder Blog Post 4',
-        date: 'December 15, 2024',
+        title: 'Placeholder Blog 4',
+        date: 'November 10, 2024',
         image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=400&fit=crop',
         excerpt: 'This is a placeholder for future thought leadership content...',
         content: 'More new thinking to generate discussions coming soon'
     },
     {
         id: 'blog-5',
-        title: 'Placeholder Blog Post 5',
-        date: 'November 20, 2024',
+        title: 'Placeholder Blog 5',
+        date: 'November 20, 2025',
         image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop',
         excerpt: 'This is a placeholder for future thought leadership content...',
         content: 'More new thinking to generate discussions coming soon'
     },
     {
         id: 'blog-6',
-        title: 'Placeholder Blog Post 6',
-        date: 'October 30, 2024',
+        title: 'Placeholder Blog 6',
+        date: 'November 30, 2025',
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=400&fit=crop',
         excerpt: 'This is a placeholder for future thought leadership content...',
         content: 'More new thinking to generate discussions coming soon'
