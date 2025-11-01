@@ -112,26 +112,26 @@ It's time to stop the strategic charade. For your business's future, abandon the
 },
     {
         id: 'blog-4',
-        title: 'Placeholder Blog Post 4',
-        date: 'December 15, 2024',
-        image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=400&fit=crop',
-        excerpt: 'This is a placeholder for future thought leadership content...',
+        title: 'Placeholder Blog 4',
+        date: 'November 15, 2025',
+        image: 'images/wtp_htw.png',
+        excerpt: 'Your Strategy Creating System is Broken. Here’s a Better Way',
         content: 'More new thinking to generate discussions coming soon'
     },
     {
         id: 'blog-5',
-        title: 'Placeholder Blog Post 5',
-        date: 'November 20, 2024',
-        image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop',
-        excerpt: 'This is a placeholder for future thought leadership content...',
+        title: 'Placeholder Blog 5',
+        date: 'November 20, 2025',
+        image: 'images/crystal_ball.png',
+        excerpt: 'There are no facts about the future',
         content: 'More new thinking to generate discussions coming soon'
     },
     {
         id: 'blog-6',
-        title: 'Placeholder Blog Post 6',
-        date: 'October 30, 2024',
-        image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=400&fit=crop',
-        excerpt: 'This is a placeholder for future thought leadership content...',
+        title: 'Placeholder Blog 6',
+        date: 'November 30, 2025',
+        image: 'images/insights_workshop.png',
+        excerpt: 'This is a placeholder for future strategic insight content...',
         content: 'More new thinking to generate discussions coming soon'
     }
 ];
