@@ -29,9 +29,9 @@ Understanding these mechanisms, and the barriers that block them, is essential f
 The gap between data-rich and insight-driven companies isn't about information access. It's about cognitive capabilities and team behaviours. While 69% of biopharma leaders believe their current model meets today's needs, only 30% feel prepared to respond to market trends through insights (Deloitte, 2024). This dangerous confidence masks a fundamental misunderstanding of how insights actually form. 
 Here's what the science reveals about generating strategic insights and how teams can systematically develop this capability. 
 <p>To appreciate what happens in your brain during an "Aha!" moment we must understand what qualifies as a true strategic insight. Chameleon Consulting identifies four essential characteristics that distinguish insights from mere observations or data:
-<ol><li>Previously Unknown: If you knew it already, then so did your competitor—that is data or fact. An insight provides a unique viewpoint, preferably with longevity</ol></li></p>
-<ol><li>Driver of Behaviour: Understand stakeholder needs, get behind data and reveal fresh attitudes and behaviours. Provide some future direction and longevity</ol></li></p>
-<ol><li>Competitive Advantage: Reveal new ideas, words, segments, services and offerings that link with a deeper brand promise, creating fresh competitive advantage</ol></li></p>
+<ol><li>Previously Unknown: If you knew it already, then so did your competitor—that is data or fact. An insight provides a unique viewpoint, preferably with longevity<b>
+<ol><li>Driver of Behaviour: Understand stakeholder needs, get behind data and reveal fresh attitudes and behaviours. Provide some future direction and longevity<b>
+<ol><li>Competitive Advantage: Reveal new ideas, words, segments, services and offerings that link with a deeper brand promise, creating fresh competitive advantage<b>
 <ol><li>Immediately Actionable: The insight must drive the organization. Even if it requires new indications, lifecycle management options, etc., you should start planning now</ol></li></p>
 
 A true insight in the pharmaceutical industry needs to pass all four tests. 
