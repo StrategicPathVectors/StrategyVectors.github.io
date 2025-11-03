@@ -100,16 +100,13 @@ Richard Rumelt, author of the seminal "Good Strategy/Bad Strategy," would <b>loo
 <br>SWOT, on the other hand, rarely provides any of this. It's a laundry list, not a diagnosis. It doesn't force the hard intellectual work of identifying the single most critical challenge your business faces. Instead, it encourages generic statements and avoids the painful trade-offs that true strategy demands. As Rumelt would contend, a strategy that starts with SWOT is often already doomed to be weak and unfocused.
 
 The Problem of Context and Choices: Roger Martin's Disdain
-Former Rotman School of Management Dean, Roger L. Martin, is perhaps the most vocal proponent of abandoning SWOT entirely. His advice is blunt: "Never do a SWOT analysis. And never pay attention to a SWOT analysis you happen to receive."
-
-Why such a strong stance? Martin's strategic philosophy is built on making rigorous, integrated choices. A "strength," for example, is only a strength in relation to a specific "where to play" and "how to win" strategic choice. If you haven't defined these choices yet (which is usually the case when a SWOT is performed), then your "strengths" and "weaknesses" are just generic observations, devoid of strategic meaning. 
-
+Former Rotman School of Management Dean, Roger L. Martin, is perhaps the most vocal proponent of abandoning SWOT entirely. His advice is blunt: <b>"Never do a SWOT analysis. And never pay attention to a SWOT analysis you happen to receive."</b>
+<br>Why such a strong stance? Martin's strategic philosophy is built on making rigorous, integrated choices. A "strength," for example, is only a strength in relation to a specific "where to play" and "how to win" strategic choice. If you haven't defined these choices yet (which is usually the case when a SWOT is performed), then your "strengths" and "weaknesses" are just generic observations, devoid of strategic meaning. 
 SWOT, by generating long, unweighted lists, avoids the essential hard work of making these choices, pulling you away from building a truly impactful strategy.
 
-The Bottom Line
+<br>The Bottom Line<br>
 SWOT analysis, born with good intentions to foster alignment, has devolved into a superficial exercise that often provides a false sense of strategic security. It generates lists instead of insights, avoids crucial choices, and is ill-equipped for the complexities and speeds of modern business.
-
-It's time to stop the strategic charade. For your business's future, abandon the SWOT.`
+<b>It's time to stop the strategic charade. For your business's future, abandon the SWOT.</b>`
 },
     {
         id: 'blog-4',
