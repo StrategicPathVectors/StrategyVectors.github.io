@@ -19,7 +19,7 @@ const blogsData = [
         excerpt: 'Understanding the Cognitive Foundations and collaborative practices that transform data into contextualised intelligence and then on to insight is crucial',
         content: `<strong>The Science of Strategic Insights: How Your Brain and Your Team Generate Breakthrough Thinking (pt 1)</strong>
 
-<br>We get asked often <em>“what do you mean by insights?”</em> And, we find ourselves commenting on articles & posts about insights which de-value the critical importance of true insight in strategy development and under-estimate the difficulty of creating <i>“real” insight</i>. Often times people use <i>“insights”</i> when they mean <i>“something interesting”</i> or a <i>“new piece of information”</i>.
+<br>We get asked often <em>“what do you mean by insights?”</em> And, we find ourselves commenting on articles & posts about insights which de-value the critical importance of true insight in strategy development and under-estimate the difficulty of creating <i>“real”</i> insight. Often times people use <i>“insights”</i> when they mean <i>“something interesting”</i> or a <i>“new piece of information”</i>.
 
 <br>Understanding the Cognitive Foundations and collaborative practices that transform data into contextualised intelligence and then on to insights toward competitive advantage is crucial.
 So, we are going to dedicate a few blogs to this topic…
