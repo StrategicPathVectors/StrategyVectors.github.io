@@ -23,7 +23,7 @@ const blogsData = [
 
 <br>Understanding the Cognitive Foundations and collaborative practices that transform data into contextualised intelligence and then on to insights toward competitive advantage is crucial.
 So, we are going to dedicate a few blogs to this topic…
-<br>This is part 1; where we focus on <i>“what is an insight?”</i>
+<br>This is part 1; where we focus on <i><b>“what is an insight?”</i></b>
 <br>Strategic insights don't arrive through mystical inspiration. They emerge from specific neurobiological processes in your brain and deliberate collaborative practices in your teams. 
 Understanding these mechanisms, and the barriers that block them, is essential for pharmaceutical organizations seeking to transform data into strategic advantage.
 The gap between data-rich and insight-driven companies isn't about information access. It's about cognitive capabilities and team behaviours. While 69% of biopharma leaders believe their current model meets today's needs, only 30% feel prepared to respond to market trends through insights (Deloitte, 2024). This dangerous confidence masks a fundamental misunderstanding of how insights actually form. 
@@ -43,11 +43,21 @@ Insights differ fundamentally from analytic solutions in four ways:
 3. Positive affect: The characteristic "Aha!" feeling accompanies breakthrough understanding that can then lead to real momentum across the room!
 4. Higher accuracy: Webb et al. (2016) found solutions accompanied by insight are actually more likely to be correct (r=0.40-0.50) than analytically derived solutions 
 
-Most remarkably, insight work happens below conscious awareness. Solution representations activate weakly long before conscious recognition. Your brain is processing patterns and connections while you're focused elsewhere—which explains why insights often arrive during showers, walks, or while falling asleep. Individual differences matter. People showing more diffuse, outward attention at rest demonstrate greater insight-solving capabilities. Positive mood facilitates insight by broadening semantic processing, making weak associations more accessible and increasing both perceptual and conceptual attention breadth. 
+<p>Most remarkably, insight work happens below conscious awareness. Solution representations activate weakly long before conscious recognition. Your brain is processing patterns and connections while you're focused elsewhere—which explains why insights often arrive during showers, walks, or while falling asleep. Individual differences matter. People showing more diffuse, outward attention at rest demonstrate greater insight-solving capabilities. Positive mood facilitates insight by broadening semantic processing, making weak associations more accessible and increasing both perceptual and conceptual attention breadth.</p> 
 The strategic implication: Organizations seeking breakthrough insights must design environments and practices that leverage these neurobiological realities—diverse stimuli to activate broader semantic fields, psychological safety to maintain positive affect, and permission for incubation time rather than relentless deadline pressure. 
 In our next blog we will focus on the core cognitive competencies required to generate better & deeper insights…
 
-Key References: - Kounios, J., & Beeman, M. (2014). The cognitive neuroscience of insight. Annual Review of Psychology, 65, 71-93. - Webb, M. E., Little, D. R., & Cropper, S. J. (2016). Insight is not in the problem: Investigating insight in problem solving across task types. Frontiers in Psychology, 7, 1424. - Watkins, M. (2024). Six disciplines of strategic thinking. Harvard Business Review. - Day, G. S. (2011). Closing the marketing capabilities gap. Journal of Marketing, 75(4), 183-195. - Lycett, M. (2013). 'Datafication': Making sense of (big) data in a complex world. European Journal of Information Systems, 22(4), 381-386. - Kolko, J. (2012). Wicked problems: Problems worth solving. Austin Center for Design. - Shore, Z., & McMaster, H. R. Strategic empathy: Understanding adversaries' perceptions and motivations. - Kahneman, D., & Tversky, A. Judgment under uncertainty: Heuristics and biases. - Deloitte. (2024). Future of biopharma commercial models survey. - Stremersch, S., et al. (2024). Customer insights for innovation. Journal of the Academy of Marketing Science. - Strategic Management Journal research on dynamic capabilities and organizational learning.
+Key References:<br>
+Kounios, J., & Beeman, M. (2014). The cognitive neuroscience of insight. Annual Review of Psychology, 65, 71-93.<br>
+Webb, M. E., Little, D. R., & Cropper, S. J. (2016). Insight is not in the problem: Investigating insight in problem solving across task types. Frontiers in Psychology, 7, 1424.<br>
+Watkins, M. (2024). Six disciplines of strategic thinking. Harvard Business Review. - Day, G. S. (2011). Closing the marketing capabilities gap. Journal of Marketing, 75(4), 183-195.<br>
+Lycett, M. (2013). 'Datafication': Making sense of (big) data in a complex world. European Journal of Information Systems, 22(4), 381-386.<br>
+Kolko, J. (2012). Wicked problems: Problems worth solving. Austin Center for Design.<br>
+Shore, Z., & McMaster, H. R. Strategic empathy: Understanding adversaries' perceptions and motivations.<br>
+Kahneman, D., & Tversky, A. Judgment under uncertainty: Heuristics and biases.<br>
+Deloitte. (2024). Future of biopharma commercial models survey.<br>
+Stremersch, S., et al. (2024). Customer insights for innovation. Journal of the Academy of Marketing Science.<br>
+Strategic Management Journal research on dynamic capabilities and organizational learning.
 `
     },
     {
