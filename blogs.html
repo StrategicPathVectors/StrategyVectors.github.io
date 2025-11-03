@@ -293,24 +293,40 @@
             list-style-type: disc;
             margin-left: 1.5rem;
             margin-bottom: 1.5rem;
+            padding-left: 0;
         }
 
         .blog-content ul li {
             color: var(--bg-dark);
             line-height: 1.8;
             margin-bottom: 0.5rem;
+            margin-left: 0;
+        }
+
+        /* Prevent nested lists from adding extra indentation */
+        .blog-content ul ul {
+            margin-left: 0;
+            padding-left: 1.5rem;
         }
 
         .blog-content ol {
             list-style-type: decimal;
             margin-left: 1.5rem;
             margin-bottom: 1.5rem;
+            padding-left: 0;
         }
 
         .blog-content ol li {
             color: var(--bg-dark);
             line-height: 1.8;
             margin-bottom: 0.5rem;
+            margin-left: 0;
+        }
+
+        /* Prevent nested ordered lists from adding extra indentation */
+        .blog-content ol ol {
+            margin-left: 0;
+            padding-left: 1.5rem;
         }
 
         .read-more {
