@@ -23,16 +23,16 @@ const blogsData = [
 
 <br>Understanding the Cognitive Foundations and collaborative practices that transform data into contextualised intelligence and then on to insights toward competitive advantage is crucial.
 So, we are going to dedicate a few blogs to this topic…
-<br>This is part 1; where we focus on <i><b>“what is an insight?”</i></b>
+<br>This is part 1; where we focus on <b>“what is an insight?”</b>
 <br>Strategic insights don't arrive through mystical inspiration. They emerge from specific neurobiological processes in your brain and deliberate collaborative practices in your teams. 
 Understanding these mechanisms, and the barriers that block them, is essential for pharmaceutical organizations seeking to transform data into strategic advantage.
 The gap between data-rich and insight-driven companies isn't about information access. It's about cognitive capabilities and team behaviours. While 69% of biopharma leaders believe their current model meets today's needs, only 30% feel prepared to respond to market trends through insights (Deloitte, 2024). This dangerous confidence masks a fundamental misunderstanding of how insights actually form. 
 Here's what the science reveals about generating strategic insights and how teams can systematically develop this capability. 
 <p>To appreciate what happens in your brain during an "Aha!" moment we must understand what qualifies as a true strategic insight. Chameleon Consulting identifies four essential characteristics that distinguish insights from mere observations or data:
-<ul><li>Previously Unknown: If you knew it already, then so did your competitor—that is data or fact. An insight provides a unique viewpoint, preferably with longevity<br>
-Driver of Behaviour: Understand stakeholder needs, get behind data and reveal fresh attitudes and behaviours. Provide some future direction and longevity<br>
-Competitive Advantage: Reveal new ideas, words, segments, services and offerings that link with a deeper brand promise, creating fresh competitive advantage<br>
-Immediately Actionable: The insight must drive the organization. Even if it requires new indications, lifecycle management options, etc., you should start planning now</ul></li></p>
+<ul><li><strong>Previously Unknown:</strong> If you knew it already, then so did your competitor—that is data or fact. An insight provides a unique viewpoint, preferably with longevity<br>
+<strong>Driver of Behaviour:</strong> Understand stakeholder needs, get behind data and reveal fresh attitudes and behaviours. Provide some future direction and longevity<br>
+<strong>Competitive Advantage:</strong> Reveal new ideas, words, segments, services and offerings that link with a deeper brand promise, creating fresh competitive advantage<br>
+<strong>Immediately Actionable:</strong> The insight must drive the organization. Even if it requires new indications, lifecycle management options, etc., you should start planning now</ul></li></p>
 
 A true insight in the pharmaceutical industry needs to pass all four tests. 
 Knowing that market share declined 3% last quarter is data. Understanding that this decline stems from a newly identified patient adherence barrier related to injection anxiety that competitors haven't addressed and that this barrier could be overcome through a nurse support program is an insight. It's previously unknown (competitors haven't recognized this specific barrier), drives behaviour (explains patient discontinuation patterns), creates competitive advantage (addressable through differentiated support), and is immediately actionable (program development can begin). 
