@@ -75,7 +75,7 @@ What if it's a strategic charade, giving you the illusion of insight while hinde
 As a business school graduate who has spent decades working & consulting with teams on strategy creation, I've never found SWOT to be helpful, but I wanted to understand what other leading thinkers have concluded too. I've come to a stark conclusion, echoed by leading thinkers across the globe: You should never use SWOT analysis.
 Let's unpack why…</p>
 
-The Illusion of Analysis: A Glorified To-Do List
+<b>The Illusion of Analysis: A Glorified To-Do List</b></p>
 At its core, a typical SWOT analysis is nothing more than a glorified list. We brainstorm, fill in the boxes, and then… what? We're left with four distinct lists, often filled with vague, unprioritized bullet points.
 <br>Professor Ajay Sirsi, an expert in customer-centric strategy from the Schulich School of Business, argues that this isn't even analysis; it's an "aimless data collection" exercise. His work emphasizes that strategy must be "outside-in"; starting with the customer and market. SWOT, however, encourages an "inside-out" view by starting with internal Strengths and Weaknesses, making the company, not the customer, the centre of the universe. It lacks the critical step of action and leaves you with information, but no inherent mechanism for making a difficult choice or building a coherent plan.<br>
 Empirical Evidence: SWOT as a "Bureaucratic Cul-de-Sac"<br>
