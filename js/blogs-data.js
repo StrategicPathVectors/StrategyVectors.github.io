@@ -8,7 +8,7 @@ const blogsData = [
         title: 'New content coming soon',
         date: 'November 5, 2025',
         image: 'images/golf_strategy.png',
-        excerpt: 'Explore how golf & course management is a great analogy for straetgic decision-making',
+        excerpt: 'Explore how golf & "course management" is a great analogy for strategic decision-making',
         content: 'More new thinking to generate discussions coming soon'
     },
     {
@@ -35,8 +35,9 @@ Here's what the science reveals about generating strategic insights and how team
 <ul><li><strong>Immediately Actionable:</strong> The insight must drive the organization. Even if it requires new indications, lifecycle management options, etc., you should start planning now</ul></li></p>
 
 A true insight in the pharmaceutical industry needs to pass all four tests. 
-Knowing that market share declined 3% last quarter is data. Understanding that this decline stems from a newly identified patient adherence barrier related to injection anxiety that competitors haven't addressed and that this barrier could be overcome through a nurse support program is an insight. It's previously unknown (competitors haven't recognized this specific barrier), drives behaviour (explains patient discontinuation patterns), creates competitive advantage (addressable through differentiated support), and is immediately actionable (program development can begin). 
-Strategic insights feel sudden and complete, arriving with a sense of certainty that analytic problem-solving lacks. This isn't coincidence—it reflects distinct neurobiological mechanisms. Groundbreaking research by John Kounios and Mark Beeman, published in the Annual Review of Psychology (2014), reveals that insights involve the right hemisphere's anterior superior temporal gyrus, which engages in coarser semantic coding activating broader semantic fields than the left hemisphere's narrower focus. This enables connecting distant associations that focused analysis would miss. At the moment of insight, there's a burst of high-frequency gamma-band EEG activity—the brain's "Eureka!" signature. This is preceded by transient alpha-band activity that reduces visual noise, essentially closing your eyes to external distractions to facilitate retrieval of weakly activated solutions gestating below conscious awareness. 
+Knowing that market share declined 3% last quarter is data. Understanding that this decline stems from a newly identified patient adherence barrier related to injection anxiety that competitors haven't addressed and that this barrier could be overcome through a nurse support program is an insight. It's previously unknown (competitors haven't recognized this specific barrier), drives behaviour (explains patient discontinuation patterns), creates competitive advantage (addressable through differentiated support), and is immediately actionable (program development can begin).<br> 
+Strategic insights feel sudden and complete, arriving with a sense of certainty that analytic problem-solving lacks.<br>
+This isn't coincidence—it reflects distinct neurobiological mechanisms. Groundbreaking research by Kounios & Beeman, reveals that insights involve the right hemisphere's anterior superior temporal gyrus, which engages in coarser semantic coding activating broader semantic fields than the left hemisphere's narrower focus. This enables connecting distant associations that focused analysis would miss. At the moment of insight, there's a burst of high-frequency gamma-band EEG activity—the brain's "Eureka!" signature. This is preceded by transient alpha-band activity that reduces visual noise, essentially closing your eyes to external distractions to facilitate retrieval of weakly activated solutions gestating below conscious awareness.<br> 
 Insights differ fundamentally from analytic solutions in four ways:
 <ul><li>Suddenness: They arrive all-at-once, not through stepwise progress (the rigour of process gets you far; but isn’t everything!)<br>
 <ul><li>No intermediate states: You don't get "partway" to an insight<br>
@@ -47,7 +48,7 @@ Most remarkably, insight work happens below conscious awareness. Solution repres
 The strategic implication: Organizations seeking breakthrough insights must design environments and practices that leverage these neurobiological realities—diverse stimuli to activate broader semantic fields, psychological safety to maintain positive affect, and permission for incubation time rather than relentless deadline pressure. 
 <p>In our next blog we will focus on the core cognitive competencies required to generate better & deeper insights…</p>
 
-Key References:<br>
+<p>Key References:</p>
 Kounios, J., & Beeman, M. (2014). The cognitive neuroscience of insight. Annual Review of Psychology, 65, 71-93.<br>
 Webb, M. E., Little, D. R., & Cropper, S. J. (2016). Insight is not in the problem: Investigating insight in problem solving across task types. Frontiers in Psychology, 7, 1424.<br>
 Watkins, M. (2024). Six disciplines of strategic thinking. Harvard Business Review. - Day, G. S. (2011). Closing the marketing capabilities gap. Journal of Marketing, 75(4), 183-195.<br>
