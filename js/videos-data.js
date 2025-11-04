@@ -8,7 +8,7 @@ const videosData = [
         id: "video-1",
         youtubeId: "https://muse.ai/embed/1PSeih6", // Replace with actual YouTube video ID
         title: "Strategy Vectors Podcast",
-        description: "Discover how we transform traditional strategy development using AI-powered insights and market intelligence to identify transformational pivot points.",
+        description: "Discover how we are aiming to revolutionise strategy development using AI-powered insights and contextualised market intelligence to identify transformational pivot points.",
         date: "October 2025",
         duration: "8 min",
         // The dateOrder is used for sorting - format: YYYYMMDD
@@ -18,17 +18,17 @@ const videosData = [
     {
         id: "video-2",
         youtubeId: "https://muse.ai/vc/JdR5GCR", // Replace with actual YouTube video ID
-        title: "Patient Journey Mapping in Action",
-        description: "See how our unified patient journey approach helps healthcare organizations identify critical touchpoints and optimize patient experiences across complex care pathways.",
-        date: "February 2025",
-        duration: "12 min",
+        title: "A Peek At The Special Sauce",
+        description: "See how our unified patient journey is built in order to identify critical intelligence & drive fresh insights & stimulate new strategic discussions",
+        date: "September 2025",
+        duration: "4 min",
         dateOrder: 20250228
     },
     {
         id: "video-3",
         youtubeId: "PLACEHOLDER", // Special marker for placeholder videos
         title: "Future Content",
-        description: "We're constantly creating new content. Check back soon for more insights on strategic transformation and business innovation.",
+        description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
         date: "Upcoming",
         duration: "TBD",
         dateOrder: 20250101, // Give it a date so it appears as the third video
