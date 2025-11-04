@@ -18,7 +18,7 @@ const videosData = [
     {
         id: "video-2",
         youtubeId: "https://muse.ai/vc/JdR5GCR", // Replace with actual YouTube video ID
-        title: "A Peek At The Special Sauce",
+        title: "A Peek Inside The Machine",
         description: "See how our unified patient journey is built in order to identify critical intelligence & drive fresh insights & stimulate new strategic discussions",
         date: "September 2025",
         duration: "4 min",
