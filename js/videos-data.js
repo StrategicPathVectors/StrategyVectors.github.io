@@ -7,9 +7,9 @@ const videosData = [
     {
         id: "video-1",
         youtubeId: "https://muse.ai/embed/1PSeih6", // Replace with actual YouTube video ID
-        title: "Introduction to Strategy Vectors",
+        title: "Strategy Vectors Podcast",
         description: "Discover how we transform traditional strategy development using AI-powered insights and market intelligence to identify transformational pivot points.",
-        date: "March 2025",
+        date: "October 2025",
         duration: "8 min",
         // The dateOrder is used for sorting - format: YYYYMMDD
         // This ensures videos appear in the correct chronological order
