@@ -6,7 +6,7 @@ const blogsData = [
     {
         id: 'blog-1',
         title: 'New content coming soon',
-        date: 'November 5, 2025',
+        date: '7 November, 2025',
         image: 'images/golf_strategy.png',
         excerpt: 'Explore how golf & "course management" is a great analogy for strategic decision-making',
         content: 'More new thinking to generate discussions coming soon'
@@ -14,7 +14,7 @@ const blogsData = [
     {
         id: 'blog-2',
         title: 'The Science of Strategic Insights',
-        date: 'October 28, 2025',
+        date: '3 November, 2025',
         image: 'images/insight_aha.png',
         excerpt: 'Understanding the Cognitive Foundations and collaborative practices that transform data into contextualised intelligence and then on to insight is crucial',
         content: `<strong>The Science of Strategic Insights: How Your Brain and Your Team Generate Breakthrough Thinking (pt 1)</strong>
@@ -64,7 +64,7 @@ Strategic Management Journal research on dynamic capabilities and organizational
     {
     id: 'blog-3',
     title: 'It\'s Time to Retire SWOT',
-    date: 'October 21, 2025',
+    date: '27 October, 2025',
     image: 'images/anti-swot.png',
     excerpt: '"Never do a SWOT analysis. And never pay attention to a SWOT analysis you happen to receive" (Roger L. Martin)',
     content: `<strong>Stop The Strategic Charade: Why It's Time to Retire SWOT Analysis</strong>
