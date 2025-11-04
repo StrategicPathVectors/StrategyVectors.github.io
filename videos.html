@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Strategy Vectors</title>
+    
+    <!-- Google Fonts for Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==================================
+           BRAND COLORS FROM CHAMELEON PALETTE
+           ================================== */
+        :root {
+            /* Primary Colors */
+            --primary-purple: #44003A;
+            --primary-red: #FF4834;
+            --primary-yellow: #FFC14C;
+            --blend-orange: #FF7940;
+            
+            /* Secondary Colors */
+            --secondary-purple: #8400AC;
+            --secondary-magenta: #EB1CA9;
+            --secondary-yellow: #FFE594;
+            
+            /* Background Colors */
+            --bg-dark: #5E5E5E;
+            --bg-medium: #757575;
+            --bg-light: #f8f8f8;
+            --white: #ffffff;
+            
+            /* Typography */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+        
+        /* ==================================
+           RESET & BASE STYLES
+           ================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* ==================================
+           ANIMATED SVG LOGO STYLES
+           ================================== */
+        .animated-logo {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .animated-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Main infinity path with morphing animation */
+        .infinity-path {
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            opacity: 0.9;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 0;
+            animation: infinityMorph 8s ease-in-out infinite, dashFlow 12s linear infinite;
+        }
+        
+        /* Use coral red and gold gradient only */
+        .infinity-gradient-red {
+            stroke: var(--primary-red);
+        }
+        
+        .infinity-gradient-gold {
+            stroke: var(--primary-yellow);
+            opacity: 0.8;
+        }
+        
+        /* Node animations */
+        .flow-node {
+            opacity: 0;
+            animation: nodeAppear 8s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        .node-red {
+            fill: var(--primary-red);
+        }
+        
+        .node-gold {
+            fill: var(--primary-yellow);
+        }
+        
+        .node-blend {
+            fill: #FF7940;
+        }
+        
+        /* Stagger node animations */
+        .flow-node:nth-child(3) { animation-delay: 0s; }
+        .flow-node:nth-child(4) { animation-delay: 0.5s; }
+        .flow-node:nth-child(5) { animation-delay: 1s; }
+        .flow-node:nth-child(6) { animation-delay: 1.5s; }
+        .flow-node:nth-child(7) { animation-delay: 2s; }
+        .flow-node:nth-child(8) { animation-delay: 2.5s; }
+        .flow-node:nth-child(9) { animation-delay: 3s; }
+        
+        /* Logo Keyframe Animations */
+        @keyframes infinityMorph {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                transform: scale(1.05) rotate(2deg);
+            }
+            50% {
+                transform: scale(0.95) rotate(-2deg);
+            }
+            75% {
+                transform: scale(1.05) rotate(2deg);
+            }
+        }
+        
+        @keyframes dashFlow {
+            0% {
+                stroke-dashoffset: 0;
+            }
+            100% {
+                stroke-dashoffset: 1000;
+            }
+        }
+        
+        @keyframes nodeAppear {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            10%, 90% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+        }
+
+        /* ==================================
+           NAVIGATION HEADER
+           ================================== */
+        header {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .brand-name {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ==================================
+           MAIN CONTENT AREA
+           ================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Page Header Section */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: white;
+            margin-top: 5rem;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ==================================
+           VIDEO SECTION STYLES
+           ================================== */
+        .videos-section {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+        
+        .section-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-intro h2 {
+            font-size: 2rem;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .section-intro p {
+            font-size: 1.1rem;
+            color: var(--bg-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Video Grid Layout */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* Individual Video Card */
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Video Container with Aspect Ratio */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: #000;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Placeholder for future video */
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .video-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        .video-placeholder p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        /* Video Details */
+        .video-details {
+            padding: 1.5rem;
+        }
+        
+        .video-details h3 {
+            color: var(--primary-purple);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-details p {
+            color: var(--bg-dark);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .video-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--bg-medium);
+        }
+        
+        .video-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* ==================================
+           CALL TO ACTION SECTION
+           ================================== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--blend-orange) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-red);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* ==================================
+           FOOTER
+           ================================== */
+        footer {
+            background: var(--primary-purple);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* ==================================
+           RESPONSIVE DESIGN
+           ================================== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-purple);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <!-- Animated Infinity Logo -->
+                <div class="animated-logo">
+                    <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <path class="infinity-path infinity-gradient-red" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        <path class="infinity-path infinity-gradient-gold" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <circle class="flow-node node-red" cx="35" cy="27" r="4"/>
+                        <circle class="flow-node node-gold" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="65" cy="27" r="5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="95" cy="53" r="3"/>
+                        <circle class="flow-node node-blend" cx="110" cy="40" r="5"/>
+                        <circle class="flow-node node-red" cx="125" cy="53" r="4"/>
+                    </svg>
+                </div>
+                <div class="brand-name">Strategy Vectors</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="approach.html">Our Approach</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Video Library</h1>
+            <p>Explore our collection of insights, case studies, and thought leadership on strategic transformation</p>
+        </div>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section class="videos-section">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Featured Videos</h2>
+                <p>Watch our latest presentations and discussions on strategy, innovation, and business transformation</p>
+            </div>
+
+            <div class="video-grid">
+                <!-- VIDEO 1: Replace with your actual video -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
+                            title="Strategy Vectors Introduction"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-details">
+                        <h3>Introduction to Strategy Vectors</h3>
+                        <p>Discover how we transform traditional strategy development using AI-powered insights and market intelligence to identify transformational pivot points.</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-clock"></i> 8 min</span>
+                            <span><i class="far fa-calendar"></i> March 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 2: Replace with your actual video -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
+                            title="Patient Journey Mapping"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-details">
+                        <h3>Patient Journey Mapping in Action</h3>
+                        <p>See how our unified patient journey approach helps healthcare organizations identify critical touchpoints and optimize patient experiences across complex care pathways.</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-clock"></i> 12 min</span>
+                            <span><i class="far fa-calendar"></i> February 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO 3: Placeholder for future content -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <i class="fas fa-video"></i>
+                            <p>Coming Soon</p>
+                        </div>
+                    </div>
+                    <div class="video-details">
+                        <h3>Future Content</h3>
+                        <p>We're constantly creating new content. Check back soon for more insights on strategic transformation and business innovation.</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-clock"></i> TBD</span>
+                            <span><i class="far fa-calendar"></i> Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Strategy?</h2>
+            <p>Let's discuss how Strategy Vectors can help identify the pivot points that drive your success</p>
+            <a href="index.html#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-container">
+                <div class="animated-logo">
+                    <svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+                        <path class="infinity-path infinity-gradient-red" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        <path class="infinity-path infinity-gradient-gold" 
+                              d="M 20,40 Q 35,15 50,40 T 80,40 Q 95,65 110,40 T 140,40 Q 125,65 110,40 T 80,40 Q 65,15 50,40 T 20,40 Z"/>
+                        
+                        <circle class="flow-node node-red" cx="35" cy="27" r="4"/>
+                        <circle class="flow-node node-gold" cx="50" cy="40" r="3"/>
+                        <circle class="flow-node node-blend" cx="65" cy="27" r="5"/>
+                        <circle class="flow-node node-red" cx="80" cy="40" r="4"/>
+                        <circle class="flow-node node-gold" cx="95" cy="53" r="3"/>
+                        <circle class="flow-node node-blend" cx="110" cy="40" r="5"/>
+                        <circle class="flow-node node-red" cx="125" cy="53" r="4"/>
+                    </svg>
+                </div>
+                <div class="brand-name">Strategy Vectors</div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 Strategy Vectors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
