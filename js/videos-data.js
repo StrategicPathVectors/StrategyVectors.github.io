@@ -30,7 +30,7 @@ const videosData = [
         title: "Future Content",
         description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
         date: "Upcoming",
-        duration: "TBD",
+        duration: "5 min",
         dateOrder: 20250101, // Give it a date so it appears as the third video
         isPlaceholder: true // Special flag to indicate this is a placeholder
     }
