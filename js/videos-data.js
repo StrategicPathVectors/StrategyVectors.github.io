@@ -6,7 +6,7 @@
 const videosData = [
     {
         id: "video-1",
-        youtubeId: "YOUR_VIDEO_ID_1", // Replace with actual YouTube video ID
+        youtubeId: "https://muse.ai/embed/1PSeih6", // Replace with actual YouTube video ID
         title: "Introduction to Strategy Vectors",
         description: "Discover how we transform traditional strategy development using AI-powered insights and market intelligence to identify transformational pivot points.",
         date: "March 2025",
@@ -17,7 +17,7 @@ const videosData = [
     },
     {
         id: "video-2",
-        youtubeId: "YOUR_VIDEO_ID_2", // Replace with actual YouTube video ID
+        youtubeId: "https://muse.ai/vc/JdR5GCR", // Replace with actual YouTube video ID
         title: "Patient Journey Mapping in Action",
         description: "See how our unified patient journey approach helps healthcare organizations identify critical touchpoints and optimize patient experiences across complex care pathways.",
         date: "February 2025",
