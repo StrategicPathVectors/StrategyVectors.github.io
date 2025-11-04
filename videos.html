@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -560,15 +561,18 @@
 
             <div class="video-grid">
                 <!-- VIDEO 1: Replace with your actual video -->
-               <div class="muse-video-player" data-video="1PSeih6" data-width="576"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
-                            title="How Strategy Vectors Works Podcast"
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
+                            title="Strategy Vectors Introduction"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
                     </div>
                     <div class="video-details">
                         <h3>Introduction to Strategy Vectors</h3>
-                        <p>Discover how we transform traditional strategy development using AI-powered insights and contextualised market intelligence to identify transformational pivot points.</p>
+                        <p>Discover how we transform traditional strategy development using AI-powered insights and market intelligence to identify transformational pivot points.</p>
                         <div class="video-meta">
                             <span><i class="far fa-clock"></i> 8 min</span>
                             <span><i class="far fa-calendar"></i> March 2025</span>
@@ -650,7 +654,7 @@
             </div>
             
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/robinmaidenchameleonconsulting/" target="_blank" aria-label="LinkedIn">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
@@ -659,6 +663,7 @@
         </div>
     </footer>
 
+    <script src="js/videos-data.js"></script>
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -674,6 +679,70 @@
                 navLinks.classList.remove('active');
             });
         });
+
+        // Load all videos dynamically from videos-data.js
+        function loadAllVideos() {
+            const videoGrid = document.querySelector('.video-grid');
+            if (!videoGrid || typeof videosData === 'undefined') return;
+
+            // Clear any existing hardcoded content
+            videoGrid.innerHTML = '';
+
+            // Sort videos by date (most recent first)
+            const sortedVideos = videosData.sort((a, b) => b.dateOrder - a.dateOrder);
+
+            // Loop through all videos and create cards for each
+            sortedVideos.forEach(video => {
+                const videoCard = document.createElement('div');
+                videoCard.className = 'video-card';
+                
+                // Check if this is a placeholder video
+                if (video.isPlaceholder) {
+                    // Create placeholder card
+                    videoCard.innerHTML = `
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-video"></i>
+                                <p>Coming Soon</p>
+                            </div>
+                        </div>
+                        <div class="video-details">
+                            <h3>${video.title}</h3>
+                            <p>${video.description}</p>
+                            <div class="video-meta">
+                                <span><i class="far fa-clock"></i> ${video.duration}</span>
+                                <span><i class="far fa-calendar"></i> ${video.date}</span>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // Create regular video card with YouTube embed
+                    videoCard.innerHTML = `
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/${video.youtubeId}" 
+                                title="${video.title}"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-details">
+                            <h3>${video.title}</h3>
+                            <p>${video.description}</p>
+                            <div class="video-meta">
+                                <span><i class="far fa-clock"></i> ${video.duration}</span>
+                                <span><i class="far fa-calendar"></i> ${video.date}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                videoGrid.appendChild(videoCard);
+            });
+        }
+
+        // Load videos when page loads
+        document.addEventListener('DOMContentLoaded', loadAllVideos);
     </script>
 </body>
 </html>
