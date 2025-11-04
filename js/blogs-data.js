@@ -104,7 +104,7 @@ Former Rotman School of Management Dean, Roger L. Martin, is perhaps the most vo
 <br>Why such a strong stance? Martin's strategic philosophy is built on making rigorous, integrated choices. A "strength," for example, is only a strength in relation to a specific "where to play" and "how to win" strategic choice. If you haven't defined these choices yet (which is usually the case when a SWOT is performed), then your "strengths" and "weaknesses" are just generic observations, devoid of strategic meaning.<br>
 SWOT, by generating long, unweighted lists, avoids the essential hard work of making these choices, pulling you away from building a truly impactful strategy.
 
-<br>The Bottom Line<br>
+<p>The Bottom Line<br>
 SWOT analysis, born with good intentions to foster alignment, has devolved into a superficial exercise that often provides a false sense of strategic security. It generates lists instead of insights, avoids crucial choices, and is ill-equipped for the complexities and speeds of modern business.
 <b>It's time to stop the strategic charade. For your business's future, abandon the SWOT.</b>`
 },
