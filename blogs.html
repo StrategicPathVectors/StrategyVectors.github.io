@@ -339,18 +339,6 @@
             list-style-position: outside;
         }
 
-        .read-more {
-            color: var(--secondary-purple);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            align-self: flex-start;
-        }
-
-        .read-more:hover {
-            color: var(--primary-red);
-        }
-
         .back-home {
             text-align: center;
             margin-top: 3rem;
@@ -583,7 +571,6 @@
                         <h3>${blog.title}</h3>
                         <p class="blog-meta">Published: ${blog.date}</p>
                         <p>${blog.content}</p>
-                        <a href="#${blog.id}" class="read-more">Read Full Article →</a>
                     </div>
                 `;
                 allBlogsContainer.appendChild(blogCard);
