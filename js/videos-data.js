@@ -17,16 +17,16 @@ const videosData = [
     },
     {
         id: "video-2",
-        MuseId: "JdR5GCR",
+        museId: "JdR5GCR",
         title: "A Peek Inside The Machine",
         description: "See how our unified patient journey is built in order to identify critical intelligence & drive fresh insights & stimulate new strategic discussions",
         date: "September 2025",
-        duration: "4 min",
+        duration: "3+ min",
         dateOrder: 20250228
     },
     {
         id: "video-3",
-        MuseId: "PLACEHOLDER", // Special marker for placeholder videos
+        museId: "PLACEHOLDER", // Special marker for placeholder videos
         title: "Future Content",
         description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
         date: "Upcoming",
