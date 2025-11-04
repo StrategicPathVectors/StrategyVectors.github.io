@@ -6,8 +6,8 @@
 const videosData = [
     {
         id: "video-1",
-        youtubeId: "https://muse.ai/embed/1PSeih6", // Replace with actual YouTube video ID
-        title: "Strategy Vectors Podcast",
+        museId: "1PSeih6",
+        title: "How Strategy Vectors Help You Podcast",
         description: "Discover how we are aiming to revolutionise strategy development using AI-powered insights and contextualised market intelligence to identify transformational pivot points.",
         date: "October 2025",
         duration: "8 min",
@@ -17,7 +17,7 @@ const videosData = [
     },
     {
         id: "video-2",
-        youtubeId: "https://muse.ai/vc/JdR5GCR", // Replace with actual YouTube video ID
+        MuseId: "JdR5GCR",
         title: "A Peek Inside The Machine",
         description: "See how our unified patient journey is built in order to identify critical intelligence & drive fresh insights & stimulate new strategic discussions",
         date: "September 2025",
@@ -26,7 +26,7 @@ const videosData = [
     },
     {
         id: "video-3",
-        youtubeId: "PLACEHOLDER", // Special marker for placeholder videos
+        MuseId: "PLACEHOLDER", // Special marker for placeholder videos
         title: "Future Content",
         description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
         date: "Upcoming",
@@ -47,10 +47,10 @@ const videosData = [
 /*
 {
     id: "video-4", // Increment the number
-    youtubeId: "abc123xyz", // Your YouTube video ID
+    MuseId: "abc123xyz", // Your Muse.ai 7-digit video ID
     title: "Your Video Title Here",
     description: "Your video description here.",
-    date: "April 2025",
+    date: "December 2025",
     duration: "10 min",
     dateOrder: 20250415 // Format: YYYYMMDD
 },
