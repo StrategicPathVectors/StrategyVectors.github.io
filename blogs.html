@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -249,6 +250,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: row;
+            align-items: flex-start;
             width: 100%;
         }
 
@@ -260,8 +262,9 @@
         .blog-image {
             width: 300px;
             min-width: 300px;
-            height: auto;
+            height: 200px;
             object-fit: cover;
+            flex-shrink: 0;
         }
 
         .blog-content {
