@@ -1,3 +1,4 @@
+
 // Central blog data store
 // Add new blogs at the TOP of this array to keep them in reverse chronological order
 // The first 3 blogs will automatically appear on the homepage
@@ -72,7 +73,7 @@ Strategic Management Journal research on dynamic capabilities and organizational
     },
     {
         id: 'blog-3',
-        title: 'It\'s Time to Retire SWOT',
+        title: "It's Time to Retire SWOT",
         date: '27 October, 2025',
         image: 'images/anti-swot.png',
         excerpt: '"Never do a SWOT analysis. And never pay attention to a SWOT analysis you happen to receive" (Roger L. Martin)',
