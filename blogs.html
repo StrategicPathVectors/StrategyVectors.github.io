@@ -371,12 +371,12 @@
             border-radius: 12px;
             max-width: 1200px;
             width: 90%;
-            margin: 3rem auto;
-            margin-bottom: 3rem;
+            margin: 2rem auto;
+            margin-bottom: 4rem;
             position: relative;
             box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
             animation: slideIn 0.3s ease-out;
-            max-height: none;
+            min-height: 400px;
         }
 
         @keyframes slideIn {
@@ -391,15 +391,17 @@
         }
 
         .modal-header {
-            padding: 2rem;
+            padding: 2.5rem;
+            padding-bottom: 2rem;
             border-bottom: 2px solid #f0f0f0;
             position: relative;
         }
 
         .modal-header h2 {
             color: var(--primary-purple);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
         .modal-meta {
@@ -432,10 +434,11 @@
         }
 
         .modal-body {
-            padding: 2rem;
-            padding-bottom: 3rem;
+            padding: 3rem;
+            padding-bottom: 4rem;
             line-height: 1.8;
             color: var(--bg-dark);
+            font-size: 1.05rem;
         }
 
         .modal-body p {
@@ -749,14 +752,14 @@
             modalBody.innerHTML = blog.content;
             
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            // Removed: document.body.style.overflow = 'hidden'; - this was preventing scrolling!
         }
 
         // Close modal
         function closeModal() {
             const modal = document.getElementById('blogModal');
             modal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
+            // Removed: document.body.style.overflow = ''; - no longer needed
         }
 
         // Close modal when clicking close button
