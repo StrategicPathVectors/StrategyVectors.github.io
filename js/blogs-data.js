@@ -16,7 +16,7 @@ const blogsData = [
    {
     id: 'blog-4',
     title: 'Your Strategy Creating System is Broken. Here\'s a Better Way.',
-    date: 'November 15, 2025',
+    date: 'November 14, 2025',
     image: 'images/wtp_htw.png',
     excerpt: 'Your Strategy Creating System is Broken. Here is a Better Way',
     content: `<p><em>(Estimated Read Time: 6-minutes)</em></p>
