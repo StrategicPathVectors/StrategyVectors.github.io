@@ -94,7 +94,7 @@ const blogsData = [
 <p>Strategy shouldn't be a painful ritual that produces a static document, yet another set of PowerPoint templates being filled. It must be a living, breathing process of continuous learning and adaptation. By integrating the wisdom of the world's best strategic thinkers, you can move from frustrating planning cycles to a dynamic system that builds a unified team picture, with intense clarity, where you bring the "outside-in", foster innovation and actually deliver results.</p>
 
 <p>Reduce linear, blinkered thinking driven by rigid templates, stop planning, stop "playing to play" and pivot toward "playing to win", and start building the capacity to adapt and thrive. Please, ask us to explain more; we'd be delighted to show you what is possible…</p>`
-}
+},
    {
     id: 'blog-1',
     title: 'Course Management in Golf: A Lesson in Mastering the Variable Environment',
