@@ -5,6 +5,15 @@
 
 const videosData = [
     {
+        id: "video-6",
+        museId: "4HfRzGn",
+        title: "Psoriasis in Sweden; a Patient Journey Framework summary AND patient story",
+        description: "Our new strategy creation tool has been used in many markets, many conditions & therapy areas; here is yet another example",
+        date: "July 2025",
+        duration: "4+ mins",
+        dateOrder: 20250817
+    },
+    {
         id: "video-5",
         museId: "nKsiPzj",
         title: "One Italian Alzheimer's Disease Patient Segment",
@@ -17,7 +26,7 @@ const videosData = [
         id: "video-4",
         museId: "HiXnF9n",
         title: "MASH Crisis in Spain",
-        description: "See how our Unified Patient journey Framework identifies critical intelligence, MASH system failures, drives fresh insights & stimulate new strategic discussions",
+        description: "See how our Unified Patient journey Framework identifies critical intelligence, MASH system failures, drives fresh insights & stimulates new strategic discussions",
         date: "November 2025",
         duration: "7 mins",
         dateOrder: 20251107
