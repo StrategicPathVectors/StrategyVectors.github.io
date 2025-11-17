@@ -5,12 +5,22 @@
 
 const videosData = [
     {
+        id: "video-3",
+        museId: "PLACEHOLDER", // Special marker for placeholder videos
+        title: "Future Content",
+        description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
+        date: "Upcoming",
+        duration: "5 min",
+        dateOrder: 20250101, // Give it a date so it appears as the third video
+        isPlaceholder: true // Special flag to indicate this is a placeholder
+    },
+    {
         id: "video-1",
         museId: "1PSeih6",
         title: "How Strategy Vectors Help You Podcast",
         description: "Discover how we are aiming to revolutionise strategy development using AI-powered insights and contextualised market intelligence to identify transformational pivot points.",
         date: "October 2025",
-        duration: "8 min",
+        duration: "8 mins",
         // The dateOrder is used for sorting - format: YYYYMMDD
         // This ensures videos appear in the correct chronological order
         dateOrder: 20250315
@@ -21,19 +31,19 @@ const videosData = [
         title: "A Peek Inside The Machine",
         description: "See how our unified patient journey is built in order to identify critical intelligence & drive fresh insights & stimulate new strategic discussions",
         date: "September 2025",
-        duration: "3+ min",
+        duration: "3+ mins",
         dateOrder: 20250228
     },
-    {
-        id: "video-3",
-        museId: "PLACEHOLDER", // Special marker for placeholder videos
-        title: "Future Content",
-        description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
-        date: "Upcoming",
-        duration: "5 min",
-        dateOrder: 20250101, // Give it a date so it appears as the third video
-        isPlaceholder: true // Special flag to indicate this is a placeholder
-    }
+     {
+        id: "video-4",
+        museId: "<div class="muse-video-player" data-video="HiXnF9n" data-width="576"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>",
+        title: "MASH Crisis in Spain",
+        description: "See how our Unified Patient journey Framework identifies critical intelligence, MASH system failures, drives fresh insights & stimulate new strategic discussions",
+        date: "November 2025",
+        duration: "7 mins",
+        dateOrder: 20250228
+    },
+    
 ];
 
 // Note: When you're ready to add a real video as the third one, simply:
