@@ -4,7 +4,7 @@
 // The date determines which videos appear as "most recent" on the homepage
 
 const videosData = [
-     {
+    {
         id: "video-4",
         museId: "HiXnF9n",
         title: "MASH Crisis in Spain",
@@ -13,7 +13,6 @@ const videosData = [
         duration: "7 mins",
         dateOrder: 20251117
     },
-   
     {
         id: "video-1",
         museId: "1PSeih6",
@@ -21,8 +20,6 @@ const videosData = [
         description: "Discover how we are aiming to revolutionise strategy development using AI-powered insights and contextualised market intelligence to identify transformational pivot points.",
         date: "October 2025",
         duration: "8 mins",
-        // The dateOrder is used for sorting - format: YYYYMMDD
-        // This ensures videos appear in the correct chronological order
         dateOrder: 20251015
     },
     {
@@ -36,33 +33,12 @@ const videosData = [
     },
     {
         id: "video-3",
-        museId: "PLACEHOLDER", // Special marker for placeholder videos
+        museId: "PLACEHOLDER",
         title: "Future Content",
         description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
         date: "Upcoming",
         duration: "5 min",
-        dateOrder: 20250101, // Give it a date so it appears as the third video
-        isPlaceholder: true // Special flag to indicate this is a placeholder
-    }, 
-    
+        dateOrder: 20250101,
+        isPlaceholder: true
+    }
 ];
-
-// Note: When you're ready to add a real video as the third one, simply:
-// 1. Change youtubeId from "PLACEHOLDER" to the actual YouTube video ID
-// 2. Update the title, description, date, and duration
-// 3. Set isPlaceholder to false (or remove that line entirely)
-// 4. Update dateOrder to the actual date in YYYYMMDD format
-
-// Example of how to add a NEW video at the top:
-// Just copy this template, fill in your details, and paste it at the very top of the videosData array:
-/*
-{
-    id: "video-4", // Increment the number
-    MuseId: "abc123xyz", // Your Muse.ai 7-digit video ID
-    title: "Your Video Title Here",
-    description: "Your video description here.",
-    date: "December 2025",
-    duration: "10 min",
-    dateOrder: 20250415 // Format: YYYYMMDD
-},
-*/
