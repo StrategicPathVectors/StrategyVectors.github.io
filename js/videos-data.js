@@ -5,6 +5,15 @@
 
 const videosData = [
     {
+        id: "video-7",
+        museId: "9pvgqUT",
+        title: "Obesity in Ireland; NEW Patient Journey Framework summary - as a newsroom headlines feature",
+        description: "Our strategy creation tool pinpoints system-level issues & creates a series of Strategy Vectors (pivot points) for strategy creation & discussion stimuli",
+        date: "November 2025",
+        duration: "8 mins",
+        dateOrder: 20251117
+    },
+    {
         id: "video-6",
         museId: "4HfRzGn",
         title: "Psoriasis in Sweden; a Patient Journey Framework summary AND patient story",
@@ -38,7 +47,7 @@ const videosData = [
         description: "Discover how we are aiming to revolutionise strategy development using AI-powered insights and contextualised market intelligence to identify transformational pivot points.",
         date: "October 2025",
         duration: "8 mins",
-        dateOrder: 20251115
+        dateOrder: 20251119
     },
     {
         id: "video-2",
@@ -47,7 +56,7 @@ const videosData = [
         description: "See how our unified patient journey is built in order to identify critical intelligence & drive fresh insights & stimulate new strategic discussions",
         date: "September 2025",
         duration: "3+ mins",
-        dateOrder: 20251108
+        dateOrder: 20251119
     },
     {
         id: "video-3",
