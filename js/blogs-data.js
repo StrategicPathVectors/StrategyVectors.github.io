@@ -31,7 +31,7 @@ const blogsData = [
 
             <p>Let me show you how it works—and how you can start applying it immediately.</p>
 
-            <h3>The Three Types of Reasoning</h3> (And Why You're Probably Using the Wrong Ones)
+            <h3>The 3 Types of Reasoning</h3> (& Why You're Probably Using the Wrong Ones)
 
             <p>Most strategic thinking operates through two familiar modes of reasoning: deduction and induction. But there's a third type, <strong>"abductive reasoning"</strong> that's essential for strategy yet rarely taught explicitly. Understanding the differences changes everything.</p>
 
