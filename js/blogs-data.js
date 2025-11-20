@@ -19,11 +19,11 @@ const blogsData = [
    title: "How to Make Strategy Decisions When Facts Don't Exist (& Your Crystal Ball Isn't Working)",
    date: "November 20, 2025",
    image: 'images/crystal_ball.png',
-   content: `
-        <div class="blog-post">
-            <p>Here's the fundamental problem with strategy: you're making irreversible decisions today about a future that doesn't exist yet, using data you don't have (can't have), about markets that haven't formed, with competitors who might not be different tomorrow.</p>
+   excerpt: 'There are no facts about the future. There is a Better Way to look forward though...',
+   content: `<p><em>(Estimated Read Time: 7-minutes)</em></p>
+            <p><strong>Here's the fundamental problem with strategy:</strong> you're making irreversible decisions today about a future that doesn't exist yet, using data you don't have (can't have), about markets that haven't formed, with competitors who might not be different tomorrow.</p>
 
-            <p>Think about the weight of that reality. Every strategic commitment—every resource allocation & investment & every market entry & development is fundamentally a bet on futures that exist only in your imagination. And here's what makes this truly uncomfortable: there are no facts about the future. None. Zero. Not a single empirically verifiable data point about what's coming next.</p>
+            <p>Think about the weight of that reality. Every strategic commitment—every resource allocation & investment & every market entry & development is fundamentally a bet on futures that exist only in your imagination. <strong>And here's what makes this truly uncomfortable: there are no facts about the future. None. Zero. Not a single empirically verifiable data point about what's coming next.</p></strong>
 
             <p>So how do you make intelligent strategic choices when the very foundation of rational decision-making, i.e. facts, don't exist?</p>
 
@@ -31,9 +31,9 @@ const blogsData = [
 
             <p>Let me show you how it works—and how you can start applying it immediately.</p>
 
-            <h2>The Three Types of Reasoning (And Why You're Probably Using the Wrong Ones)</h2>
+            <h2>The Three Types of Reasoning</h2> (And Why You're Probably Using the Wrong Ones)
 
-            <p>Most strategic thinking operates through two familiar modes of reasoning: deduction and induction. But there's a third type—abductive reasoning—that's essential for strategy yet rarely taught explicitly. Understanding the differences changes everything.</p>
+            <p>Most strategic thinking operates through two familiar modes of reasoning: deduction and induction. But there's a third type, <strong>"abductive reasoning"</strong> that's essential for strategy yet rarely taught explicitly. Understanding the differences changes everything.</p>
 
             <style>
                 .reasoning-table-wrapper {
@@ -414,13 +414,13 @@ const blogsData = [
 
             <p>Induction identifies trends in what's already happened.</p>
 
-            <p>But abduction generates possibilities for what could be—and that's where strategic advantage lives.</p>
+            <p><strong>But abduction generates possibilities for what could be—and that's where strategic advantage lives.</p></strong>
 
             <p>Charles Sanders Peirce, the philosopher who formalized abductive reasoning, called it "the logic of what might be." It's the cognitive process that lets you look at incomplete information and generate the best guess about what's happening or what could happen. Not the proven answer. Not the statistically likely answer. The most insightful answer given what you know and what you're trying to achieve.</p>
 
             <p>This is the reasoning mode that makes strategic foresight possible. And it's trainable.</p>
 
-            <h2>Why Traditional Strategy Creation Fails: The Tyranny of the Single Future</h2>
+            <p>Why Traditional Strategy Creation Fails: The Tyranny of the Single Future</p>
 
             <p>For most of business history, strategic planning meant forecasting. You'd gather historical data, identify trends, extend those trends forward, and call the result your five-year plan. This produced beautifully detailed strategic documents with charts showing exactly where you'd be in 2030. But most if not all forecasts are never met exactly (obviously, but we keep doing it to build strategy!)</p>
 
@@ -436,29 +436,29 @@ const blogsData = [
 
             <p>This is possibilism: the recognition that futures are not predetermined but shaped by choices made in the present.</p>
 
-            <h2>The Integration Imperative: Why Singapore Succeeds Where Others Fail</h2>
+            <p>The Integration Imperative: Why Singapore Succeeds Where Others Fail</p>
 
             <p>Scenario planning represents one powerful technique. But the organizations achieving true foresight excellence don't rely on single methodologies. They integrate complementary approaches systematically.</p>
 
             <p>Singapore provides the masterclass. As a small island nation with no natural resources, extraordinary vulnerability to global disruptions, and existence dependent on international trade and stability, Singapore recognized early that foresight wasn't optional—it was existential.</p>
 
-            <p>The Centre for Strategic Futures, established in the Prime Minister's Office (signalling how seriously Singapore takes this), practices what they call "Scenario Planning Plus." The "Plus" matters enormously. They don't just do scenario planning. They systematically combine:</p>
+            <li>The Centre for Strategic Futures, established in the Prime Minister's Office (signalling how seriously Singapore takes this), practices what they call "Scenario Planning Plus." The "Plus" matters enormously. They don't just do scenario planning. They systematically combine:</li>
 
             <ul>
-                <li>Horizon Scanning</li>
-                <li>Weak Signals Analysis</li>
-                <li>Scenario Planning</li>
-                <li>Back-casting</li>
-                <li>War Gaming</li>
-                <li>Complexity Theory</li>
-                <li>Big Data Analytics</li>
+                <p>Horizon Scanning</p>
+                <p>Weak Signals Analysis</p>
+                <p>Scenario Planning</p>
+                <p>Back-casting</p>
+                <p>War Gaming</p>
+                <p>Complexity Theory</p>
+                <p>Big Data Analytics</p>
             </ul>
 
             <p>The Centre conducts regular "Futures Conversations" across government agencies. They rotate public servants through the Centre to build foresight capacity throughout the system. After 35+ years of practice, thinking about multiple futures has become Singapore's institutional DNA.</p>
 
             <p>The lesson isn't "use scenario planning" or "do horizon scanning." The lesson is that excellence emerges from integrating complementary techniques contextually. Horizon scanning provides peripheral vision. Scenarios explore possibilities. Back-casting identifies pathways. War gaming tests responses. Complexity theory reveals dynamics. Together, they create comprehensive capability that single methodologies cannot.</p>
 
-            <h2>The Bridge to Action: "What Would Have to Be True"</h2>
+            <h3>The Bridge to Action: "What Would Have to Be True"</h3>
 
             <p>Strategic foresight generates rich understanding of possible futures. But how do you translate that insight into strategic choices? How do you move from "here are four plausible futures" to "here's what we're going to do"?</p>
 
@@ -480,7 +480,7 @@ const blogsData = [
 
             <p>This is how you connect foresight to strategic choice. You explore multiple scenarios. For each scenario, you identify promising strategies. For each strategy, you articulate conditions required for success using WWHTTBT. You test those conditions. You monitor indicators showing which scenarios are emerging and which conditions are materializing. You adjust strategy dynamically as the future clarifies.</p>
 
-            <h2>Practical Application: Your Immediate Action Plan</h2>
+            <h3>Practical Application: Your Immediate Action Plan</h3>
 
             <p>You can begin improving your strategic thinking immediately with four focused practices:</p>
 
@@ -540,7 +540,7 @@ const blogsData = [
 
             <p>Cross-pollinate domains deliberately. When working on problem in domain A, ask: "How does domain B address similar challenges?" Healthcare can learn from aviation's safety protocols. Manufacturing can learn from software's agile methods. Finance can learn from sports analytics. Abductive leaps often come from connecting previously unconnected domains.</p>
 
-            <h2>The Synthesis: Strategy as Disciplined Imagination</h2>
+            <h3>The Synthesis: Strategy as Disciplined Imagination</h3>
 
             <p>Let me tie this together, because these aren't separate techniques—they're components of integrated capability.</p>
 
@@ -560,7 +560,7 @@ const blogsData = [
 
             <p>Strategic thinking isn't innate talent. It's trainable capability. The organizations navigating uncertainty successfully aren't lucky. They're practicing systematic approaches to thinking about futures that don't yet exist.</p>
 
-            <p>Because here's the fundamental truth: the future isn't predetermined. It's shapeable. Your strategic choices today influence which of the possible futures becomes real. You're not a passive observer waiting for the future to happen to you. You're an active participant helping to create it.</p>
+            <p><strong>Because here's the fundamental truth: the future isn't predetermined. It's shapeable. Your strategic choices today influence which of the possible futures becomes real. You're not a passive observer waiting for the future to happen to you. You're an active participant helping to create it.</p></strong>
         </div>
     `
 },
