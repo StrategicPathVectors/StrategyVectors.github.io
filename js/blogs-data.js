@@ -5,14 +5,565 @@
 
 const blogsData = [
    
-    {
+   {
         id: 'new blog coming soon',
         title: 'NEW blog: Coming Soon',
-        date: 'November 21, 2025',
-        image: 'images/crystal_ball.png',
-        excerpt: 'There are no facts about the future',
+        date: 'November 28, 2025',
+        image: 'images/.png',
+        excerpt: 'Part 2 on Strategic Insights',
         content: 'More new thinking to generate discussions coming soon'
     },
+
+{
+   id: 'new blog coming soon',
+   title: "How to Make Strategy Decisions When Facts Don't Exist (& Your Crystal Ball Isn't Working)",
+   date: "November 20, 2025",
+   image: 'images/crystal_ball.png',
+   content: `
+        <div class="blog-post">
+            <p>Here's the fundamental problem with strategy: you're making irreversible decisions today about a future that doesn't exist yet, using data you don't have (can't have), about markets that haven't formed, with competitors who might not be different tomorrow.</p>
+
+            <p>Think about the weight of that reality. Every strategic commitment—every resource allocation & investment & every market entry & development is fundamentally a bet on futures that exist only in your imagination. And here's what makes this truly uncomfortable: there are no facts about the future. None. Zero. Not a single empirically verifiable data point about what's coming next.</p>
+
+            <p>So how do you make intelligent strategic choices when the very foundation of rational decision-making, i.e. facts, don't exist?</p>
+
+            <p>The answer lies in understanding a type of reasoning most business leaders have never formally learned, combined with systematic approaches to exploring multiple futures. This isn't theoretical philosophy.</p>
+
+            <p>Let me show you how it works—and how you can start applying it immediately.</p>
+
+            <h2>The Three Types of Reasoning (And Why You're Probably Using the Wrong Ones)</h2>
+
+            <p>Most strategic thinking operates through two familiar modes of reasoning: deduction and induction. But there's a third type—abductive reasoning—that's essential for strategy yet rarely taught explicitly. Understanding the differences changes everything.</p>
+
+            <style>
+                .reasoning-table-wrapper {
+                    margin: 40px 0;
+                    background: white;
+                    border-radius: 10px;
+                    box-shadow: 0 8px 30px rgba(68, 0, 58, 0.15);
+                    overflow: hidden;
+                }
+                
+                .reasoning-table-header {
+                    background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
+                    color: white;
+                    padding: 25px 20px;
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                .reasoning-table-header::before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    right: -5%;
+                    width: 200px;
+                    height: 200px;
+                    background: rgba(235, 28, 169, 0.2);
+                    border-radius: 50%;
+                }
+                
+                .reasoning-table-header-content {
+                    position: relative;
+                    z-index: 1;
+                }
+                
+                .reasoning-table-header h3 {
+                    font-size: 1.6em;
+                    margin-bottom: 8px;
+                    font-weight: 700;
+                    letter-spacing: -0.5px;
+                }
+                
+                .reasoning-table-header p {
+                    font-size: 0.95em;
+                    opacity: 0.95;
+                    font-weight: 300;
+                }
+                
+                .reasoning-table-content {
+                    padding: 20px 15px;
+                }
+                
+                .reasoning-table {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 0 12px;
+                    table-layout: fixed;
+                }
+                
+                .reasoning-table th {
+                    padding: 12px 10px;
+                    text-align: left;
+                    font-weight: 700;
+                    font-size: 0.7em;
+                    text-transform: uppercase;
+                    letter-spacing: 0.8px;
+                    background: #44003A;
+                    color: #FFE594;
+                    border: none;
+                }
+                
+                .reasoning-table th:nth-child(1) { width: 12%; }
+                .reasoning-table th:nth-child(2) { width: 22%; }
+                .reasoning-table th:nth-child(3) { width: 16%; }
+                .reasoning-table th:nth-child(4) { width: 22%; }
+                .reasoning-table th:nth-child(5) { width: 28%; }
+                
+                .reasoning-table th:first-child {
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                }
+                
+                .reasoning-table th:last-child {
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+                
+                .reasoning-table tbody tr {
+                    background: white;
+                    box-shadow: 0 2px 6px rgba(68, 0, 58, 0.08);
+                    border-radius: 8px;
+                }
+                
+                .reasoning-table td {
+                    padding: 16px 10px;
+                    vertical-align: top;
+                    line-height: 1.4;
+                    background: white;
+                    font-size: 0.85em;
+                }
+                
+                .reasoning-table td:first-child {
+                    border-top-left-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                }
+                
+                .reasoning-table td:last-child {
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+                
+                .reasoning-type {
+                    font-weight: 800;
+                    font-size: 1.3em;
+                    margin-bottom: 4px;
+                    letter-spacing: -0.5px;
+                }
+                
+                .deductive .reasoning-type { color: #FF4834; }
+                .inductive .reasoning-type { color: #8400AC; }
+                .abductive .reasoning-type { color: #FFC14C; }
+                
+                .deductive { border-left: 4px solid #FF4834; }
+                .inductive { border-left: 4px solid #8400AC; }
+                .abductive { border-left: 4px solid #FFC14C; }
+                
+                .logic-flow {
+                    font-weight: 700;
+                    color: #44003A;
+                    margin-bottom: 8px;
+                    font-size: 0.95em;
+                }
+                
+                .example {
+                    background: linear-gradient(135deg, #FFE594 0%, #FFC14C 100%);
+                    padding: 10px 12px;
+                    border-radius: 6px;
+                    font-style: italic;
+                    margin-top: 6px;
+                    border-left: 3px solid #FF4834;
+                    font-size: 0.85em;
+                    color: #44003A;
+                    line-height: 1.5;
+                }
+                
+                .certainty {
+                    display: inline-block;
+                    padding: 6px 12px;
+                    border-radius: 18px;
+                    font-size: 0.7em;
+                    font-weight: 700;
+                    margin-top: 6px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+                
+                .certainty.high {
+                    background: #FF4834;
+                    color: white;
+                }
+                
+                .certainty.medium {
+                    background: #8400AC;
+                    color: white;
+                }
+                
+                .certainty.low {
+                    background: #FFC14C;
+                    color: #44003A;
+                }
+                
+                .certainty-note {
+                    margin-top: 8px;
+                    color: #5E5E5E;
+                    font-size: 0.8em;
+                    line-height: 1.4;
+                }
+                
+                .best-for ul {
+                    margin-top: 8px;
+                    margin-left: 0;
+                    list-style: none;
+                }
+                
+                .best-for li {
+                    margin: 6px 0;
+                    color: #44003A;
+                    padding-left: 20px;
+                    position: relative;
+                    line-height: 1.3;
+                    font-size: 0.9em;
+                }
+                
+                .best-for li::before {
+                    content: '→';
+                    position: absolute;
+                    left: 0;
+                    color: #FF4834;
+                    font-weight: 700;
+                    font-size: 1em;
+                }
+                
+                .strategic-value {
+                    margin-top: 8px;
+                    padding: 14px;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    border: 2px solid;
+                }
+                
+                .strategic-value.low {
+                    background: linear-gradient(135deg, #FF4834 0%, #EB1CA9 100%);
+                    border-color: #44003A;
+                    color: white;
+                }
+                
+                .strategic-value.medium {
+                    background: linear-gradient(135deg, #EB1CA9 0%, #8400AC 100%);
+                    border-color: #44003A;
+                    color: white;
+                }
+                
+                .strategic-value.high {
+                    background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
+                    border-color: #FF4834;
+                    color: #FFE594;
+                }
+                
+                .strategic-value .label {
+                    font-size: 0.95em;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 800;
+                    margin-bottom: 6px;
+                    display: block;
+                }
+                
+                .strategic-value .description {
+                    font-weight: 400;
+                    font-size: 0.8em;
+                    line-height: 1.4;
+                    opacity: 0.95;
+                }
+
+                @media (max-width: 768px) {
+                    .reasoning-table th,
+                    .reasoning-table td {
+                        font-size: 0.75em;
+                        padding: 10px 8px;
+                    }
+                    
+                    .reasoning-type {
+                        font-size: 1.1em;
+                    }
+                }
+            </style>
+
+            <div class="reasoning-table-wrapper">
+                <div class="reasoning-table-header">
+                    <div class="reasoning-table-header-content">
+                        <h3>Three Types of Strategic Reasoning</h3>
+                        <p>Understanding the cognitive foundations of strategic thinking</p>
+                    </div>
+                </div>
+                
+                <div class="reasoning-table-content">
+                    <table class="reasoning-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Logic Flow & Example</th>
+                                <th>Certainty</th>
+                                <th>Best Used For</th>
+                                <th>Strategic Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="deductive">
+                                <td>
+                                    <div class="reasoning-type">DEDUCTIVE</div>
+                                </td>
+                                <td>
+                                    <div class="logic-flow">General rule → Specific case</div>
+                                    <div class="example">
+                                        "All swans catalogued are white" + "This is a swan" = "Therefore, this swan is white"
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="certainty high">High</span>
+                                    <p class="certainty-note">If premises true, conclusion certain</p>
+                                </td>
+                                <td>
+                                    <div class="best-for">
+                                        <ul>
+                                            <li>Applying known principles</li>
+                                            <li>System optimization</li>
+                                            <li>Quality control</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="strategic-value low">
+                                        <div class="label">⚠️ Low for Innovation</div>
+                                        <div class="description">Optimizes existing approaches but cannot discover new possibilities. Excellent for efficiency, poor for breakthroughs.</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr class="inductive">
+                                <td>
+                                    <div class="reasoning-type">INDUCTIVE</div>
+                                </td>
+                                <td>
+                                    <div class="logic-flow">Observations → Pattern</div>
+                                    <div class="example">
+                                        "Swan 1 is white" + "Swan 2 is white" + "Swan N is white" = "All swans are white"
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="certainty medium">Medium</span>
+                                    <p class="certainty-note">Probability-based; vulnerable to outliers</p>
+                                </td>
+                                <td>
+                                    <div class="best-for">
+                                        <ul>
+                                            <li>Building theories from data</li>
+                                            <li>Trend analysis</li>
+                                            <li>Pattern recognition</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="strategic-value medium">
+                                        <div class="label">⚡ Medium for Innovation</div>
+                                        <div class="description">Identifies patterns but vulnerable to black swans. Assumes future resembles past—useful for incremental improvement.</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr class="abductive">
+                                <td>
+                                    <div class="reasoning-type">ABDUCTIVE</div>
+                                </td>
+                                <td>
+                                    <div class="logic-flow">Observation + Context → Best explanation</div>
+                                    <div class="example">
+                                        "This bird is black with swan features" + "Black swans might exist" = "This could be a black swan"
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="certainty low">Low</span>
+                                    <p class="certainty-note">Generates hypotheses requiring testing</p>
+                                </td>
+                                <td>
+                                    <div class="best-for">
+                                        <ul>
+                                            <li>Novel explanations</li>
+                                            <li>Creative problem-solving</li>
+                                            <li>Strategic innovation</li>
+                                            <li>Complex diagnosis</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="strategic-value high">
+                                        <div class="label">🚀 High for Innovation</div>
+                                        <div class="description">Enables imaginative leaps beyond available data. Creates new possibilities and competitive advantage by exploring "what could be."</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p>Here's why this matters profoundly for strategy:</p>
+
+            <p>Deduction optimizes what you're already doing.</p>
+
+            <p>Induction identifies trends in what's already happened.</p>
+
+            <p>But abduction generates possibilities for what could be—and that's where strategic advantage lives.</p>
+
+            <p>Charles Sanders Peirce, the philosopher who formalized abductive reasoning, called it "the logic of what might be." It's the cognitive process that lets you look at incomplete information and generate the best guess about what's happening or what could happen. Not the proven answer. Not the statistically likely answer. The most insightful answer given what you know and what you're trying to achieve.</p>
+
+            <p>This is the reasoning mode that makes strategic foresight possible. And it's trainable.</p>
+
+            <h2>Why Traditional Strategy Creation Fails: The Tyranny of the Single Future</h2>
+
+            <p>For most of business history, strategic planning meant forecasting. You'd gather historical data, identify trends, extend those trends forward, and call the result your five-year plan. This produced beautifully detailed strategic documents with charts showing exactly where you'd be in 2030. But most if not all forecasts are never met exactly (obviously, but we keep doing it to build strategy!)</p>
+
+            <p>Here's why:</p>
+
+            <p>Forecasting asks, "What will happen?" (& that tends to be based purely on historical data & linked assumptions)</p>
+
+            <p>Foresight asks, "What could happen?" (and that is a far bigger, scarier prospect!)</p>
+
+            <p>That subtle shift in questions opens up an entirely different strategic approach. Forecasting assumes a single most-likely future and optimizes for it. This produces organizational brittleness—you're superbly prepared for one future and catastrophically unprepared for alternatives. When the unexpected happens (and in our current era, it will happen), you're blindsided.</p>
+
+            <p>Foresight recognizes that multiple futures remain genuinely possible and that your strategic choices today influence which one emerges. Rather than one forecast, you develop a portfolio of scenarios. Rather than optimizing for a single future, you identify strategic moves that create advantage across multiple possible futures.</p>
+
+            <p>This is possibilism: the recognition that futures are not predetermined but shaped by choices made in the present.</p>
+
+            <h2>The Integration Imperative: Why Singapore Succeeds Where Others Fail</h2>
+
+            <p>Scenario planning represents one powerful technique. But the organizations achieving true foresight excellence don't rely on single methodologies. They integrate complementary approaches systematically.</p>
+
+            <p>Singapore provides the masterclass. As a small island nation with no natural resources, extraordinary vulnerability to global disruptions, and existence dependent on international trade and stability, Singapore recognized early that foresight wasn't optional—it was existential.</p>
+
+            <p>The Centre for Strategic Futures, established in the Prime Minister's Office (signalling how seriously Singapore takes this), practices what they call "Scenario Planning Plus." The "Plus" matters enormously. They don't just do scenario planning. They systematically combine:</p>
+
+            <ul>
+                <li>Horizon Scanning</li>
+                <li>Weak Signals Analysis</li>
+                <li>Scenario Planning</li>
+                <li>Back-casting</li>
+                <li>War Gaming</li>
+                <li>Complexity Theory</li>
+                <li>Big Data Analytics</li>
+            </ul>
+
+            <p>The Centre conducts regular "Futures Conversations" across government agencies. They rotate public servants through the Centre to build foresight capacity throughout the system. After 35+ years of practice, thinking about multiple futures has become Singapore's institutional DNA.</p>
+
+            <p>The lesson isn't "use scenario planning" or "do horizon scanning." The lesson is that excellence emerges from integrating complementary techniques contextually. Horizon scanning provides peripheral vision. Scenarios explore possibilities. Back-casting identifies pathways. War gaming tests responses. Complexity theory reveals dynamics. Together, they create comprehensive capability that single methodologies cannot.</p>
+
+            <h2>The Bridge to Action: "What Would Have to Be True"</h2>
+
+            <p>Strategic foresight generates rich understanding of possible futures. But how do you translate that insight into strategic choices? How do you move from "here are four plausible futures" to "here's what we're going to do"?</p>
+
+            <p>This is where Roger Martin and A.G. Lafley's "What Would Have to Be True" (WWHTTBT) framework provides the essential bridge. It's deceptively simple and remarkably powerful.</p>
+
+            <p>Here's the problem most strategic debates devolve into: people argue about what is true. "The market is growing." "No, it's saturating." "Customers want premium." "No, they want value." These debates are unresolvable because there are no facts about the future to settle the argument.</p>
+
+            <p>WWHTTBT flips the conversation entirely. Instead of arguing about what is true, you ask: "What would have to be true for this strategy to succeed?"</p>
+
+            <p>Suddenly, you're not debating. You're collaboratively listing testable conditions.</p>
+
+            <p>The framework separates logic from data. Teams agree on the logic—the conditions required for success—before arguing about whether those conditions exist or can be created. This produces three transformative benefits:</p>
+
+            <p>First, it reduces defensiveness. You're not attacking someone's strategy; you're collaboratively exploring its requirements. The conversation shifts from "your idea is wrong" to "what needs to be true for this to work?"</p>
+
+            <p>Second, it clarifies assumptions. Every strategy rests on assumptions about customers, competitors, capabilities, markets, and regulations. WWHTTBT makes those assumptions explicit and therefore testable.</p>
+
+            <p>Third, it creates monitoring frameworks. Once you've identified conditions required for success, you can design experiments to test them and establish indicators to monitor them. Strategy becomes hypothesis-testing rather than opinion warfare.</p>
+
+            <p>This is how you connect foresight to strategic choice. You explore multiple scenarios. For each scenario, you identify promising strategies. For each strategy, you articulate conditions required for success using WWHTTBT. You test those conditions. You monitor indicators showing which scenarios are emerging and which conditions are materializing. You adjust strategy dynamically as the future clarifies.</p>
+
+            <h2>Practical Application: Your Immediate Action Plan</h2>
+
+            <p>You can begin improving your strategic thinking immediately with four focused practices:</p>
+
+            <h3>1. Establish Structured Market Info Contextualisation (Start This Week!)</h3>
+
+            <p>Stop treating market data as the ultimate resource for strategy. Contextualise data into useful intelligence. Contact us about the rapidity, robustness & revolutionary re-focusing delivered by our Patient Journey Framework & resultant Strategy Vectors</p>
+
+            <p>You'll be astonished how many weak system-level & market-based signals you were missing simply because nobody was systematically watching or contextualising all the data & information.</p>
+
+            <h3>2. Run a Scenario Workshop (Do This In January 2026)</h3>
+
+            <p>Identify the 2-3 most critical uncertainties facing your organization over the next 5-10 years. Not certainties (those are constraints, not scenarios). Not minor variables (those don't generate meaningfully different futures). The fundamental uncertainties that could push your industry in radically different directions. These might be what Rumelt calls the kernel of strategy</p>
+
+            <p>Create a 2x2 matrix with those uncertainties as axes. That gives you four scenarios. For each:</p>
+
+            <p>Develop a rich narrative and then test your current strategy:</p>
+
+            <ul>
+                <li>Which of our initiatives work well in each scenario?</li>
+                <li>Which are vulnerable?</li>
+                <li>What "no-regrets moves" work across multiple scenarios?</li>
+                <li>What options should we preserve?</li>
+                <li>What early indicators would tell us which scenario is emerging?</li>
+            </ul>
+
+            <p>This doesn't require expensive consultants or week-long off-sites. A well-facilitated half-day session with your leadership team generates remarkable insight. The conversation itself transforms how people think about uncertainty.</p>
+
+            <h3>3. Apply WWHTTBT to Current Strategic Initiatives (Do This Q1 26)</h3>
+
+            <p>Take every major strategic initiative currently underway. For each one:</p>
+
+            <p>List 5-7 conditions that must be true for success. Be specific. Not "customers must want this" but "urban millennial customers must value convenience over price by ratio of at least 2:1." Not "we must execute well" but "our project management office must deliver 80%+ of technology projects on time and on budget."</p>
+
+            <p>Rate your confidence in each condition:</p>
+
+            <ul>
+                <li>High confidence (>75%): Strong evidence this condition exists or will exist</li>
+                <li>Medium confidence (40-75%): Some evidence, significant uncertainty</li>
+                <li>Low confidence (<40%): Little evidence, major questions</li>
+            </ul>
+
+            <p>Low confidence conditions become immediate priorities for testing. Design experiments, gather data, interview customers, analyze competitors. Transform assumptions into knowledge.</p>
+
+            <p>Create monitoring dashboards. For conditions you're confident about now, identify leading indicators that would signal change. If customer preferences shift, what would you see first? If competitive dynamics change, what early signals would appear?</p>
+
+            <p>This transforms strategic planning from opinion exercise into systematic hypothesis testing.</p>
+
+            <h3>4. Practice Abductive Reasoning (Do This Daily, Start Today)</h3>
+
+            <p>Abductive reasoning is a skill you can deliberately develop. Start training it through simple practices:</p>
+
+            <p>When you observe something surprising, ask: "What explanation would make this make sense?" Not "Is this right or wrong?" but "What story connects these observations?"</p>
+
+            <p>When evaluating ideas, ask: "Where does this lead?" not "Is this immediately correct?" Suspend judgment long enough to explore implications. Poor ideas often contain seeds of breakthrough ideas visible only through exploration.</p>
+
+            <p>When facing complex problems, generate multiple explanations. Not just the most likely explanation—multiple plausible explanations. This trains your mind to hold multiple possibilities simultaneously rather than prematurely converging on single answers.</p>
+
+            <p>Cross-pollinate domains deliberately. When working on problem in domain A, ask: "How does domain B address similar challenges?" Healthcare can learn from aviation's safety protocols. Manufacturing can learn from software's agile methods. Finance can learn from sports analytics. Abductive leaps often come from connecting previously unconnected domains.</p>
+
+            <h2>The Synthesis: Strategy as Disciplined Imagination</h2>
+
+            <p>Let me tie this together, because these aren't separate techniques—they're components of integrated capability.</p>
+
+            <p>Strategic foresight without abductive reasoning produces mechanical scenario planning that misses truly novel possibilities. You need abduction to generate genuinely different futures rather than incremental variations on the present.</p>
+
+            <p>Abductive reasoning without strategic foresight produces clever ideas disconnected from systematic understanding of how futures might unfold. You need foresight's disciplined exploration to ensure your creative hypotheses connect to plausible trajectories.</p>
+
+            <p>Both without WWHTTBT produce interesting conversations but weak links to action. You need the framework to translate insight into testable strategic choices and implementation plans.</p>
+
+            <h3>Your Starting Point: This Week</h3>
+
+            <p>Here's your immediate action plan:</p>
+
+            <p>Contact me to see how we can support you…</p>
+
+            <h2>The Final Word</h2>
+
+            <p>Strategic thinking isn't innate talent. It's trainable capability. The organizations navigating uncertainty successfully aren't lucky. They're practicing systematic approaches to thinking about futures that don't yet exist.</p>
+
+            <p>Because here's the fundamental truth: the future isn't predetermined. It's shapeable. Your strategic choices today influence which of the possible futures becomes real. You're not a passive observer waiting for the future to happen to you. You're an active participant helping to create it.</p>
+        </div>
+    `
+},
    {
     id: 'blog-4',
     title: 'Your Strategy Creating System is Broken. Here\'s a Better Way.',
