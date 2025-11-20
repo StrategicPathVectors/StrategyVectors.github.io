@@ -442,15 +442,13 @@ const blogsData = [
 
             <p>Singapore provides the masterclass. As a small island nation they recognized early that foresight wasn't optional—it was existential. The Centre for Strategic Futures, established in the Prime Minister's Office, practices what they call "Scenario Planning Plus." The "Plus" matters enormously. They don't just do scenario planning. They systematically combine:</p>
 
-            <ul>
-                <il>Horizon Scanning</il>
-                <il>Weak Signals Analysis</il>
-                <il>Scenario Planning</il>
-                <il>Back-casting</il>
-                <il>War Gaming</il>
-                <il>Complexity Theory</il>
-                <il>Big Data Analytics</il>
-            </ul>
+            <ul><li>Horizon Scanning</li>
+                <li>Weak Signals Analysis</li>
+                <li>Scenario Planning</li>
+                <li>Back-casting</li>
+                <li>War Gaming</li>
+                <li>Complexity Theory</li>
+                <li>Big Data Analytics</li></ul>
 
             <p>The Centre conducts regular "Futures Conversations" across government agencies. They rotate public servants through the Centre to build foresight capacity throughout the system. After 35+ years of practice, thinking about multiple futures has become Singapore's institutional DNA.</p>
 
