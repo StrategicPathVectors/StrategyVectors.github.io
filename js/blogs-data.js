@@ -10,7 +10,7 @@ const blogsData = [
         title: 'NEW blog: Coming Soon',
         date: 'November 28, 2025',
         image: 'images/.png',
-        excerpt: 'Part 2 on Strategic Insights',
+        excerpt: 'Strategic Insights: How Your Brain and Your Team Generate Breakthrough Thinking (pt 2)',
         content: 'More new thinking to generate discussions coming soon'
     },
 
