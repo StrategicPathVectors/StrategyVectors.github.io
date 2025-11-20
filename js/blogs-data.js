@@ -31,7 +31,7 @@ const blogsData = [
 
             <p>Let me show you how it works—and how you can start applying it immediately.</p>
 
-            <h2>The Three Types of Reasoning</h2> (And Why You're Probably Using the Wrong Ones)
+            <h3>The Three Types of Reasoning</h3> (And Why You're Probably Using the Wrong Ones)
 
             <p>Most strategic thinking operates through two familiar modes of reasoning: deduction and induction. But there's a third type, <strong>"abductive reasoning"</strong> that's essential for strategy yet rarely taught explicitly. Understanding the differences changes everything.</p>
 
@@ -422,7 +422,7 @@ const blogsData = [
 
             <p>Why Traditional Strategy Creation Fails: The Tyranny of the Single Future</p>
 
-            <p>For most of business history, strategic planning meant forecasting. You'd gather historical data, identify trends, extend those trends forward, and call the result your five-year plan. This produced beautifully detailed strategic documents with charts showing exactly where you'd be in 2030. But most if not all forecasts are never met exactly (obviously, but we keep doing it to build strategy!)</p>
+            <p>For most of business history, strategic planning meant forecasting. You'd gather historical data, identify trends, extend those trends forward, and call the result your 5-year plan. This produced beautifully detailed "strategic" slides with charts showing exactly where you'd be in 2030. But most if not all forecasts are never met exactly (obviously, but we keep doing it to build strategy!)</p>
 
             <p>Here's why:</p>
 
@@ -438,20 +438,18 @@ const blogsData = [
 
             <p>The Integration Imperative: Why Singapore Succeeds Where Others Fail</p>
 
-            <p>Scenario planning represents one powerful technique. But the organizations achieving true foresight excellence don't rely on single methodologies. They integrate complementary approaches systematically.</p>
+            <p>Scenario planning represents one powerful technique. But the organizations achieving true foresight excellence don't rely on single methodologies. They integrate complementary approaches systematically.
 
-            <p>Singapore provides the masterclass. As a small island nation with no natural resources, extraordinary vulnerability to global disruptions, and existence dependent on international trade and stability, Singapore recognized early that foresight wasn't optional—it was existential.</p>
-
-            <li>The Centre for Strategic Futures, established in the Prime Minister's Office (signalling how seriously Singapore takes this), practices what they call "Scenario Planning Plus." The "Plus" matters enormously. They don't just do scenario planning. They systematically combine:</li>
+            <p>Singapore provides the masterclass. As a small island nation they recognized early that foresight wasn't optional—it was existential. The Centre for Strategic Futures, established in the Prime Minister's Office, practices what they call "Scenario Planning Plus." The "Plus" matters enormously. They don't just do scenario planning. They systematically combine:</p>
 
             <ul>
-                <p>Horizon Scanning</p>
-                <p>Weak Signals Analysis</p>
-                <p>Scenario Planning</p>
-                <p>Back-casting</p>
-                <p>War Gaming</p>
-                <p>Complexity Theory</p>
-                <p>Big Data Analytics</p>
+                <il>Horizon Scanning</il>
+                <il>Weak Signals Analysis</il>
+                <il>Scenario Planning</il>
+                <il>Back-casting</il>
+                <il>War Gaming</il>
+                <il>Complexity Theory</il>
+                <il>Big Data Analytics</il>
             </ul>
 
             <p>The Centre conducts regular "Futures Conversations" across government agencies. They rotate public servants through the Centre to build foresight capacity throughout the system. After 35+ years of practice, thinking about multiple futures has become Singapore's institutional DNA.</p>
