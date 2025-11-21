@@ -288,8 +288,7 @@ const blogsData = [
                         font-size: 1.1em;
                     }
                 }
-            </style>
-/* Mobile/iOS Responsive Enhancements */
+          /* Mobile/iOS Responsive Enhancements */
 @media (max-width: 768px) {
     /* Enable smooth horizontal scrolling */
     .reasoning-table-wrapper {
@@ -363,6 +362,8 @@ const blogsData = [
         font-size: 0.85em;
     }
 }
+</style>
+
             <div class="reasoning-table-wrapper">
                 <div class="reasoning-table-header">
                     <div class="reasoning-table-header-content">
