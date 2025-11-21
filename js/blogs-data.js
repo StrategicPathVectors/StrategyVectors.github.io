@@ -35,333 +35,316 @@ const blogsData = [
 
             <p>Most strategic thinking operates through two familiar modes of reasoning: deduction and induction. But there's a third type, <strong>"abductive reasoning"</strong> that's essential for strategy yet rarely taught explicitly. Understanding the differences changes everything.</p>
 
-            <style>
-                .reasoning-table-wrapper {
-                    margin: 40px 0;
-                    background: white;
-                    border-radius: 10px;
-                    box-shadow: 0 8px 30px rgba(68, 0, 58, 0.15);
-                    overflow: hidden;
-                }
-                
-                .reasoning-table-header {
-                    background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
-                    color: white;
-                    padding: 25px 20px;
-                    position: relative;
-                    overflow: hidden;
-                }
-                
-                .reasoning-table-header::before {
-                    content: '';
-                    position: absolute;
-                    top: -50%;
-                    right: -5%;
-                    width: 200px;
-                    height: 200px;
-                    background: rgba(235, 28, 169, 0.2);
-                    border-radius: 50%;
-                }
-                
-                .reasoning-table-header-content {
-                    position: relative;
-                    z-index: 1;
-                }
-                
-                .reasoning-table-header h3 {
-                    font-size: 1.6em;
-                    margin-bottom: 8px;
-                    font-weight: 700;
-                    letter-spacing: -0.5px;
-                }
-                
-                .reasoning-table-header p {
-                    font-size: 0.95em;
-                    opacity: 0.95;
-                    font-weight: 300;
-                }
-                
-                .reasoning-table-content {
-                    padding: 20px 15px;
-                }
-                
-                .reasoning-table {
-                    width: 100%;
-                    border-collapse: separate;
-                    border-spacing: 0 12px;
-                    table-layout: fixed;
-                }
-                
-                .reasoning-table th {
-                    padding: 12px 10px;
-                    text-align: left;
-                    font-weight: 700;
-                    font-size: 0.7em;
-                    text-transform: uppercase;
-                    letter-spacing: 0.8px;
-                    background: #44003A;
-                    color: #FFE594;
-                    border: none;
-                }
-                
-                .reasoning-table th:nth-child(1) { width: 12%; }
-                .reasoning-table th:nth-child(2) { width: 22%; }
-                .reasoning-table th:nth-child(3) { width: 16%; }
-                .reasoning-table th:nth-child(4) { width: 22%; }
-                .reasoning-table th:nth-child(5) { width: 28%; }
-                
-                .reasoning-table th:first-child {
-                    border-top-left-radius: 6px;
-                    border-bottom-left-radius: 6px;
-                }
-                
-                .reasoning-table th:last-child {
-                    border-top-right-radius: 6px;
-                    border-bottom-right-radius: 6px;
-                }
-                
-                .reasoning-table tbody tr {
-                    background: white;
-                    box-shadow: 0 2px 6px rgba(68, 0, 58, 0.08);
-                    border-radius: 8px;
-                }
-                
-                .reasoning-table td {
-                    padding: 16px 10px;
-                    vertical-align: top;
-                    line-height: 1.4;
-                    background: white;
-                    font-size: 0.85em;
-                }
-                
-                .reasoning-table td:first-child {
-                    border-top-left-radius: 8px;
-                    border-bottom-left-radius: 8px;
-                }
-                
-                .reasoning-table td:last-child {
-                    border-top-right-radius: 8px;
-                    border-bottom-right-radius: 8px;
-                }
-                
-                .reasoning-type {
-                    font-weight: 800;
-                    font-size: 1.3em;
-                    margin-bottom: 4px;
-                    letter-spacing: -0.5px;
-                }
-                
-                .deductive .reasoning-type { color: #FF4834; }
-                .inductive .reasoning-type { color: #8400AC; }
-                .abductive .reasoning-type { color: #FFC14C; }
-                
-                .deductive { border-left: 4px solid #FF4834; }
-                .inductive { border-left: 4px solid #8400AC; }
-                .abductive { border-left: 4px solid #FFC14C; }
-                
-                .logic-flow {
-                    font-weight: 700;
-                    color: #44003A;
-                    margin-bottom: 8px;
-                    font-size: 0.95em;
-                }
-                
-                .example {
-                    background: linear-gradient(135deg, #FFE594 0%, #FFC14C 100%);
-                    padding: 10px 12px;
-                    border-radius: 6px;
-                    font-style: italic;
-                    margin-top: 6px;
-                    border-left: 3px solid #FF4834;
-                    font-size: 0.85em;
-                    color: #44003A;
-                    line-height: 1.5;
-                }
-                
-                .certainty {
-                    display: inline-block;
-                    padding: 6px 12px;
-                    border-radius: 18px;
-                    font-size: 0.7em;
-                    font-weight: 700;
-                    margin-top: 6px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5px;
-                }
-                
-                .certainty.high {
-                    background: #FF4834;
-                    color: white;
-                }
-                
-                .certainty.medium {
-                    background: #8400AC;
-                    color: white;
-                }
-                
-                .certainty.low {
-                    background: #FFC14C;
-                    color: #44003A;
-                }
-                
-                .certainty-note {
-                    margin-top: 8px;
-                    color: #5E5E5E;
-                    font-size: 0.8em;
-                    line-height: 1.4;
-                }
-                
-                .best-for ul {
-                    margin-top: 8px;
-                    margin-left: 0;
-                    list-style: none;
-                }
-                
-                .best-for li {
-                    margin: 6px 0;
-                    color: #44003A;
-                    padding-left: 20px;
-                    position: relative;
-                    line-height: 1.3;
-                    font-size: 0.9em;
-                }
-                
-                .best-for li::before {
-                    content: '→';
-                    position: absolute;
-                    left: 0;
-                    color: #FF4834;
-                    font-weight: 700;
-                    font-size: 1em;
-                }
-                
-                .strategic-value {
-                    margin-top: 8px;
-                    padding: 14px;
-                    border-radius: 8px;
-                    font-weight: 600;
-                    border: 2px solid;
-                }
-                
-                .strategic-value.low {
-                    background: linear-gradient(135deg, #FF4834 0%, #EB1CA9 100%);
-                    border-color: #44003A;
-                    color: white;
-                }
-                
-                .strategic-value.medium {
-                    background: linear-gradient(135deg, #EB1CA9 0%, #8400AC 100%);
-                    border-color: #44003A;
-                    color: white;
-                }
-                
-                .strategic-value.high {
-                    background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
-                    border-color: #FF4834;
-                    color: #FFE594;
-                }
-                
-                .strategic-value .label {
-                    font-size: 0.95em;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    font-weight: 800;
-                    margin-bottom: 6px;
-                    display: block;
-                }
-                
-                .strategic-value .description {
-                    font-weight: 400;
-                    font-size: 0.8em;
-                    line-height: 1.4;
-                    opacity: 0.95;
-                }
-
-                @media (max-width: 768px) {
-                    .reasoning-table th,
-                    .reasoning-table td {
-                        font-size: 0.75em;
-                        padding: 10px 8px;
-                    }
-                    
-                    .reasoning-type {
-                        font-size: 1.1em;
-                    }
-                }
-          /* Mobile/iOS Responsive Enhancements */
-@media (max-width: 768px) {
-    /* Enable smooth horizontal scrolling */
+           <style>
     .reasoning-table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* This gives iOS that smooth, native scroll feel */
-        margin: 20px -15px; /* Extends table to screen edges for better use of space */
+        margin: 40px 0;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 8px 30px rgba(68, 0, 58, 0.15);
+        overflow: hidden;
     }
     
-    /* Prevent table from compressing too much */
-    .reasoning-table-content {
-        min-width: 768px; /* Maintains readable column widths */
-        padding: 15px;
-    }
-    
-    /* Add visual scroll indicator */
-    .reasoning-table-wrapper::after {
-        content: '← Swipe to see more →';
-        display: block;
-        text-align: center;
-        padding: 10px;
+    .reasoning-table-header {
         background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
         color: white;
-        font-size: 0.8em;
-        font-weight: 600;
+        padding: 25px 20px;
+        position: relative;
+        overflow: hidden;
     }
     
-    /* Improve touch targets for iOS */
-    .reasoning-table td,
-    .reasoning-table th {
-        min-height: 44px; /* Apple's recommended minimum touch target size */
+    .reasoning-table-header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -5%;
+        width: 200px;
+        height: 200px;
+        background: rgba(235, 28, 169, 0.2);
+        border-radius: 50%;
     }
     
-    /* Better text readability on mobile */
-    .reasoning-table {
-        font-size: 14px; /* Comfortable reading size for mobile */
-    }
-    
-    .example {
-        font-size: 13px;
-        line-height: 1.6; /* More breathing room between lines */
-    }
-    
-    /* Prevent iOS from automatically adjusting text size */
-    .reasoning-table-wrapper {
-        -webkit-text-size-adjust: 100%;
-        text-size-adjust: 100%;
-    }
-    
-    /* Reduce padding slightly on very small screens for more content visibility */
-    .reasoning-table td,
-    .reasoning-table th {
-        padding: 12px 8px;
-    }
-    
-    .reasoning-type {
-        font-size: 1.2em; /* Slightly smaller but still prominent */
-    }
-}
-
-/* Extra adjustments for very small phones */
-@media (max-width: 480px) {
-    .reasoning-table-content {
-        min-width: 680px; /* Allows slight compression on tiny screens */
+    .reasoning-table-header-content {
+        position: relative;
+        z-index: 1;
     }
     
     .reasoning-table-header h3 {
-        font-size: 1.3em;
+        font-size: 1.6em;
+        margin-bottom: 8px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
     }
     
     .reasoning-table-header p {
+        font-size: 0.95em;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+    
+    .reasoning-table-content {
+        padding: 20px 15px;
+    }
+    
+    .reasoning-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 12px;
+        table-layout: fixed;
+    }
+    
+    .reasoning-table th {
+        padding: 12px 10px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        background: #44003A;
+        color: #FFE594;
+        border: none;
+    }
+    
+    .reasoning-table th:nth-child(1) { width: 12%; }
+    .reasoning-table th:nth-child(2) { width: 22%; }
+    .reasoning-table th:nth-child(3) { width: 16%; }
+    .reasoning-table th:nth-child(4) { width: 22%; }
+    .reasoning-table th:nth-child(5) { width: 28%; }
+    
+    .reasoning-table th:first-child {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+    
+    .reasoning-table th:last-child {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    
+    .reasoning-table tbody tr {
+        background: white;
+        box-shadow: 0 2px 6px rgba(68, 0, 58, 0.08);
+        border-radius: 8px;
+    }
+    
+    .reasoning-table td {
+        padding: 16px 10px;
+        vertical-align: top;
+        line-height: 1.4;
+        background: white;
         font-size: 0.85em;
     }
-}
+    
+    .reasoning-table td:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    .reasoning-table td:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    
+    .reasoning-type {
+        font-weight: 800;
+        font-size: 1.3em;
+        margin-bottom: 4px;
+        letter-spacing: -0.5px;
+    }
+    
+    .deductive .reasoning-type { color: #FF4834; }
+    .inductive .reasoning-type { color: #8400AC; }
+    .abductive .reasoning-type { color: #FFC14C; }
+    
+    .deductive { border-left: 4px solid #FF4834; }
+    .inductive { border-left: 4px solid #8400AC; }
+    .abductive { border-left: 4px solid #FFC14C; }
+    
+    .logic-flow {
+        font-weight: 700;
+        color: #44003A;
+        margin-bottom: 8px;
+        font-size: 0.95em;
+    }
+    
+    .example {
+        background: linear-gradient(135deg, #FFE594 0%, #FFC14C 100%);
+        padding: 10px 12px;
+        border-radius: 6px;
+        font-style: italic;
+        margin-top: 6px;
+        border-left: 3px solid #FF4834;
+        font-size: 0.85em;
+        color: #44003A;
+        line-height: 1.5;
+    }
+    
+    .certainty {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 18px;
+        font-size: 0.7em;
+        font-weight: 700;
+        margin-top: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .certainty.high {
+        background: #FF4834;
+        color: white;
+    }
+    
+    .certainty.medium {
+        background: #8400AC;
+        color: white;
+    }
+    
+    .certainty.low {
+        background: #FFC14C;
+        color: #44003A;
+    }
+    
+    .certainty-note {
+        margin-top: 8px;
+        color: #5E5E5E;
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+    
+    .best-for ul {
+        margin-top: 8px;
+        margin-left: 0;
+        list-style: none;
+    }
+    
+    .best-for li {
+        margin: 6px 0;
+        color: #44003A;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.3;
+        font-size: 0.9em;
+    }
+    
+    .best-for li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #FF4834;
+        font-weight: 700;
+        font-size: 1em;
+    }
+    
+    .strategic-value {
+        margin-top: 8px;
+        padding: 14px;
+        border-radius: 8px;
+        font-weight: 600;
+        border: 2px solid;
+    }
+    
+    .strategic-value.low {
+        background: linear-gradient(135deg, #FF4834 0%, #EB1CA9 100%);
+        border-color: #44003A;
+        color: white;
+    }
+    
+    .strategic-value.medium {
+        background: linear-gradient(135deg, #EB1CA9 0%, #8400AC 100%);
+        border-color: #44003A;
+        color: white;
+    }
+    
+    .strategic-value.high {
+        background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
+        border-color: #FF4834;
+        color: #FFE594;
+    }
+    
+    .strategic-value .label {
+        font-size: 0.95em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 800;
+        margin-bottom: 6px;
+        display: block;
+    }
+    
+    .strategic-value .description {
+        font-weight: 400;
+        font-size: 0.8em;
+        line-height: 1.4;
+        opacity: 0.95;
+    }
+
+    /* ALL MOBILE STYLES IN ONE UNIFIED BLOCK */
+    @media (max-width: 768px) {
+        /* Enable smooth horizontal scrolling */
+        .reasoning-table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px -15px;
+        }
+        
+        /* Prevent table from compressing too much */
+        .reasoning-table-content {
+            min-width: 768px;
+            padding: 15px;
+        }
+        
+        /* Add visual scroll indicator */
+        .reasoning-table-wrapper::after {
+            content: '← Swipe to see more →';
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
+            color: white;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+        
+        /* Better text readability on mobile */
+        .reasoning-table {
+            font-size: 14px;
+        }
+        
+        .reasoning-table th,
+        .reasoning-table td {
+            padding: 12px 8px;
+            min-height: 44px;
+        }
+        
+        .reasoning-type {
+            font-size: 1.2em;
+        }
+        
+        .example {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        /* Prevent iOS from automatically adjusting text size */
+        .reasoning-table-wrapper {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+    }
+
+    /* Extra adjustments for very small phones */
+    @media (max-width: 480px) {
+        .reasoning-table-content {
+            min-width: 680px;
+        }
+        
+        .reasoning-table-header h3 {
+            font-size: 1.3em;
+        }
+        
+        .reasoning-table-header p {
+            font-size: 0.85em;
+        }
+    }
 </style>
 
             <div class="reasoning-table-wrapper">
