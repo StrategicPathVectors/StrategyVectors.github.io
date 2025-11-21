@@ -289,7 +289,80 @@ const blogsData = [
                     }
                 }
             </style>
+/* Mobile/iOS Responsive Enhancements */
+@media (max-width: 768px) {
+    /* Enable smooth horizontal scrolling */
+    .reasoning-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* This gives iOS that smooth, native scroll feel */
+        margin: 20px -15px; /* Extends table to screen edges for better use of space */
+    }
+    
+    /* Prevent table from compressing too much */
+    .reasoning-table-content {
+        min-width: 768px; /* Maintains readable column widths */
+        padding: 15px;
+    }
+    
+    /* Add visual scroll indicator */
+    .reasoning-table-wrapper::after {
+        content: '← Swipe to see more →';
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background: linear-gradient(135deg, #44003A 0%, #8400AC 100%);
+        color: white;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+    
+    /* Improve touch targets for iOS */
+    .reasoning-table td,
+    .reasoning-table th {
+        min-height: 44px; /* Apple's recommended minimum touch target size */
+    }
+    
+    /* Better text readability on mobile */
+    .reasoning-table {
+        font-size: 14px; /* Comfortable reading size for mobile */
+    }
+    
+    .example {
+        font-size: 13px;
+        line-height: 1.6; /* More breathing room between lines */
+    }
+    
+    /* Prevent iOS from automatically adjusting text size */
+    .reasoning-table-wrapper {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* Reduce padding slightly on very small screens for more content visibility */
+    .reasoning-table td,
+    .reasoning-table th {
+        padding: 12px 8px;
+    }
+    
+    .reasoning-type {
+        font-size: 1.2em; /* Slightly smaller but still prominent */
+    }
+}
 
+/* Extra adjustments for very small phones */
+@media (max-width: 480px) {
+    .reasoning-table-content {
+        min-width: 680px; /* Allows slight compression on tiny screens */
+    }
+    
+    .reasoning-table-header h3 {
+        font-size: 1.3em;
+    }
+    
+    .reasoning-table-header p {
+        font-size: 0.85em;
+    }
+}
             <div class="reasoning-table-wrapper">
                 <div class="reasoning-table-header">
                     <div class="reasoning-table-header-content">
