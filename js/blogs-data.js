@@ -17,7 +17,7 @@ const blogsData = [
 {
    id: 'new blog coming soon',
    title: "How to Make Strategy Decisions When Facts Don't Exist (& Your Crystal Ball Isn't Working)",
-   date: "November 20, 2025",
+   date: "November 21, 2025",
    image: 'images/crystal_ball.png',
    excerpt: 'There are no facts about the future. There is a Better Way to look forward though...',
    content: `<p><em>(Estimated Read Time: 7-minutes)</em></p>
