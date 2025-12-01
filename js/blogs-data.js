@@ -8,14 +8,42 @@ const blogsData = [
    {
         id: 'new blog coming soon',
         title: 'NEW blog: Coming Soon',
-        date: 'November 28, 2025',
-        image: 'images/6_hats.png',
+        date: 'December 8, 2025',
+        image: 'images/insights_workshop.png',
         excerpt: 'Strategic Insights: How Your Brain and Your Team Generate Breakthrough Thinking (pt 2)',
         content: 'More new thinking to generate discussions coming soon'
     },
 
 {
-   id: 'new blog coming soon',
+    id: 'Breakthrough Thinking',
+        title: 'Strategic Insights: How Your Brain & Your Team Generate Breakthrough Thinking (pt 2)',
+        date: 'December 1, 2025',
+        image: 'images/6_hats.png',
+    excerpt: 'Insight generation requires specific cognitive capabilities that individuals can develop through deliberate practice',
+    content: `<p><em>(Estimated Read Time: 7-minutes)</em></p>
+        <p>In our last "insights" blog we focused on gaining clarity on what an insight looks like and even feels like in the "Eureka" moment. This time we focus on "how to get there" and the <strong>Core Cognitive Competencies that Generate Insights</strong>. Understanding this methodology is necessary but insufficient.).</p>
+
+        <p>Insight generation requires specific cognitive capabilities that individuals can develop through deliberate practice.</p>
+
+        <p><strong>Pattern Recognition: "Seeing What Others Miss".</strong> The most fundamental discipline is pattern recognition: spotting trends, connections, and opportunities in complex environments. Gary Klein's naturalistic decision-making research identifies this as the foundation of strategic thinking, complemented by systems analysis, mental agility, structured problem-solving, visioning, and political savvy.</p>
+
+        <p>Pattern recognition requires distinguishing signal from noise, identifying "pattern signalling" from "noise," and distinguishing what's "true" from what's just "opinion". Research in the Strategic Management Journal emphasizes that insights generation relates to dynamic capabilities, organizational learning, knowledge management, and innovation performance—all rooted in superior pattern recognition.</p>
+
+        <p>In real-world contexts, strategic recognition appears in recognizing divergent strategic choices with prescriber adoption patterns, link payer coverage decisions with patient access, or identifying new competitive angles from unexpected therapeutic angles. The skill develops through exposure to diverse problems, deliberate practice analyzing complex scenarios, and feedback on pattern identification quality.</p>
+
+        <p><strong>Abductive Reasoning: "Generating Plausible Explanations".</strong> Unlike deductive reasoning (applying general rules to specific cases) or inductive reasoning (deriving general rules from observations), <strong>abductive reasoning generates plausible explanations from incomplete observations</strong>; essential when facing uncertainty typical in strategy development.</p>
+
+        <p>Abduction seeks the simplest and most likely explanation for observations, yielding plausible but not certain conclusions. This form of reasoning involves prefrontal cortex and executive functions, requires working memory and cognitive flexibility, and creates mental models from incomplete data. True strategic insights require more than observation—they demand moving from "what's happening to why it's happening to what should be done<strong>.</strong> Abductive reasoning bridges observation to inference, generating hypotheses about causal mechanisms that can then be tested and refined via systematic problem locations.</p>
+
+        <p><strong>Synthesis: "Creating New Knowledge from Diverse Sources".</strong> Jon Kolko (2012) describes synthesis as "making meaning through inference-based sensemaking"—moving from observations to patterns to frameworks. This differs fundamentally from analysis. While analysis breaks problems into components, synthesis combines disparate pieces into novel configurations revealing new relationships.</p>
+
+        <p>Synthesis requires three types of thinking simultaneously: deductive (validating against data), inductive (expanding to generalizations), and abductive (making explanatory leaps when data incomplete).</p>
+
+        <p>Insights emerge at the intersection when all three operate together. George Day and Paul Schoemaker call these "peripheral insights" as a vital capacity that organizations must systematically develop rather than waiting for random eureka moments. Building synthesis capacity requires exposure to diverse knowledge domains, practice connecting apparently unrelated concepts, structured frameworks for integration, and team-based synthesis processes that leverage collective intelligence.</p>
+    `
+},
+{
+   id: 'Crystal-ball gazing',
    title: "How to Make Strategy Decisions When Facts Don't Exist (& Your Crystal Ball Isn't Working)",
    date: "November 21, 2025",
    image: 'images/crystal_ball.png',
