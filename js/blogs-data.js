@@ -21,7 +21,7 @@ const blogsData = [
         image: 'images/6_hats.png',
     excerpt: 'Insight generation requires specific cognitive capabilities that individuals can develop through deliberate practice',
     content: `<p><em>(Estimated Read Time: 5-minutes)</em></p>
-        <p>In our last "insights" blog we focused on gaining clarity on what an insight looks like and even feels like in the "Eureka" moment. This time we focus on "how to get there" and the <strong>Core Cognitive Competencies that Generate Insights</strong>. Understanding this methodology is necessary but insufficient.).</p>
+        <p>In our last "insights" blog we focused on gaining clarity on what an insight looks like and even feels like in the "Eureka" moment. This time we focus on "how to get there" and the <strong>Core Cognitive Competencies that Generate Insights</strong>. Understanding this methodology is necessary but insufficient.</p>
 
         <p>Insight generation requires specific cognitive capabilities that individuals can develop through deliberate practice.</p>
 
