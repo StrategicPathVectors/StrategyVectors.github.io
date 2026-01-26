@@ -16,7 +16,7 @@ const blogsData = [
    {
         id: 'insights-part-3',
         title: 'The Science of Strategic Insights: How Your Brain and Your Team Generate Breakthrough Thinking - Part 3',
-        date: 'January 27, 2025',
+        date: 'January 25, 2026',
         image: 'images/insights_workshop.png',
         excerpt: 'While individual cognitive capabilities matter, breakthrough insights increasingly emerge from collaborative processes leveraging diverse perspectives and collective intelligence',
         content: `<p><em>(Estimated Read Time: 7-minutes)</em></p>
