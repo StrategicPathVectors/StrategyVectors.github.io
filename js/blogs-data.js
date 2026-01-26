@@ -8,7 +8,7 @@ const blogsData = [
         id: 'unmet-medical-need-placeholder',
         title: 'Unmet Medical Need Should Not Be the Basis for Your Strategy: We Show You Why & Offer Better Options',
         date: 'Coming Soon',
-        image: 'images/insights_workshop.png',
+        image: 'images/Nail_in_coffin.png',
         excerpt: 'Why the ubiquitous "Unmet Medical Need" framework falls short as a strategic foundation, and what pharmaceutical companies should use instead',
         content: '<p><em>Coming soon...</em></p><p>An in-depth exploration of why relying solely on "Unmet Medical Need" as your strategic anchor creates vulnerabilities, and what evidence-based alternatives deliver superior outcomes in pharmaceutical strategy development.</p>'
     },
