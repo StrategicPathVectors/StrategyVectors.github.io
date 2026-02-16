@@ -60,6 +60,24 @@ const videosData = [
     },
     {
         id: "video-3",
+        museId: "UVWfqS4",
+        title: "Advert: Building a Patient Journey Database for client interrogation",
+        description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
+        date: "February 2026",
+        duration: "<2 min",
+        dateOrder: 20260210,
+    }
+    {
+        id: "video-10",
+        museId: "kDMwbjp",
+        title: "Launch Team Leader gives their team an EXTRA 12 MONTHS by using Strategy Vectors & Patient Journey Framework",
+        description: "A new hire experienced launch leader faced a the daunting task of rapidly understanding their market to "catch-up" to where their new launch should've already been. They got back on track & better aligned their team with us...",
+        date: "December 2025",
+        duration: "3 min",
+        dateOrder: 20250901,
+    }
+{
+        id: "video-10",
         museId: "PLACEHOLDER",
         title: "Future Content",
         description: "We're constantly creating new content. Check back soon for more on Strategy Vectors & The Patient Journey Framework",
