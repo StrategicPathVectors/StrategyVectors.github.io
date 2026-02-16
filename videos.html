@@ -547,7 +547,7 @@
     <section class="page-header">
         <div class="container">
             <h1>Video Library</h1>
-            <p>Explore our collection of to understand more about how we've expanded & enhanced The Patient Journey Framework</p>
+            <p>Explore our collection to understand more about how we've expanded & enhanced The Patient Journey Framework</p>
         </div>
     </section>
 
@@ -560,63 +560,7 @@
             </div>
 
             <div class="video-grid">
-                <!-- VIDEO 1: Replace with your actual video -->
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
-                            title="Strategy Vectors Introduction"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-details">
-                        <h3>Introduction to Strategy Vectors</h3>
-                        <p>Discover how we transform traditional strategy development using AI-powered insights and market intelligence to identify transformational pivot points.</p>
-                        <div class="video-meta">
-                            <span><i class="far fa-clock"></i> 8 min</span>
-                            <span><i class="far fa-calendar"></i> March 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VIDEO 2: Replace with your actual video -->
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
-                            title="Patient Journey Mapping"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-details">
-                        <h3>Patient Journey Mapping in Action</h3>
-                        <p>See how our unified patient journey approach helps healthcare organizations identify critical touchpoints and optimize patient experiences across complex care pathways.</p>
-                        <div class="video-meta">
-                            <span><i class="far fa-clock"></i> 12 min</span>
-                            <span><i class="far fa-calendar"></i> February 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VIDEO 3: Placeholder for future content -->
-                <div class="video-card">
-                    <div class="video-container">
-                        <div class="video-placeholder">
-                            <i class="fas fa-video"></i>
-                            <p>Coming Soon</p>
-                        </div>
-                    </div>
-                    <div class="video-details">
-                        <h3>Future Content</h3>
-                        <p>We're constantly creating new content. Check back soon for more insights on strategic transformation and business innovation.</p>
-                        <div class="video-meta">
-                            <span><i class="far fa-clock"></i> TBD</span>
-                            <span><i class="far fa-calendar"></i> Upcoming</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- All videos load dynamically from videos-data.js -->
             </div>
         </div>
     </section>
@@ -685,7 +629,7 @@
             const videoGrid = document.querySelector('.video-grid');
             if (!videoGrid || typeof videosData === 'undefined') return;
 
-            // Clear any existing hardcoded content
+            // Clear any existing content
             videoGrid.innerHTML = '';
 
             // Sort videos by date (most recent first)
