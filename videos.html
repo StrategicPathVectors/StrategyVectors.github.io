@@ -629,7 +629,7 @@
             const videoGrid = document.querySelector('.video-grid');
             if (!videoGrid || typeof videosData === 'undefined') return;
 
-            // Clear any existing content
+            // Clear any existing hardcoded content
             videoGrid.innerHTML = '';
 
             // Sort videos by date (most recent first)
@@ -660,11 +660,11 @@
                         </div>
                     `;
                 } else {
-                    // Create regular video card with Muse.ai embed
+                    // Create regular video card with Skiv.com embed (formerly Muse.ai)
                     videoCard.innerHTML = `
                         <div class="video-container">
                             <iframe 
-                                src="https://muse.ai/embed/${video.museId}" 
+                                src="https://skiv.com/embed/${video.skivId}" 
                                 title="${video.title}"
                                 frameborder="0" 
                                 allowfullscreen>
