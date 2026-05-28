@@ -5,12 +5,182 @@
 const blogsData = [
    
    {
-        id: 'unmet-medical-need-placeholder',
-        title: 'Unmet Medical Need Should Not Be the Basis for Your Strategy: We Show You Why & Offer Better Options',
+        id: 'next-blog-placeholder',
+        title: 'Next Blog Coming in June',
         date: 'Coming Soon',
         image: 'images/Nail_in_coffin.png',
-        excerpt: 'Why the ubiquitous "Unmet Medical Need" framework falls short as a strategic foundation, and what pharmaceutical companies should use instead',
-        content: '<p><em>Coming soon...</em></p><p>An in-depth exploration of why relying solely on "Unmet Medical Need" as your strategic anchor creates vulnerabilities, and what evidence-based alternatives deliver superior outcomes in pharmaceutical strategy development.</p>'
+        excerpt: 'Next blog coming in June — stay tuned for more strategic thinking from Chameleon Consulting.',
+        content: '<p><em>Next blog coming in June...</em></p>'
+    },
+
+   {
+        id: 'unmet-medical-need',
+        title: 'Another Nail in the Coffin of Great Strategy Creation: The Unmet Medical Need',
+        date: 'May 28, 2026',
+        image: 'images/Nail_in_coffin.png',
+        excerpt: '"Unmet Medical Need" is a poorly defined, misleading concept that has been hijacked across pharma. It pushes brands into the red ocean and undermines trust. Here is a better way to find the true "kernel" of your strategy.',
+        content: `<p><em>(Estimated Read Time: 8-minutes)</em></p>
+
+        <p>Stop thinking & talking about "UMN" when creating or ideating around strategic intent.</p>
+
+        <p>At best it is a misleading concept that directs you away from where your strategy should be focused.</p>
+
+        <p>And, at worst it pushes you, your team, your brand into the red ocean to be eaten by the bigger sharks whilst also further undermining trust in the industry.</p>
+
+        <p>There is a better way to find the "kernel" of your strategy, a more valuable definition of Where To Play (& How To Win).</p>
+
+        <p>This latest article will cover:</p>
+
+        <ul>
+        <li>The origins of the term/concept Unmet Medical Need</li>
+        <li>How the original intent has evolved over time</li>
+        <li>How UMN has been interpreted within pharmaceutical & biotech companies</li>
+        <li>Why this change has lessened impact/trust etc</li>
+        <li>Suggest different ways to determine the starting point for strategy discussions</li>
+        </ul>
+
+        <h3>The origins of the term/concept Unmet Medical Need</h3>
+
+        <p>The phrase "unmet medical need" emerged from the intersection of patient advocacy and FDA regulatory discourse between 1980-1983, crystallizing during congressional deliberations over the Orphan Drug Act. No single individual coined the term—it evolved organically as rare disease advocates and regulators sought language to describe conditions lacking adequate treatments.</p>
+
+        <p>The pharmaceutical industry only embraced the terminology after the 1985 amendments extended orphan drug benefits to patentable products, making rare disease drugs commercially attractive.</p>
+
+        <p>From a legislative perspective, the formal regulatory embedding of "unmet medical need" occurred gradually across multiple jurisdictions. 1992 saw the FDA's Accelerated Approval pathway which includes the first formal regulatory use of the exact phrase "unmet medical need" linked to HIV/AIDS & the ability to expedite drug approvals. Not until 2004 did EU Regulation "catch-up" using the definition of a condition with "no satisfactory method of diagnosis, prevention or treatment".</p>
+
+        <h3>How the original intent/definition has evolved over time</h3>
+
+        <p>A 2019 scoping review by Vreman et al. in 'Value in Health' found 16 different definitions of UMN in current use across stakeholders; though all 16 included "adequacy of available treatments" as a core element (but only 38% refer to disease severity). This definitional fragmentation reflects how the term migrated across regulatory, HTA, industry, and clinical contexts without standardization.</p>
+
+        <p>Initially, UMN served as a rationale for government intervention in market failures. By the early 1990s, biotech companies discovered that orphan drugs could be enormously profitable; what journalist Ann Gibbons memorably called "billion-dollar orphans" in a 1990 Science article.</p>
+
+        <p>HTA bodies adopted UMN as an evaluation criterion somewhat later. NICE (UK) incorporated severity modifiers accounting for unmet need around 2009, while the EMA's PRIME scheme (2016) made UMN central to prioritizing promising medicines.</p>
+
+        <h3>How UMN has been interpreted within pharmaceutical & biotech companies</h3>
+
+        <p>Let's break down the phrase "The Unmet Medical Need" that is often stated (or a close equivalent) in many of the brand plans that we have helped teams shape or provided much need Fresh Perspective with our "pre-mortem" offering. It is stated as an equivalent to a "kernel" of strategy; the thing that needs to be addressed/solved that will lead to success…</p>
+
+        <h4><u>THE</u> Unmet Medical Need</h4>
+
+        <p>When development/launch/brand teams state THE unmet medical need, do they really mean <em><strong>"THE ONE"</strong></em>?</p>
+
+        <p>Has ONE singular need (or issue or desire) been pinpointed; the true kernel, for strategy focus & creation?</p>
+
+        <p>Has this team looked at all of the many system-wide issues, desires, wants, barriers etc to identify all these 'needs', and they've selected the one that is most important, that is the core to them finding a position that is unique, where they know where to play and how to win?</p>
+
+        <p>I'm not so sure. Quite often it feels like they've looked at a template where they must fill in "the unmet medical need" box. They discuss it as a brand team. They come up with lots of options. Some are agreed with, some aren't. The ones that they can agree on are probably the more vanilla, plain, boring conservative, not particularly forward thinking, not particularly different, but they can all agree on it. So, they select that as the one they're going stick in the slides, the one that no one's going argue with when it's presented, one that looks very much like last year's, or other countries, or other companies, or other brands. De-risked & de-valued.</p>
+
+        <p>Plus, can't UMN change or evolve over time? So, is this yesterday's "The" UMN (that can be identified in traditional primary research) or is it some future "bet" based on where the team is looking (development – 10 years out, to brand teams – the next 3 years max)?</p>
+
+        <h4>The Unmet Medical <u>NEED</u>:</h4>
+
+        <p>Let's jump to the end of the phrase and talk about "need".</p>
+
+        <p>Whose need are we talking about?</p>
+
+        <p>Is it the company's need? (to find enough patients? to justify R&D costs and to cover SG&A and marketing spend etc)</p>
+
+        <p>Is the need, truly, what the market needs? What customers need, what patient's need? And does this link back to the one that was chosen? Are needs the same as wants? Do we re-package a "want" as a "need"? (they aren't the same! This is why they are both called out in many definitions of marketing)</p>
+
+        <p>Have some needs been hidden/de-risked; they are too scary, too big, too difficult?</p>
+
+        <p>And has the team gone with the obvious need, the one that is non-controversial? (the same one competitors are going for – so they've "benchmarked" and are therefore "safe" in their selection?)</p>
+
+        <p>Too often I would suggest the "need" is conflated with one of the key features of the drug we have in our hands currently. "They really 'need' our drug, how do we convince them of that?"</p>
+
+        <p><strong>But</strong>, is that true? Or is that just the simplest answer? That's where I have concerns for anyone 'blindly' adopting UMN as a pillar of strategy creation.</p>
+
+        <p>And let's take obesity & GLP-1 drugs. Is the need an extra percentage or two in BMI loss in a week or two earlier, or for a week or two longer? Is that really the need?</p>
+
+        <p>Or can we not look ahead to five years' time when there's multiple GLP-1s (& 2G/3G combos) and then new classes of drugs to treat obesity? And everyone looks at GLP-1s and say; GLP-1 & BMI reduction & duration etc; "it's kind of a class effect". What about long-term adherence? What about support from multiple sources? What about down-dosing or interval expansion over time? What about combinations? What about type of weight-loss and so on…</p>
+
+        <p>We should find a different way of differentiating. Will we look back at today and say, hmm, 5 years ago, 2026, everyone was talking about the numbers for BMI loss. But do you know what? They all do just about kind of the same thing. Maybe the 'real' needs were different, but we didn't address them? Now we are all lumped together & we can't break free of the mass, we've commoditized ourselves by not thinking deeper, wider, better at an earlier stage – we swam with the sharks in the red ocean & now we are chum. It's worth asking the question?</p>
+
+        <h4>The <u>UNMET</u> medical need:</h4>
+
+        <p>And when we say unmet, what do we mean?</p>
+
+        <p>For an example, let's stick with obesity & the current trend of drugs focusing on BMI reduction numbers as their various "headlines". So, is the 'need', in obesity, 'unmet'? Are any of the drugs as good as bariatric surgery for reducing weight-loss & avoiding rebound weight gain? Or is it simply that there aren't enough surgeons? There aren't enough surgeries? They're too costly to fund? What is it? Why is bariatric surgery not meeting, and meeting better, any BMI-linked 'need' that might be identified?</p>
+
+        <p>So, can we truly say that there's a need, if BMI reduction is the identified need? Then is it not met? Better or met completely by bariatric surgery? It's a question worth thinking about…</p>
+
+        <p>Is a 'need' that seems unmet now going to be 'met' quite soon (by a different company/brand?)</p>
+
+        <p>Is a need that is 'met' now going to uncover a new unmet need later?</p>
+
+        <p>Too often when I listen to teams / senior leaders talk about needs that are unmet it feels like what they are actually saying is "our drug is better" if we look at some miniscule differences in "efficacy" (what does that word actually mean?) or another bit of data we can try to highlight from our registration trial work – cos we spend so much money on it we have to promote the heck out of it!</p>
+
+        <h4>The unmet <u>MEDICAL</u> need:</h4>
+
+        <p>And then we come back to 'medical'. So medical, does medical mean drug? And when coupled with an asset in hand does the need actually become more of a want from an internal perspective?</p>
+
+        <p>Should it be unmet pharmacological <s>need</s> want?</p>
+
+        <p>Or does medical mean what medics need? Clinicians; people who treat the condition. What is it that they need? (N.B. not what you'd like to convince them they want)</p>
+
+        <p>Do you know what they need? Are they truly saying, my unmet requirement is another drug in the GLP1 class? Or are they also thinking, this is going become a class effect? Have they already settled for an oral peptide (as great as the technical accomplishment & science is) as being somehow "better" than injectables?</p>
+
+        <p>Or some of the medics thinking, "Actually, my problem (my need) is I can't keep these patients on treatment. They do well initially, then stop and gain weight. The fundamental underlying causes and triggers - the stigma, the embarrassment, the poor diet, the poor exercise, whatever it might be that's contributing to that patient's problem hasn't gone away – but no one is available to support these patients – especially as they can't access via "traditional" health systems & they are paying out-of-pocket with little or no involvement with "wraparound" & holistic care systems etc. That's my biggest need."</p>
+
+        <p>Maybe launch teams mean something different when we're saying unmet MEDICAL need. I wonder how many times we actually mean<strong>, the unmet <em>"pharmacological"</em> <s>need</s> WANT</strong>. So, are we being a bit disingenuous, if we use "the unmet medical need", and we narrow it down to the drug in hand, with the need that I have to achieve? I wonder.</p>
+
+        <p>And would this kind of approach build more, or less, trust in our companies & industry?</p>
+
+        <p>Could it be argued that the "scramble" of companies to "get into obesity" is a measure of chasing UMN? or something else? You decide…</p>
+
+        <h3>Why this "hijacked" most recent version of UMN has lessened impact/trust etc</h3>
+
+        <p>It could be argues that; UMN is a poorly defined & misleading term that has been 'hijacked' by Pharma senior execs to try to showcase their drug innovation by 'finding' links to market opportunities by suggesting that there is a real need, when perhaps that need is more internal than external & for which there is no real alternative than their own specific drug.</p>
+
+        <p>In my research I saw reference to France's HAS Transparency Committee, where they assigned approximately 87% of medicines an ASMR V rating (no improvement over existing treatments). Does this contradict company claims of addressing unmet needs?</p>
+
+        <p>Germany's IQWiG found that among 216 new drug approvals between 2011-2017, only 25% were judged to have considerable or major added benefit over standard care (so, 75% didn't offer anything related to UMN!?)</p>
+
+        <p>And I wonder how many of NICE approvals were restricted to a much smaller population than drug license? (did I see a composite figure across many reviews & over much time NICE approved treatments reach only 31% of intended populations? And, how many never even get an approval?) And at what level of confidential discounting to meet "cost-effectiveness" measures? Both factors would drive the argument that "the market" perception of how closely those assets meet an UMN is far lower than how companies have assessed them…?</p>
+
+        <p><em>N.B. On advice, I've decided to remove content here that links the use of UMN not as originally intended with the potential for reduced trust.</em></p>
+
+        <p>But, I'll retain one element…the role played by ubiquitous big-box consulting firms that charge a fortune to churn out the same stuff with different labels across much of the industry…they also de-value the UMN concept and they remove true strategic thinking – thereby reducing impact and possibly aiding any perceived trust issues linked with unmet needs.</p>
+
+        <p>For example, in "Beyond the Storm" McKinsey decided to analyse 60 assets and mapped them by clinical differentiation & burden of the condition they were "targeting". This is not unmet need – this is burden – or size of population – so playing into the de-risk mindset – better to get a small %MS of a much larger market than aim for a really high %MS of a much smaller but truly "in need" condition. And the differentiation was explicitly measured against already present drugs/incumbents – so there are active treatments…</p>
+
+        <p>Despite these huge restrictions to "real" unmet need the authors concluded that only 15% of those 60 assets would be focused on UMN and those companies would have to "establish" this UMN (it wasn't clear currently & therefore would only become clear once a treatment was available??)</p>
+
+        <h3>Moving on to impact of UMN limited thinking on strategic impact…</h3>
+
+        <p>From experience, teams focusing on UMN filter-out a huge aspect of outside-in thinking way too early in the strategy development process. They almost begin with a solution in mind. Their drug!</p>
+
+        <p>When we see teams that conduct the zoom-in & zoom-out of strategy and hold robust strategy discussions focused around possibility ideation & pilot idea creation <em><strong>we see excellent strategy emerge</strong></em>.</p>
+
+        <p>Oftentimes even these teams' ideas get de-risked/scaled-back when their thinking & hypotheses & assumptions meet static, rigid and poor templates that are more "planning" than they are "strategic".</p>
+
+        <p>So, hints & tips are required (at least for those who'd see a need & want to make a change).</p>
+
+        <h3>Suggesting different ways to determine the starting point for strategy discussions</h3>
+
+        <p>With all these questions & thoughts, how can there be one simple UMN? There are many different needs in the market & some solutions are NOT medical (or medical alone).</p>
+
+        <p>So, we suggest STOP looking at MEDICAL Unmet Needs.</p>
+
+        <ul>
+        <li>Find MARKET Needs first</li>
+        <li>Do NOT "filter" Needs – don't "screen" them or "SWOT" them.</li>
+        <li>LOOK at them, understand them, ideate around them, consider working WITH them, consider NOT working with them and so on</li>
+        <li>Forget your asset at this stage</li>
+        <li>Look to find patterns across the market needs. Do NOT look for ONE need to hang your hat on</li>
+        <li>Consider future scenarios where a new reality exists. (What would it look like, what role can you play, where does your asset fit, your wider organisation, how would competitors respond, and so on)</li>
+        <li>Pilot some ideas – rapidly test & kill or scale</li>
+        <li>Conduct primary research here – once you've got a better idea of where you might go, what you might do, where you know you need more – your research will be faster, less investment, have more impact etc</li>
+        <li>Then you need to make some decisions (but make sure you are clear on assumptions & hypotheses – because the future WILL be different to what you expect & yes, those "Needs" will evolve over time)</li>
+        <li>What magnifying glass are you currently using to find YOUR difference, YOUR distinctiveness, YOUR USP/value proposition etc?</li>
+        <li>Do you have a robust & consistent way of looking at all global markets, all TAs, all conditions etc?</li>
+        </ul>
+
+        <p>This is why we created Strategy Vectors; with a traditional meaning = "having direction & magnitude" and "to act as a guide".</p>
+
+        <p>Ultimately to us "Chameleons" it means, "to transmit powerful strategic ideas to others, to give them direction so that they can drive greater impact & value."</p>
+
+        <p>We can address all your market & system-focused needs identification AND the conversion of contextualised intelligence into potential pivot points that are Strategy Vectors for your team/company/asset.</p>
+        `
     },
 
    {
