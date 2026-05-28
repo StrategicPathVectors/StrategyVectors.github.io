@@ -8,7 +8,7 @@ const blogsData = [
         id: 'next-blog-placeholder',
         title: 'Next Blog Coming in June',
         date: 'Coming Soon',
-        image: 'images/Nail_in_coffin.png',
+        image: 'images/break_glass.png',
         excerpt: 'Next blog coming in June — stay tuned for more strategic thinking from Chameleon Consulting.',
         content: '<p><em>Next blog coming in June...</em></p>'
     },
