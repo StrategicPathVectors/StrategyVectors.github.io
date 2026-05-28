@@ -12,7 +12,101 @@ const blogsData = [
         excerpt: 'Why the ubiquitous "Unmet Medical Need" framework falls short as a strategic foundation, and what pharmaceutical companies should use instead',
         content: '<p><em>Coming soon...</em></p><p>An in-depth exploration of why relying solely on "Unmet Medical Need" as your strategic anchor creates vulnerabilities, and what evidence-based alternatives deliver superior outcomes in pharmaceutical strategy development.</p>'
     },
-   
+
+   {
+        id: 'market-opportunity-assessment',
+        title: 'Rethinking Market Opportunity Assessment: Can Pharma Do Better Than TAM, SAM & SOM?',
+        date: 'May 20, 2026',
+        image: 'images/market_opportunity.png',
+        excerpt: 'TAM, SAM and SOM are ubiquitous in life sciences market sizing — yet the evidence shows they consistently miss. Why structured uncertainty beats false precision, and how a 10-Domain Patient Journey Database sharpens the picture.',
+        content: `<p><em>(Estimated Read Time: 8-minutes)</em></p>
+
+        <p><strong>Can the way we approach market opportunity assessment be improved?</strong></p>
+
+        <p>Whenever I'm asked to support either a stealth biotech, early commercial development team or a BD&L group create an asset assessment, there are always different Excel sheets to fill in and different templates to transfer data into. But at the core they are often based around one core structure. The often used, if not ubiquitous, approach is TAM, SAM, and SOM (with various alternative iterations available too). Unfortunately, I've now linked this phrase to a well-known Neil Diamond song and recent movie starring Wolverine Hugh Jackman — "Song Sung Blue" — and I say it in time to the music. Bloody annoying, and now you might have caught the same condition! And, like the song says, assessment models are the same as "Everybody has one". But can we improve the content within this structure/philosophy, and maybe even improve the design/outputs/accuracy too?</p>
+
+        <h3>Origins and definitions of a deceptively simple framework</h3>
+
+        <p>Total Addressable Market (TAM), Serviceable Addressable Market (SAM), and Serviceable Obtainable Market (SOM) form a nested hierarchy — three concentric circles of progressively smaller market opportunity:</p>
+
+        <ul>
+        <li><strong>TAM</strong> represents the total revenue opportunity if a product achieved 100% market share with zero constraints. A final TAM calculation output equals total potential customers multiplied by average revenue per customer.</li>
+        <li><strong>SAM</strong> narrows this to the segment reachable given a company's product characteristics, geographic presence and distribution capabilities.</li>
+        <li><strong>SOM</strong> estimates realistic capture given competition, resources and execution capacity.</li>
+        </ul>
+
+        <p>The simplicity of these formulas, however, belies the complexity of the assumptions they could/should encode…</p>
+
+        <p>The most illuminating public debate over TAM methodology occurred in July 2014. NYU Stern professor Aswath Damodaran valued Uber at $5.9 billion, anchoring his TAM to the $100bn global taxi and limousine market. Benchmark Capital's Bill Gurley responded with "How to Miss By a Mile", arguing the TAM was off by a x25 multiple because disruptive products expand markets rather than merely capturing share of existing ones. Uber's market capitalisation today exceeds $150bn, vindicating Gurley's point that static TAM estimation systematically undervalues market-creating innovations — a lesson directly applicable to transformative pharma categories like GLP-1 receptor agonists.</p>
+
+        <h3>Three methodologies and their trade-offs</h3>
+
+        <h4>Top-down estimation starts broad and filters narrow</h4>
+
+        <p>The top-down approach begins with macroeconomic industry-level data or government health statistics, then applies successive percentage filters to reach a target segment. In pharma, this might start with global healthcare expenditure, narrow to a therapeutic area, then to a specific indication and line of therapy. The method is fast, useful for initial scoping and sanity checks, and anchored in published data. Its weakness is systematic overestimation: broad industry figures carry implicit assumptions about growth rates that may not apply to specific segments. Additionally, anchoring bias — the tendency to insufficiently adjust from an initial reference value — distorts top-down estimates.</p>
+
+        <p>We recommend reference class forecasting against 5+ comparable market entries as a corrective if this approach is used.</p>
+
+        <h4>Bottom-up estimation builds from granular unit economics</h4>
+
+        <p>The bottom-up approach counts potential customers, determines revenue per customer from pricing data or willingness-to-pay research, and multiplies upward. In pharma, this translates to the epidemiology-based patient funnel: total population → disease prevalence → diagnosed patients → treated patients → drug-eligible patients → reachable patients → captured patients. Each filter applies empirically derived rates. Most commentators consider this more credible to investors because it exposes every assumption. Bottom-up estimates tend to be more conservative and defensible, but they are labour-intensive and vulnerable to cascading errors when small inaccuracies in early assumptions compound through the funnel.</p>
+
+        <h4>Value theory estimates markets that do not yet exist</h4>
+
+        <p>The value theory approach estimates the economic value a product delivers to customers, then determines what fraction of that value can be captured in pricing. This is essential for novel product categories where no historical market data exists. In pharma, value-based pricing for gene therapies exemplifies this logic: a one-time gene therapy for haemophilia B priced at $3.5 million might be justified against lifetime factor replacement costs of $7-10mn. The approach is inherently more subjective but necessary for breakthrough therapies that redefine treatment paradigms.</p>
+
+        <h3>How pharma applies the framework across therapeutic areas</h3>
+
+        <h4>Oncology market sizing illustrates the biomarker-driven funnel</h4>
+
+        <p>The global NSCLC market exemplifies pharma's multi-layered approach. With approximately 537,700 incident cases across the seven major markets in 2024, the headline TAM ranges from $22 to $38bn depending on scope and methodology (and that's quite a range variability!), projected to reach $37-75bn by the early 2030s at 8-13% CAGR (an even greater range!).</p>
+
+        <p>The relevant TAM for any individual asset is dramatically smaller. An EGFR-targeted therapy, for instance, must filter through adenocarcinoma histology (~42-44% of NSCLC), metastatic stage (~57%), EGFR mutation positivity (~15-20% in Western populations, ~50% in Asia), specific mutation variant (exon 19 deletion or L858R) and line of therapy — before applying access and competitive share filters. The result is that SOM for a single biomarker-defined product may represent &lt;5% of the headline NSCLC TAM.</p>
+
+        <p>Breast cancer similarly segments by molecular subtype: HR+/HER2-negative accounts for 65% of spending, while TNBC, though a smaller patient population, is expanding at 12.35% CAGR due to ADC innovation.</p>
+
+        <h4>Rare disease sizing depends on diagnosis rates and prevalence uncertainty</h4>
+
+        <p>Rare disease market opportunity assessment faces a fundamental challenge: patient populations are small, poorly characterised, and frequently under-diagnosed.</p>
+
+        <p>Spinal muscular atrophy (SMA) offers a masterclass in how different treatment modalities create overlapping but distinct SAMs. Three main therapies compete: Spinraza (ongoing intrathecal modality), Zolgensma (one-time gene therapy) and Evrysdi (oral daily dosing). Zolgensma's SAM is narrower — Type 1 or 2 SMA, &lt;2 years of age, plus a gene therapy and one-time cost threshold — yet within that SAM it captures ~80% of newly diagnosed US patients. This demonstrates that SOM dominance within a narrow SAM can generate blockbuster revenues (~$1.3bn) even against competitors with broader labels.</p>
+
+        <h4>GLP-1 agonists reveal how TAM can expand by orders of magnitude</h4>
+
+        <p>No therapeutic area better illustrates dynamic TAM expansion than GLP-1 receptor agonists for obesity. The total GLP-1 market reached approximately $54-64bn in 2024, with Novo Nordisk's Ozempic alone generating $16.7bn. Analyst estimates for the obesity market have been revised upward repeatedly: Morgan Stanley's projection escalated from $54bn (July 2022) to $77bn (2023) to $105bn (2024), with a high case of $144bn.</p>
+
+        <p>The obesity TAM-to-SAM compression is stark. The theoretical patient population is enormous — 880+ million obese adults worldwide, 2.5 billion overweight. Yet current GLP-1 penetration is only 2-3% in the US and ~1% globally. Financial access is the primary constraint, but there are many drivers currently and these will shift over time and geographies.</p>
+
+        <h3>Why the framework persists despite its limitations</h3>
+
+        <p>TAM/SAM/SOM analysis remains indispensable across pharmaceutical strategy because it provides a common language for sizing opportunity. In venture capital and IPO filings it anchors valuation narratives. In M&A due diligence, market sizing directly determines deal values. However, L.E.K. Consulting found that more than half of acquired lead assets fall short of pre-deal forecasts by approximately 40% over three years post-launch, pointing to systematic over-optimism in acquirer market sizing. For launch planning, the patient funnel directly determines sales force sizing, manufacturing scale, and geographic launch sequencing.</p>
+
+        <h4>Forecast accuracy data paints a sobering picture</h4>
+
+        <p>The most rigorous study of pharmaceutical forecast accuracy — published by Cha, Rifai, and Sarraf in Nature Reviews Drug Discovery (October 2013) and conducted with McKinsey — analysed 1,700 analyst forecasts for 260 drugs launched between 2002 and 2011. Actual peak sales deviated from predictions by 71% one year before launch. Even six years post-launch, forecasts remained 45% off. More than 60% of forecasts were wrong by over 40%, and 53 of 260 drugs had actual revenues at least 160% below forecast. Cancer drugs tended to be underestimated (due to unanticipated indication expansions), while cardiovascular and CNS drugs were systematically overestimated. A 2024 Simon-Kucher analysis of 50 US drugs confirmed these findings: only 12% achieved sales within 25% of forecast, 32% were overestimated by more than double, and 28% were underestimated by more than two times.</p>
+
+        <h3>Beyond static models: alternative and emerging approaches</h3>
+
+        <p>The limitations of point-estimate TAM/SAM/SOM have driven adoption of more sophisticated methodologies.</p>
+
+        <p><strong>Monte Carlo simulation</strong> replaces single-number forecasts with probability distributions, running thousands of scenarios across uncertain variables (awareness, compliance, market share, pricing). Mark Chang's "Monte Carlo Simulation for the Pharmaceutical Industry" (Chapman & Hall, 2011) provides a systematic treatment of the methodology.</p>
+
+        <p><strong>Patient flow modelling</strong> tracks cohorts through treatment lines — initiation, switching, discontinuation — rather than relying on static prevalence snapshots. And it can incorporate Monte Carlo methods within the framework.</p>
+
+        <h3>Conclusion: structured uncertainty over false precision</h3>
+
+        <p>TAM/SAM/SOM analysis in pharma is not a prediction exercise — it is a structured approach to mapping uncertainty. The framework's value lies not in generating accurate point estimates (which the evidence confirms it consistently fails to do) but in forcing explicit articulation of assumptions about patient populations, competitive dynamics, pricing, and access. We would argue that "me and you are subject to the blues now and then" and get estimates wrong (all estimates will be wrong — by their very scope and definition). We find that the assumptions used, even in a "quick and dirty" asset assessment, can be hugely improved over what we have seen over the years.</p>
+
+        <p>The most important advances are methodological: replacing single numbers with probability distributions, integrating real-world data with epidemiological models, and building dynamic forecasts that update as clinical evidence and market intelligence accumulate. The strongest recommendation from the literature is triangulation — combining top-down context with bottom-up patient-level modelling, value-based pricing analysis, Monte Carlo uncertainty quantification, and scenario planning.</p>
+
+        <p>For pharma specifically, any TAM figure that does not incorporate phase-specific probability of success, HTA/reimbursement constraints, and competitive intensity is not a market estimate but an aspiration. The companies and investors that treat market sizing as an iterative, evidence-driven hypothesis rather than a static slide in a pitch deck will make substantially better capital allocation decisions — and ultimately serve more patients.</p>
+
+        <p>We've been working on adapting our great new Patient Journey Database, originally formulated from 7 Domains and now expanded to 10 separate and deeper Domains — allowing for even greater reach and understanding of current market dynamics, and extrapolation to future outlooks that create more informed market opportunity assessments. And we've even used Anthropic and Claude's recent upgrades and new skills to produce better designed, more intuitive spreadsheets for those that want them. With minimal investment of budget and resources, we've improved the content of hypotheses and assumptions across all elements of TAM, SAM and SOM, improved the interpretability, and can update simply at regular future points. This will only improve assessments over time and, "before you know it, get to feeling good. You simply got no choice".</p>
+
+        <p><em>(Apologies to Neil Diamond and his fans.)</em></p>
+        `
+    },
+
    {
         id: 'insights-part-3',
         title: 'The Science of Strategic Insights: How Your Brain and Your Team Generate Breakthrough Thinking - Part 3',
