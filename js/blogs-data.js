@@ -9,7 +9,7 @@ const blogsData = [
         title: 'Next Blog Coming in July',
         date: 'Coming Soon',
         image: 'images/break_glass.png',
-        excerpt: 'Next blog coming in July — stay tuned for more strategic thinking from Chameleon Consulting.',
+        excerpt: 'Next blog coming in July — stay tuned for more challenging & strategic thinking from the team at Chameleon.',
         content: '<p><em>Next blog coming in July...</em></p>'
     },
 
