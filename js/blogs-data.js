@@ -17,7 +17,7 @@ const blogsData = [
         id: 'mental-availability',
         title: `How clinicians really choose between drug options — and why mental availability beats awareness`,
         date: 'June 15, 2026',
-        image: 'images/market_opportunity.png',
+        image: 'images/Mental_Availability.png',
         excerpt: `Most launch teams pour budget into awareness. But clinicians choose from a 2-to-5 drug 'evoked set' held in memory — and awareness isn't the same as availability. Why mental availability, not recognition, is what gets your brand on the script.`,
         content: `<p class="article-meta"><em>A Chameleon Consulting point of view (~10-minute read &middot; fully referenced)</em></p>
 <p class="standfirst"><strong>Everyone has heard of your drug. The prescriber still didn&rsquo;t think of it.</strong></p>
